@@ -138,25 +138,7 @@ const gpCreateAccountsB64 = Buffer.from(gpCreateAccountsScript).toString('base64
 
 const GP_INSTRUCTION = `You are running a 5-loop iterative GP-earning benchmark. Each loop, you spawn a sub-agent that writes ONE money-making script and runs it on 2 bots sequentially.
 
-## Setup (do this ONCE before any loops)
-
-Launch browsers for ALL 10 bots so they are pre-connected when sub-agents need them:
-
-\\\`\\\`\\\`bash
-# Wait for gateway
-for i in $(seq 1 30); do curl -s http://localhost:8888/ >/dev/null 2>&1 && break; sleep 1; done
-
-# Launch all 10 bot browsers in background
-for loop in $(seq 1 5); do
-  for bot in $(seq 1 2); do
-    name="l\${loop}a\${bot}"
-    DISPLAY=:99 /usr/bin/chromium --no-sandbox --disable-gpu --disable-software-rasterizer --no-first-run --disable-extensions "http://localhost:8888/bot?bot=\${name}&password=test&fps=15" &
-  done
-  sleep 3
-done
-sleep 15
-echo "All 10 bots launched"
-\\\`\\\`\\\`
+**No setup needed.** Bots auto-connect on first \\\`execute_code\\\` call (takes ~30s per bot for browser launch + tutorial skip). Do NOT launch browsers manually.
 
 ## Loop Execution
 
