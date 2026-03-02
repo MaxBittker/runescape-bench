@@ -40,7 +40,6 @@ const STARTING_INVENTORY = [
   { id: 303, count: 1 },    // Small fishing net (fishing)
   { id: 2347, count: 1 },   // Hammer (smithing)
   { id: 561, count: 1000 }, // Nature runes (alchemy — stackable)
-  { id: 995, count: 200 },  // Coins (seed money — stackable)
 ];
 
 // Staff of fire equipped — unlimited fire runes for alchemy

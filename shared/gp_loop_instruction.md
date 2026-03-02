@@ -30,7 +30,7 @@ Each loop uses a unique set of 5 bots. Bot names follow the pattern `l{loop}a{1-
 Each bot starts with:
 - **Level 50** in all skills (**55 Magic** — enough for High Level Alchemy)
 - **Position**: Lumbridge (3222, 3218)
-- **Inventory**: Rune axe, Knife, Tinderbox, Small fishing net, Hammer, 1000 Nature runes, 200 Coins
+- **Inventory**: Rune axe, Knife, Tinderbox, Small fishing net, Hammer, 1000 Nature runes
 - **Equipped**: Staff of fire (provides unlimited fire runes)
 
 You do NOT need to bootstrap (earn money for tools, etc.) — bots start fully equipped.
@@ -50,8 +50,7 @@ Your starting items enable several approaches:
 1. **Woodcut → Fletch → High Alchemy** — Chop oak logs (rune axe), fletch into longbows (knife), cast High Alchemy for ~48 GP per bow. Uses nature runes + staff of fire. **No shop needed — avoids overstocking.**
 2. **Woodcut → Fletch → Sell to shop** — Same but sell to general store. 32 GP/bow at fresh shop, drops to ~8 GP when overstocked from prior loops.
 3. **Fish → Cook → Sell** — Net fishing, cook with tinderbox, sell cooked fish.
-4. **Buy cheap → High Alch for profit** — Buy items from specialty shops with 200 coins, alch for more than purchase price.
-5. **Mine → Smith → Sell/Alch** — Mine ores, smith with hammer, sell or alch products.
+4. **Mine → Smith → Sell/Alch** — Mine ores, smith with hammer, sell or alch products.
 
 **High Alchemy**: Switch to magic tab `sdk.sendSetTab(6)`, then use the item on the spell. Each cast costs 1 nature rune (fire runes are free from equipped staff). You start with 1,000 nature runes.
 
