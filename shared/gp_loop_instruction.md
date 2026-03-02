@@ -43,18 +43,11 @@ You do NOT need to bootstrap (earn money for tools, etc.) — bots start fully e
 - **Same script on all 5 bots** — write ONE script, run it 5 times in parallel
 - **All 5 execute_code calls in ONE tool response** — this ensures parallel execution
 
-## Strategy Options
+## Notes
 
-Your starting items enable several approaches:
+**High Alchemy**: You can cast High Level Alchemy on items to convert them to coins. Switch to magic tab `sdk.sendSetTab(6)`, then use the item on the spell. Each cast costs 1 nature rune (fire runes are free from equipped staff). You start with 1,000 nature runes.
 
-1. **Woodcut → Fletch → High Alchemy** — Chop oak logs (rune axe), fletch into longbows (knife), cast High Alchemy for ~48 GP per bow. Uses nature runes + staff of fire. **No shop needed — avoids overstocking.**
-2. **Woodcut → Fletch → Sell to shop** — Same but sell to general store. 32 GP/bow at fresh shop, drops to ~8 GP when overstocked from prior loops.
-3. **Fish → Cook → Sell** — Net fishing, cook with tinderbox, sell cooked fish.
-4. **Mine → Smith → Sell/Alch** — Mine ores, smith with hammer, sell or alch products.
-
-**High Alchemy**: Switch to magic tab `sdk.sendSetTab(6)`, then use the item on the spell. Each cast costs 1 nature rune (fire runes are free from equipped staff). You start with 1,000 nature runes.
-
-**Shop overstocking warning**: All 5 loops share the same game server. If loop 1 sells 500 longbows to Lumbridge general store, loop 2 will find those bows already in stock and get a much lower sell price. High Alchemy avoids this problem entirely.
+**Shop overstocking warning**: All 5 loops share the same game server. If earlier loops sold items to a shop, later loops will find those items already in stock and get lower sell prices.
 
 ## Script Template
 
