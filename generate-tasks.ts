@@ -205,11 +205,11 @@ RUN cd /app && bun run benchmark/shared/generate_gp_saves.ts
 RUN echo '${gpCreateAccountsB64}' | base64 -d > /app/server/engine/create_gp_accounts.ts && \\
     cd /app/server/engine && bun run sqlite:migrate && bun create_gp_accounts.ts
 
-# Disable the Docker ENTRYPOINT — Harbor runs both ENTRYPOINT and
-# /start-services.sh, causing port conflicts (EADDRINUSE) when both
-# try to start the engine/gateway. Make entrypoint a no-op so
-# start-services.sh is the sole startup path.
-RUN printf '#!/bin/bash\\ntrue\\n' > /entrypoint.sh && chmod +x /entrypoint.sh
+# Replace Docker ENTRYPOINT with a keep-alive — Harbor runs both ENTRYPOINT
+# and /start-services.sh, causing port conflicts when both start the engine.
+# This entrypoint just keeps the container alive while start-services.sh
+# (called by Harbor) handles all service startup.
+RUN printf '#!/bin/bash\\nexec tail -f /dev/null\\n' > /entrypoint.sh && chmod +x /entrypoint.sh
 
 # Wrap /start-services.sh to regenerate saves BEFORE the engine starts.
 # Docker build-time saves don't persist in Modal's container runtime.
