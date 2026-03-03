@@ -205,16 +205,16 @@ RUN cd /app && bun run benchmark/shared/generate_gp_saves.ts
 RUN echo '${gpCreateAccountsB64}' | base64 -d > /app/server/engine/create_gp_accounts.ts && \\
     cd /app/server/engine && bun run sqlite:migrate && bun create_gp_accounts.ts
 
-# Wrap BOTH /entrypoint.sh AND /start-services.sh to regenerate saves.
-# Harbor runs both paths: Docker ENTRYPOINT (/entrypoint.sh) AND
-# /start-services.sh. Saves generated at Docker build time don't persist
-# in Modal's container runtime, so we regenerate in both startup paths.
-# A lockfile prevents double-generation when both paths run.
-RUN mv /entrypoint.sh /entrypoint-base.sh && \\
-    printf '#!/bin/bash\\nif [ ! -f /tmp/.saves_generated ]; then\\n  echo "[entrypoint] Generating bot saves..."\\n  cd /app && bun run benchmark/shared/generate_gp_saves.ts\\n  cd /app/server/engine && bun run sqlite:migrate 2>/dev/null; bun create_gp_accounts.ts 2>/dev/null\\n  touch /tmp/.saves_generated\\n  echo "[entrypoint] Saves ready"\\nfi\\nexec /entrypoint-base.sh "\\$@"\\n' > /entrypoint.sh && \\
-    chmod +x /entrypoint.sh && \\
-    mv /start-services.sh /start-services-base.sh && \\
-    printf '#!/bin/bash\\nif [ ! -f /tmp/.saves_generated ]; then\\n  echo "[start-services] Generating bot saves..."\\n  cd /app && bun run benchmark/shared/generate_gp_saves.ts\\n  cd /app/server/engine && bun run sqlite:migrate 2>/dev/null; bun create_gp_accounts.ts 2>/dev/null\\n  touch /tmp/.saves_generated\\n  echo "[start-services] Saves ready"\\nfi\\nexec /start-services-base.sh "\\$@"\\n' > /start-services.sh && \\
+# Disable the Docker ENTRYPOINT — Harbor runs both ENTRYPOINT and
+# /start-services.sh, causing port conflicts (EADDRINUSE) when both
+# try to start the engine/gateway. Make entrypoint a no-op so
+# start-services.sh is the sole startup path.
+RUN printf '#!/bin/bash\\ntrue\\n' > /entrypoint.sh && chmod +x /entrypoint.sh
+
+# Wrap /start-services.sh to regenerate saves BEFORE the engine starts.
+# Docker build-time saves don't persist in Modal's container runtime.
+RUN mv /start-services.sh /start-services-base.sh && \\
+    printf '#!/bin/bash\\nset -e\\necho "[start-services] Generating bot saves..."\\ncd /app && bun run benchmark/shared/generate_gp_saves.ts\\ncd /app/server/engine && bun run sqlite:migrate 2>/dev/null || true\\ncd /app/server/engine && bun create_gp_accounts.ts 2>/dev/null || true\\necho "[start-services] Saves ready"\\nexec /start-services-base.sh\\n' > /start-services.sh && \\
     chmod +x /start-services.sh
 `;
 
