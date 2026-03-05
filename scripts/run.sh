@@ -20,6 +20,7 @@ claude-code|anthropic/claude-sonnet-4-6|sonnet46
 claude-code|anthropic/claude-sonnet-4-5|sonnet45
 claude-code|anthropic/claude-haiku-4-5|haiku
 codex|openai/gpt-5.3-codex|codex
+codex|openai/gpt-5.4|gpt54
 gemini-cli|google/gemini-3-pro-preview|gemini
 claude-code|glm-5|glm
 kimi-opencode|openrouter/moonshotai/kimi-k2.5|kimi
@@ -45,7 +46,7 @@ while [[ $# -gt 0 ]]; do
     -h|--help)
       echo "Usage: run.sh [-t task] [-m model] [-n trials] [-c concurrency]"
       echo ""
-      echo "Models: opus, sonnet46, sonnet45, haiku, codex, gemini, glm, kimi, qwen3, qwen35 (default: all)"
+      echo "Models: opus, sonnet46, sonnet45, haiku, codex, gpt54, gemini, glm, kimi, qwen3, qwen35 (default: all)"
       echo "Task:   any task dir name (default: woodcutting-xp-10m)"
       exit 0
       ;;
@@ -56,7 +57,7 @@ done
 
 # Default to all models if none specified
 if [ -z "$SELECTED_MODELS" ]; then
-  SELECTED_MODELS="sonnet46 sonnet45 opus haiku codex gemini glm kimi qwen3 qwen35"
+  SELECTED_MODELS="sonnet46 sonnet45 opus haiku codex gpt54 gemini glm kimi qwen3 qwen35"
 fi
 
 load_env "$REPO_ROOT/.env"
@@ -71,7 +72,7 @@ PIDS=""
 for name in $SELECTED_MODELS; do
   entry=$(lookup_model "$name" "$ALL_MODELS")
   if [ -z "$entry" ]; then
-    echo "Unknown model: $name (available: opus, sonnet46, sonnet45, haiku, codex, gemini, glm, kimi, qwen3, qwen35)"
+    echo "Unknown model: $name (available: opus, sonnet46, sonnet45, haiku, codex, gpt54, gemini, glm, kimi, qwen3, qwen35)"
     exit 1
   fi
 

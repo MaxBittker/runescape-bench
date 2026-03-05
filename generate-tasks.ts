@@ -117,6 +117,8 @@ Your ONLY goal is to maximize ${skillName} XP. Focus exclusively on this skill. 
 
 IMPORTANT: You have ${durationMinutes} minutes. Start training immediately — do not spend time planning.
 
+RULES: You must gain XP through legitimate in-game actions only (e.g. casting spells, chopping trees, fishing). Do NOT modify game server files, player save files, databases, or game engine code. Do NOT use server console commands, cheat commands (::setstat, ::advancestat, etc.), or any other method that bypasses normal gameplay. Only interact with the game through the SDK and MCP tools provided.
+
 CRITICAL: Do NOT write one giant script. Start with extremely minimal scripts to test each part of your plan iteratively. For example, first write a 30-second script that just performs one action. Run it, verify it works, then extend it. Build up complexity only after each piece is validated. Scripts that try to do everything at once will crash and waste your time. Run scripts in the FOREGROUND (not as a background process).
 
 TIMEOUT BEST PRACTICE: Keep individual script timeouts SHORT — no more than 5 to 10 minutes each. Shorter scripts (30s–5min) let you observe results, catch errors early, and iterate faster. If a script runs for 10+ minutes and fails, you've wasted significant time. Break long tasks into multiple short runs instead.
