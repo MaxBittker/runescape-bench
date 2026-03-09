@@ -26,14 +26,47 @@ function findSkillLevel(sample, skillKey) {
   return 1;
 }
 
+function findSkillXp(sample, skillKey) {
+  if (!sample?.skills) return 0;
+  const skillName = SKILL_DISPLAY[skillKey] || skillKey;
+  for (const [sName, sData] of Object.entries(sample.skills)) {
+    if (sName.toLowerCase() === skillKey || sName.toLowerCase() === skillName.toLowerCase()) {
+      return sData.xp || 0;
+    }
+  }
+  return 0;
+}
+
+function computeRateData(samples, skillKey) {
+  const rates = [];    // { x: minutes, y: XP/hr }
+  const peakRates = []; // { x: minutes, y: running max XP/hr }
+  let peak = 0;
+  for (let i = 1; i < samples.length; i++) {
+    const prev = samples[i - 1];
+    const curr = samples[i];
+    const dxp = findSkillXp(curr, skillKey) - findSkillXp(prev, skillKey);
+    const dms = curr.elapsedMs - prev.elapsedMs;
+    if (dms <= 0) continue;
+    const rate = (dxp / dms) * 3600000; // XP/hr
+    const mins = curr.elapsedMs / 60000;
+    rates.push({ x: mins, y: Math.max(0, rate) });
+    peak = Math.max(peak, rate);
+    peakRates.push({ x: mins, y: peak });
+  }
+  return { rates, peakRates };
+}
+
 function getActiveSkills(samples, targetSkill) {
+  if (!samples || samples.length === 0) return [targetSkill];
+  const firstSample = samples[0];
   const seen = new Set();
-  for (const s of samples) {
+  for (let i = 1; i < samples.length; i++) {
+    const s = samples[i];
     if (!s.skills) continue;
     for (const sk of SKILL_ORDER) {
-      const lvl = findSkillLevel(s, sk);
-      const threshold = sk === 'hitpoints' ? 10 : 1;
-      if (lvl > threshold) seen.add(sk);
+      const startLvl = findSkillLevel(firstSample, sk);
+      const currLvl = findSkillLevel(s, sk);
+      if (currLvl > startLvl) seen.add(sk);
     }
   }
   seen.add(targetSkill);
@@ -138,6 +171,8 @@ export function TrajectoryModal({ model, skill, data }) {
   const transcriptRef = useRef(null);
   const chartCanvasRef = useRef(null);
   const chartInstanceRef = useRef(null);
+  const rateChartCanvasRef = useRef(null);
+  const rateChartInstanceRef = useRef(null);
   const videoOffsetRef = useRef(0);
   const maxVideoTimeRef = useRef(Infinity);
   const videoReadyRef = useRef(false);
@@ -230,13 +265,20 @@ export function TrajectoryModal({ model, skill, data }) {
         videoEl.currentTime = maxTime;
       }
 
-      // Update skills chart playhead
-      if (chartInstanceRef.current && trajData?.samples?.length) {
+      // Update chart playheads
+      if (trajData?.samples?.length) {
         const agentTime = Math.max(0, videoEl.currentTime - videoOffsetRef.current);
         const gameMinutes = agentTime / 60;
-        const xPixel = chartInstanceRef.current.scales.x.getPixelForValue(gameMinutes);
-        chartInstanceRef.current._playheadX = xPixel;
-        chartInstanceRef.current.draw();
+        if (chartInstanceRef.current) {
+          const xPixel = chartInstanceRef.current.scales.x.getPixelForValue(gameMinutes);
+          chartInstanceRef.current._playheadX = xPixel;
+          chartInstanceRef.current.draw();
+        }
+        if (rateChartInstanceRef.current) {
+          const xPixel = rateChartInstanceRef.current.scales.x.getPixelForValue(gameMinutes);
+          rateChartInstanceRef.current._playheadX = xPixel;
+          rateChartInstanceRef.current.draw();
+        }
       }
 
       // Auto-scroll transcript
@@ -331,7 +373,7 @@ export function TrajectoryModal({ model, skill, data }) {
         borderWidth: isTarget ? 2.5 : 1.2,
         pointRadius: 0,
         pointStyle: makeSkillIcon(sk, 14),
-        tension: 0.3,
+        tension: 0,
         order: isTarget ? 0 : 1,
       };
     });
@@ -352,11 +394,18 @@ export function TrajectoryModal({ model, skill, data }) {
             border: { display: false },
           },
           y: {
-            min: yMin - yPad,
+            min: Math.max(0, yMin - yPad),
             max: yMax + yPad,
             title: { display: false },
-            ticks: { display: false },
-            grid: { display: false },
+            afterFit: axis => { axis.width = 36; },
+            ticks: {
+              display: true,
+              font: { size: 9 },
+              color: '#aaa',
+              maxTicksLimit: 5,
+              callback: v => Number.isInteger(v) ? v : '',
+            },
+            grid: { color: 'rgba(0,0,0,0.04)' },
             border: { display: false },
           },
         },
@@ -493,6 +542,138 @@ export function TrajectoryModal({ model, skill, data }) {
     };
   }, [trajData?.samples, skill]);
 
+  // XP Rate chart setup
+  useEffect(() => {
+    const canvas = rateChartCanvasRef.current;
+    if (!canvas || !trajData?.samples?.length) return;
+
+    const { rates, peakRates } = computeRateData(trajData.samples, skill);
+    if (rates.length === 0) return;
+
+    const lastElapsed = trajData.samples[trajData.samples.length - 1].elapsedMs || 1;
+    // Normalize: XP/hr → display units (÷60 for per-min, ÷25, ÷8 = ÷12000)
+    const normRates = rates.map(p => ({ x: p.x, y: p.y / 12000 }));
+    const normPeakRates = peakRates.map(p => ({ x: p.x, y: p.y / 12000 }));
+    const maxRate = normPeakRates.length > 0 ? normPeakRates[normPeakRates.length - 1].y : 0;
+
+    const datasets = [
+      {
+        label: 'XP Rate',
+        data: normRates,
+        borderColor: SKILL_COLORS[skill] || '#888',
+        backgroundColor: (SKILL_COLORS[skill] || '#888') + '20',
+        borderWidth: 1.5,
+        pointRadius: 0,
+        tension: 0,
+        fill: true,
+        order: 1,
+      },
+      {
+        label: 'Peak Rate',
+        data: normPeakRates,
+        borderColor: '#333',
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        borderDash: [4, 3],
+        pointRadius: 0,
+        tension: 0,
+        fill: false,
+        order: 0,
+      },
+    ];
+
+    const chart = new Chart(canvas, {
+      type: 'line',
+      data: { datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        scales: {
+          x: {
+            type: 'linear', min: 0, max: lastElapsed / 60000,
+            title: { display: false },
+            ticks: { display: false },
+            grid: { display: false },
+            border: { display: false },
+          },
+          y: {
+            min: 0,
+            max: maxRate * 1.15,
+            title: { display: false },
+            afterFit: axis => { axis.width = 36; },
+            ticks: {
+              display: true,
+              font: { size: 9 },
+              color: '#aaa',
+              callback: v => Math.round(v),
+              maxTicksLimit: 4,
+            },
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            border: { display: false },
+          },
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false },
+        },
+        layout: { padding: { top: 2, bottom: 10, left: 2, right: 24 } },
+      },
+      plugins: [{
+        id: 'ratePlayhead',
+        afterDraw(chart) {
+          if (chart._playheadX == null) return;
+          const ctx = chart.ctx;
+          const area = chart.chartArea;
+          const x = chart._playheadX;
+          if (x < area.left || x > area.right) return;
+          ctx.save();
+          ctx.beginPath();
+          ctx.moveTo(x, area.top);
+          ctx.lineTo(x, area.bottom);
+          ctx.strokeStyle = 'rgba(0,0,0,0.3)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+          ctx.restore();
+        }
+      }],
+    });
+
+    rateChartInstanceRef.current = chart;
+
+    // Click + drag on rate chart scrubs video
+    function seekChartToX(clientX) {
+      if (!videoReadyRef.current) return;
+      const rect = canvas.getBoundingClientRect();
+      const area = chart.chartArea;
+      const xPx = clientX - rect.left;
+      const ratio = (xPx - area.left) / (area.right - area.left);
+      if (ratio < 0 || ratio > 1) return;
+      const videoEl = videoRef.current;
+      if (videoEl) {
+        const xScale = chart.scales.x;
+        const gameMinutes = xScale.min + ratio * (xScale.max - xScale.min);
+        videoEl.currentTime = Math.max(0, gameMinutes * 60 + videoOffsetRef.current);
+      }
+    }
+
+    const onMouseDown = (e) => { chartDraggingRef.current = true; seekChartToX(e.clientX); };
+    const onMouseMove = (e) => { if (chartDraggingRef.current) seekChartToX(e.clientX); };
+    const onMouseUp = () => { chartDraggingRef.current = false; };
+
+    canvas.addEventListener('mousedown', onMouseDown);
+    canvas.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+
+    return () => {
+      chart.destroy();
+      rateChartInstanceRef.current = null;
+      canvas.removeEventListener('mousedown', onMouseDown);
+      canvas.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    };
+  }, [trajData?.samples, skill]);
+
   if (!trajData) {
     return html`
       <div className="modal-backdrop" onClick=${(e) => { if (e.target === e.currentTarget) closeModal(); }}>
@@ -524,7 +705,7 @@ export function TrajectoryModal({ model, skill, data }) {
             <button onClick=${closeModal} className="close-btn">\u00d7</button>
           </div>
           <div style=${{ fontSize: '12px', color: '#999', marginTop: '2px' }}>
-            ${formatXp(trajData.finalXp)} XP (Lv ${trajData.finalLevel})${trajData.jobName ? ' \u00b7 ' + trajData.jobName : ''}
+            Peak: ${formatRate(trajData.peakXpRate || 0)} \u00b7 ${formatXp(trajData.finalXp)} XP (Lv ${trajData.finalLevel})${trajData.jobName ? ' \u00b7 ' + trajData.jobName : ''}
           </div>
         </div>
         <div className="traj-video-container">
@@ -533,6 +714,19 @@ export function TrajectoryModal({ model, skill, data }) {
               <video ref=${videoRef} controls preload="auto"
                      src=${videoSrc}
                      style=${{ width: '400px', height: '300px' }} />
+              <div className="traj-skills-chart-wrap">
+                <div className="traj-rate-legend">
+                  <span className="traj-rate-legend-item">
+                    <span className="traj-rate-legend-line" style=${{ borderColor: SKILL_COLORS[skill] || '#888', background: (SKILL_COLORS[skill] || '#888') + '20' }}></span>
+                    XP Rate
+                  </span>
+                  <span className="traj-rate-legend-item">
+                    <span className="traj-rate-legend-line dashed" style=${{ borderColor: '#333' }}></span>
+                    Peak Rate
+                  </span>
+                </div>
+                <canvas ref=${rateChartCanvasRef}></canvas>
+              </div>
               <div className="traj-skills-chart-wrap">
                 <canvas ref=${chartCanvasRef}></canvas>
               </div>

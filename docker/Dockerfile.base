@@ -1,0 +1,26 @@
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# System dependencies:
+#   chromium     - real chromium binary (not a snap shim like ubuntu 24.04)
+#   default-jre  - Java runtime for RuneScript compiler (engine cache packing)
+RUN apt-get update && apt-get install -y \
+    curl \
+    git \
+    chromium \
+    default-jre-headless \
+    unzip \
+    ca-certificates \
+    procps \
+    xvfb \
+    ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install bun
+RUN curl -fsSL https://bun.sh/install | bash
+ENV PATH="/root/.bun/bin:$PATH"
+
+# Use system chromium instead of puppeteer downloading its own
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium

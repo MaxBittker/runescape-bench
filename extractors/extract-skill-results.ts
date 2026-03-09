@@ -371,7 +371,7 @@ function parseGeminiCliLog(content: string): { steps: TrajectoryStep[] } {
 // ── Main ─────────────────────────────────────────────────────────
 
 const { filter, horizon: horizonArg, explicitDirs } = parseCLIArgs(process.argv.slice(2));
-const HORIZON = horizonArg || '30m';
+const HORIZON = horizonArg || '15m';
 const RESULTS_DIR = join(import.meta.dir, '..', 'results', `skills-${HORIZON}`);
 
 // Load video URL manifest (written by scripts/upload-videos.ts)
@@ -394,6 +394,7 @@ const jobDirs = resolveJobDirs(JOBS_DIR, explicitDirs, filter, (name, f) => {
 // Extract and group by model -> skill
 const combined: Record<string, Record<string, {
   jobName: string;
+  peakXpRate: number;
   finalXp: number;
   finalLevel: number;
   durationSeconds: number;
@@ -409,6 +410,33 @@ const combined: Record<string, Record<string, {
   agentStartedAt?: string;
 }>> = {};
 
+/** Compute peak XP rate (XP/hr) from tracking samples for a given skill */
+function computePeakXpRate(samples: Sample[], skill: string): number {
+  let peak = 0;
+  for (let i = 1; i < samples.length; i++) {
+    const prev = samples[i - 1];
+    const curr = samples[i];
+    const prevXp = getSkillXpFromSample(prev, skill);
+    const currXp = getSkillXpFromSample(curr, skill);
+    const deltaXp = currXp - prevXp;
+    const deltaMs = curr.elapsedMs - prev.elapsedMs;
+    if (deltaMs <= 0 || deltaXp <= 0) continue;
+    const rate = (deltaXp / deltaMs) * 3600000;
+    if (rate > peak) peak = rate;
+  }
+  return Math.round(peak);
+}
+
+function getSkillXpFromSample(sample: Sample, skill: string): number {
+  if (!sample?.skills) return 0;
+  for (const [name, data] of Object.entries(sample.skills)) {
+    if (name.toLowerCase() === skill.toLowerCase()) {
+      return (data as { level: number; xp: number }).xp || 0;
+    }
+  }
+  return 0;
+}
+
 const REPO_ROOT = join(import.meta.dir, '..');
 
 let extracted = 0;
@@ -416,6 +444,11 @@ let extracted = 0;
 // Parse horizon into milliseconds for sample trimming
 const horizonMatch = HORIZON.match(/^(\d+)m$/);
 const horizonMs = horizonMatch ? parseInt(horizonMatch[1]) * 60 * 1000 : 0;
+
+// ── Phase 1: Group job dirs by model and keep only the latest per model ──
+// This prevents mixing results from different runs for the same model.
+
+const jobsByModel: Record<string, { dir: string; timestamp: string }[]> = {};
 
 for (const dir of jobDirs) {
   const jobName = basename(dir);
@@ -431,6 +464,29 @@ for (const dir of jobDirs) {
     console.log(`  skip: ${jobName} (can't detect model)`);
     continue;
   }
+
+  // Extract timestamp from dir name (YYYYMMDD-HHMMSS at the end)
+  const tsMatch = jobName.match(/(\d{8}-\d{6})$/);
+  const timestamp = tsMatch ? tsMatch[1] : '00000000-000000';
+
+  if (!jobsByModel[model]) jobsByModel[model] = [];
+  jobsByModel[model].push({ dir, timestamp });
+}
+
+// Keep only the latest job dir per model
+const latestJobDirs: { dir: string; model: string }[] = [];
+for (const [model, jobs] of Object.entries(jobsByModel)) {
+  jobs.sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+  latestJobDirs.push({ dir: jobs[0].dir, model });
+  if (jobs.length > 1) {
+    console.log(`  ${model}: using latest job ${basename(jobs[0].dir)} (skipping ${jobs.length - 1} older)`);
+  }
+}
+
+// ── Phase 2: Extract results from latest job per model ──
+
+for (const { dir, model } of latestJobDirs) {
+  const jobName = basename(dir);
 
   // Detect skill at job level (old single-task format: {skill}-xp-{horizon}-{model}-...)
   const jobSkill = detectSkill(jobName, HORIZON) || detectSkillFromConfig(dir, HORIZON);
@@ -524,6 +580,17 @@ for (const dir of jobDirs) {
     }
 
     // Slim down samples: keep elapsedMs and all skills (level only for non-target, level+xp for target)
+    // Use first sample as baseline — only include non-target skills that changed from their starting level
+    const firstSample = samples.length > 0 ? samples[0] : null;
+    function getBaselineLevel(skillName: string): number {
+      if (!firstSample?.skills) return 1;
+      for (const [sName, sData] of Object.entries(firstSample.skills)) {
+        if (sName.toLowerCase() === skillName.toLowerCase()) {
+          return (sData as { level: number }).level || 1;
+        }
+      }
+      return 1;
+    }
     const slimSamples = samples.map(s => {
       const slimSkills: Record<string, { level: number; xp?: number }> = {};
       if (s.skills) {
@@ -531,7 +598,7 @@ for (const dir of jobDirs) {
           const sd = sData as { level: number; xp: number };
           if (sName.toLowerCase() === skill.toLowerCase()) {
             slimSkills[sName] = { level: sd.level, xp: sd.xp };
-          } else if (sd.level > 1) {
+          } else if (sd.level > getBaselineLevel(sName)) {
             slimSkills[sName] = { level: sd.level };
           }
         }
@@ -539,39 +606,39 @@ for (const dir of jobDirs) {
       return { elapsedMs: s.elapsedMs, skills: slimSkills };
     });
 
+    // Compute peak XP rate from tracking samples
+    const peakXpRate = computePeakXpRate(samples as Sample[], skill);
+
     if (!combined[model]) combined[model] = {};
 
-    const existing = combined[model][skill];
-    const shouldReplace = !existing
-      || (samples.length > existing.sampleCount * 2)
-      || (existing.sampleCount <= samples.length * 2 && finalXp > existing.finalXp);
     const videoUrl = videoManifest[`${HORIZON}/${model}/${skill}`];
 
-    if (shouldReplace) {
-      combined[model][skill] = {
-        jobName,
-        finalXp,
-        finalLevel,
-        durationSeconds,
-        sampleCount: samples.length,
-        samples: slimSamples,
-        ...(tokenUsage ? { tokenUsage } : {}),
-        ...(trajectory ? { trajectory: trajectory.steps } : {}),
-        ...(trajectory?.firstStepAt ? { firstStepAt: trajectory.firstStepAt } : {}),
-        ...(trimmedCount > 0 ? { trimmedSamples: trimmedCount } : {}),
-        trialDir: relTrialDir,
-        videoAvailable,
-        ...(videoDuration ? { videoDuration } : {}),
-        ...(videoUrl ? { videoUrl } : {}),
-        ...(containerStartedAt ? { containerStartedAt } : {}),
-        ...(containerFinishedAt ? { containerFinishedAt } : {}),
-        ...(agentStartedAt ? { agentStartedAt } : {}),
-      };
-    }
+    // No shouldReplace heuristic — since we only process the latest job per
+    // model, each skill within a job is taken as-is (no cross-run mixing).
+    combined[model][skill] = {
+      jobName,
+      peakXpRate,
+      finalXp,
+      finalLevel,
+      durationSeconds,
+      sampleCount: samples.length,
+      samples: slimSamples,
+      ...(tokenUsage ? { tokenUsage } : {}),
+      ...(trajectory ? { trajectory: trajectory.steps } : {}),
+      ...(trajectory?.firstStepAt ? { firstStepAt: trajectory.firstStepAt } : {}),
+      ...(trimmedCount > 0 ? { trimmedSamples: trimmedCount } : {}),
+      trialDir: relTrialDir,
+      videoAvailable,
+      ...(videoDuration ? { videoDuration } : {}),
+      ...(videoUrl ? { videoUrl } : {}),
+      ...(containerStartedAt ? { containerStartedAt } : {}),
+      ...(containerFinishedAt ? { containerFinishedAt } : {}),
+      ...(agentStartedAt ? { agentStartedAt } : {}),
+    };
 
     const tokenStr = tokenUsage ? `, tokens: ${(tokenUsage.inputTokens / 1000).toFixed(0)}k in / ${(tokenUsage.outputTokens / 1000).toFixed(0)}k out` : '';
     const trimStr = trimmedCount > 0 ? ` (trimmed ${trimmedCount} post-horizon samples)` : '';
-    console.log(`  ${model}/${skill}: ${jobName} — xp=${finalXp}, level=${finalLevel}, ${samples.length} samples${trimStr}${tokenStr}`);
+    console.log(`  ${model}/${skill}: ${jobName} — peakRate=${peakXpRate} XP/hr, xp=${finalXp}, level=${finalLevel}, ${samples.length} samples${trimStr}${tokenStr}`);
     extracted++;
   }
 }

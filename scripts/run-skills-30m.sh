@@ -62,7 +62,7 @@ done
 
 # Default to all if none specified
 if [ -z "$SELECTED_MODELS" ]; then
-  SELECTED_MODELS="opus opus45 sonnet46 sonnet45 haiku codex codex53 gpt54 gemini gemini31 glm kimi qwen3"
+  SELECTED_MODELS="opus opus45 sonnet46 sonnet45 haiku codex codex53 gpt54 gemini gemini31 glm kimi qwen3 qwen35"
 fi
 if [ -z "$SELECTED_SKILLS" ]; then
   SELECTED_SKILLS="$ALL_SKILLS"

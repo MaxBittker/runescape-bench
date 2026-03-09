@@ -3,6 +3,7 @@
   "skills": {
     "ranged": {
       "jobName": "ranged-xp-10m-qwen35-20260227-153822",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.045,
@@ -718,12 +719,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/ranged-xp-10m-qwen35-20260227-153822/ranged-xp-10m__j4W4bqD",
       "videoAvailable": true,
+      "videoDuration": 618,
       "containerStartedAt": "2026-02-27T20:39:23.971084Z",
       "containerFinishedAt": "2026-02-27T20:50:55.697902Z",
       "agentStartedAt": "2026-02-27T20:40:06.618120Z"
     },
     "strength": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 510.028,
@@ -1954,12 +1957,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/strength-xp-10m__MPAVd8t",
       "videoAvailable": true,
+      "videoDuration": 515,
       "containerStartedAt": "2026-03-06T03:25:42.942658Z",
       "containerFinishedAt": "2026-03-06T03:35:10.077947Z",
       "agentStartedAt": "2026-03-06T03:26:13.540973Z"
     },
     "crafting": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 435.036,
@@ -2942,12 +2947,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/crafting-xp-10m__79cuH5E",
       "videoAvailable": true,
+      "videoDuration": 449,
       "containerStartedAt": "2026-03-06T03:25:42.940117Z",
       "containerFinishedAt": "2026-03-06T03:34:00.927279Z",
       "agentStartedAt": "2026-03-06T03:26:18.563057Z"
     },
     "fletching": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 480.042,
@@ -4094,12 +4101,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/fletching-xp-10m__9W6PQ8D",
       "videoAvailable": true,
+      "videoDuration": 485,
       "containerStartedAt": "2026-03-06T03:25:42.912753Z",
       "containerFinishedAt": "2026-03-06T03:34:38.896182Z",
       "agentStartedAt": "2026-03-06T03:26:14.492304Z"
     },
     "cooking": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 592.596,
@@ -4999,12 +5008,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/cooking-xp-10m__9Z8ZHfe",
       "videoAvailable": true,
+      "videoDuration": 602,
       "containerStartedAt": "2026-03-06T03:25:42.938213Z",
       "containerFinishedAt": "2026-03-06T03:36:54.661759Z",
       "agentStartedAt": "2026-03-06T03:26:04.281111Z"
     },
     "attack": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 504000,
       "finalXp": 21200,
       "finalLevel": 44,
       "durationSeconds": 504.169,
@@ -5887,12 +5898,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/attack-xp-10m__ofkfWPn",
       "videoAvailable": true,
+      "videoDuration": 497.079917,
       "containerStartedAt": "2026-03-06T03:25:42.933456Z",
       "containerFinishedAt": "2026-03-06T03:35:02.018856Z",
       "agentStartedAt": "2026-03-06T03:26:02.761866Z"
     },
     "firemaking": {
       "jobName": "skills-10m-qwen35-20260306-101725",
+      "peakXpRate": 959936,
       "finalXp": 20000,
       "finalLevel": 43,
       "durationSeconds": 588.075,
@@ -6911,12 +6924,14 @@
       "trimmedSamples": 2,
       "trialDir": "jobs/skills-10m-qwen35-20260306-101725/firemaking-xp-10m__TC2X83w",
       "videoAvailable": true,
+      "videoDuration": 618,
       "containerStartedAt": "2026-03-06T15:43:28.548167Z",
       "containerFinishedAt": "2026-03-06T15:55:15.253401Z",
       "agentStartedAt": "2026-03-06T15:43:54.899335Z"
     },
     "fishing": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 435.01,
@@ -8019,12 +8034,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/fishing-xp-10m__xfkptxz",
       "videoAvailable": true,
+      "videoDuration": 431,
       "containerStartedAt": "2026-03-06T03:25:42.935905Z",
       "containerFinishedAt": "2026-03-06T03:33:38.634981Z",
       "agentStartedAt": "2026-03-06T03:26:05.292426Z"
     },
     "hitpoints": {
       "jobName": "hitpoints-xp-10m-qwen35-20260227-153822",
+      "peakXpRate": 15600,
       "finalXp": 1175,
       "finalLevel": 11,
       "durationSeconds": 465.01,
@@ -8614,12 +8631,14 @@
       ],
       "trialDir": "jobs/hitpoints-xp-10m-qwen35-20260227-153822/hitpoints-xp-10m__XZ8DCVA",
       "videoAvailable": true,
+      "videoDuration": 461,
       "containerStartedAt": "2026-02-27T20:39:24.565464Z",
       "containerFinishedAt": "2026-02-27T20:47:53.049899Z",
       "agentStartedAt": "2026-02-27T20:39:45.893083Z"
     },
     "smithing": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 443.041,
@@ -9594,12 +9613,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/smithing-xp-10m__7nnenJd",
       "videoAvailable": true,
+      "videoDuration": 438,
       "containerStartedAt": "2026-03-06T03:25:42.944846Z",
       "containerFinishedAt": "2026-03-06T03:33:44.834157Z",
       "agentStartedAt": "2026-03-06T03:26:03.151715Z"
     },
     "defence": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 428.277,
@@ -10502,12 +10523,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/defence-xp-10m__2uzYWwU",
       "videoAvailable": true,
+      "videoDuration": 418,
       "containerStartedAt": "2026-03-06T03:25:42.882718Z",
       "containerFinishedAt": "2026-03-06T03:33:25.116645Z",
       "agentStartedAt": "2026-03-06T03:26:03.059401Z"
     },
     "thieving": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 495.057,
@@ -11630,12 +11653,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/thieving-xp-10m__3jmZJRL",
       "videoAvailable": true,
+      "videoDuration": 500,
       "containerStartedAt": "2026-03-06T03:25:42.922901Z",
       "containerFinishedAt": "2026-03-06T03:34:54.523476Z",
       "agentStartedAt": "2026-03-06T03:26:18.133262Z"
     },
     "woodcutting": {
       "jobName": "woodcutting-xp-10m-qwen35-20260227-153822",
+      "peakXpRate": 299980,
       "finalXp": 3125,
       "finalLevel": 20,
       "durationSeconds": 585.015,
@@ -12415,12 +12440,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/woodcutting-xp-10m-qwen35-20260227-153822/woodcutting-xp-10m__xDZw3F4",
       "videoAvailable": true,
+      "videoDuration": 596,
       "containerStartedAt": "2026-02-27T20:39:24.532757Z",
       "containerFinishedAt": "2026-02-27T20:50:04.767749Z",
       "agentStartedAt": "2026-02-27T20:39:44.365553Z"
     },
     "prayer": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 488.305,
@@ -13563,12 +13590,14 @@
       ],
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/prayer-xp-10m__kjjKaix",
       "videoAvailable": true,
+      "videoDuration": 484,
       "containerStartedAt": "2026-03-06T03:25:42.908202Z",
       "containerFinishedAt": "2026-03-06T03:34:36.142568Z",
       "agentStartedAt": "2026-03-06T03:26:03.329377Z"
     },
     "mining": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 593.783,
@@ -14640,12 +14669,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/mining-xp-10m__TGT82Yf",
       "videoAvailable": true,
+      "videoDuration": 602,
       "containerStartedAt": "2026-03-06T03:25:42.926523Z",
       "containerFinishedAt": "2026-03-06T03:36:35.028373Z",
       "agentStartedAt": "2026-03-06T03:26:03.671023Z"
     },
     "magic": {
       "jobName": "skills-10m-qwen35-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 591.687,
@@ -15333,6 +15364,7 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen35-20260305-215936/magic-xp-10m__LF33AS4",
       "videoAvailable": true,
+      "videoDuration": 606,
       "containerStartedAt": "2026-03-06T03:25:42.890275Z",
       "containerFinishedAt": "2026-03-06T03:37:05.763540Z",
       "agentStartedAt": "2026-03-06T03:26:04.669688Z"

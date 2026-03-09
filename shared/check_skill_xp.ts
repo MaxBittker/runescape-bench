@@ -27,6 +27,30 @@ const TRACKING_PATHS = [
 
 const verifierStartTime = new Date().toISOString();
 
+function getSkillXpFromSample(sample: any, skill: string): number {
+    if (!sample?.skills) return 0;
+    for (const [name, data] of Object.entries(sample.skills)) {
+        if (name.toLowerCase() === skill.toLowerCase()) {
+            return (data as any).xp || 0;
+        }
+    }
+    return 0;
+}
+
+function computePeakXpRate(samples: any[], skill: string): number {
+    let peak = 0;
+    for (let i = 1; i < samples.length; i++) {
+        const prev = samples[i - 1];
+        const curr = samples[i];
+        const deltaXp = getSkillXpFromSample(curr, skill) - getSkillXpFromSample(prev, skill);
+        const deltaMs = curr.elapsedMs - prev.elapsedMs;
+        if (deltaMs <= 0 || deltaXp <= 0) continue;
+        const rate = (deltaXp / deltaMs) * 3600000; // XP/hr
+        if (rate > peak) peak = rate;
+    }
+    return Math.round(peak);
+}
+
 async function main() {
     const sdk = new BotSDK({
         botUsername: 'agent',
@@ -70,8 +94,14 @@ async function main() {
             console.log('No tracking data file found in:', TRACKING_PATHS.join(', '));
         }
 
+        // Compute peak XP rate from tracking samples
+        const trackingSamples = trackingData?.samples || [];
+        const peakXpRate = computePeakXpRate(trackingSamples, SKILL_NAME as string);
+        console.log(`Peak XP rate: ${peakXpRate.toLocaleString()} XP/hr`);
+
         const rewardObj = {
             skill: SKILL_NAME,
+            peakXpRate,
             xp,
             level,
             verifierStartTime,
@@ -79,12 +109,11 @@ async function main() {
         };
 
         writeFileSync('/logs/verifier/reward.json', JSON.stringify(rewardObj, null, 2));
-        writeFileSync('/logs/verifier/reward.txt', xp.toString());
+        writeFileSync('/logs/verifier/reward.txt', peakXpRate.toString());
 
-        console.log(`Reward: xp=${xp}, level=${level}`);
+        console.log(`Reward: peakXpRate=${peakXpRate} XP/hr, xp=${xp}, level=${level}`);
 
-        // Print reward JSON to stdout so it can be recovered from test-stdout.txt
-        // even when Modal file downloads fail
+        // Print reward JSON to stdout for recovery from test-stdout.txt
         console.log(`__REWARD_JSON_START__`);
         console.log(JSON.stringify(rewardObj));
         console.log(`__REWARD_JSON_END__`);
@@ -100,6 +129,7 @@ main().catch(err => {
         writeFileSync('/logs/verifier/reward.txt', '0');
         writeFileSync('/logs/verifier/reward.json', JSON.stringify({
             skill: SKILL_NAME,
+            peakXpRate: 0,
             xp: 0,
             level: 1,
             error: err.message,

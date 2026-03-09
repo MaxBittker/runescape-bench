@@ -1,24 +1,51 @@
 #!/bin/bash
 set -e
 
-IMAGE_NAME="${IMAGE_NAME:-rs-agent-benchmark}"
-IMAGE_TAG="${IMAGE_TAG:-latest}"
-FULL_IMAGE="${IMAGE_NAME}:${IMAGE_TAG}"
+# Build the app image (default) or the base image (--base).
+#
+# Usage:
+#   ./build.sh                          # build app image (rs-agent-benchmark:latest)
+#   ./build.sh --base                   # build base image (rs-agent-benchmark-base:latest)
+#   PUSH=1 IMAGE_TAG=v26 ./build.sh     # build + push app image as v26
+#   PUSH=1 IMAGE_TAG=v1 ./build.sh --base  # build + push base image as v1
+
+BUILD_BASE=false
+if [ "$1" = "--base" ]; then
+    BUILD_BASE=true
+    shift
+fi
 
 PLATFORM="${PLATFORM:-linux/amd64}"
-echo "Building Docker image: ${FULL_IMAGE} (platform: ${PLATFORM})"
-
 cd "$(dirname "$0")"
 
-# Copy skill_tracker.ts from shared/ (single source of truth)
-cp ../shared/skill_tracker.ts skill_tracker.ts
+if [ "$BUILD_BASE" = true ]; then
+    IMAGE_NAME="${IMAGE_NAME:-ghcr.io/maxbittker/rs-agent-benchmark-base}"
+    IMAGE_TAG="${IMAGE_TAG:-latest}"
+    FULL_IMAGE="${IMAGE_NAME}:${IMAGE_TAG}"
+    echo "Building BASE image: ${FULL_IMAGE} (platform: ${PLATFORM})"
 
-if [ "$PUSH" = "1" ] || [ "$PUSH" = "true" ]; then
-    # Build and push in one step (buildx with --push avoids loading
-    # a foreign-arch image into the local daemon).
-    docker buildx build --platform "${PLATFORM}" -t "${FULL_IMAGE}" --push .
-    echo "Built and pushed: ${FULL_IMAGE}"
+    if [ "$PUSH" = "1" ] || [ "$PUSH" = "true" ]; then
+        docker buildx build --platform "${PLATFORM}" -f Dockerfile.base -t "${FULL_IMAGE}" --push .
+        echo "Built and pushed: ${FULL_IMAGE}"
+    else
+        docker buildx build --platform "${PLATFORM}" -f Dockerfile.base -t "${FULL_IMAGE}" --load .
+        echo "Built: ${FULL_IMAGE}"
+    fi
 else
-    docker buildx build --platform "${PLATFORM}" -t "${FULL_IMAGE}" --load .
-    echo "Built: ${FULL_IMAGE}"
+    IMAGE_NAME="${IMAGE_NAME:-ghcr.io/maxbittker/rs-agent-benchmark}"
+    IMAGE_TAG="${IMAGE_TAG:-latest}"
+    FULL_IMAGE="${IMAGE_NAME}:${IMAGE_TAG}"
+    echo "Building APP image: ${FULL_IMAGE} (platform: ${PLATFORM})"
+
+    # Copy shared scripts from shared/ (single source of truth)
+    cp ../shared/skill_tracker.ts skill_tracker.ts
+    cp ../shared/check_xp_rate.ts check_xp_rate.ts
+
+    if [ "$PUSH" = "1" ] || [ "$PUSH" = "true" ]; then
+        docker buildx build --platform "${PLATFORM}" -t "${FULL_IMAGE}" --push .
+        echo "Built and pushed: ${FULL_IMAGE}"
+    else
+        docker buildx build --platform "${PLATFORM}" -t "${FULL_IMAGE}" --load .
+        echo "Built: ${FULL_IMAGE}"
+    fi
 fi

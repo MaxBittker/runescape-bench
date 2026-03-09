@@ -3,6 +3,7 @@ tasks/
 
 # Job outputs — extracted to results/ by extract scripts
 jobs/
+jobs-v1/
 
 # Secrets
 .env
@@ -17,10 +18,14 @@ __pycache__/
 results/_combined.json
 
 # Ignore results subdirs except _data.js (needed by GitHub Pages viewers)
+results/skills-10m/*
+!results/skills-10m/_data.js
 results/skills-30m/*
 !results/skills-30m/_data.js
+results/skills-30m-v1/
 results/gold/*
 !results/gold/_data.js
 
-# Build artifact copied by docker/build.sh
+# Build artifacts copied by docker/build.sh
 docker/skill_tracker.ts
+docker/check_xp_rate.ts

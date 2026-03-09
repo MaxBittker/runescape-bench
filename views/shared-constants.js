@@ -40,6 +40,12 @@ function formatXp(xp) {
   return String(xp);
 }
 
+function formatRate(rate) {
+  if (rate >= 1_000_000) return (rate / 1_000_000).toFixed(1) + 'M/hr';
+  if (rate >= 1_000) return (rate / 1_000).toFixed(1) + 'k/hr';
+  return Math.round(rate) + '/hr';
+}
+
 function sanitizePoints(points) {
   if (points.length < 3) return points;
   const result = [];
@@ -52,6 +58,7 @@ function sanitizePoints(points) {
   return result;
 }
 
+/** Extract raw XP points over time for a skill (used by trajectory views) */
 function extractSkillPoints(skillData, skill, horizonMinutes) {
   if (!skillData || !skillData.samples || skillData.samples.length === 0) return [];
   const skillNameCaps = SKILL_DISPLAY[skill] || skill;
@@ -74,4 +81,49 @@ function extractSkillPoints(skillData, skill, horizonMinutes) {
   }
 
   return sanitizePoints(points);
+}
+
+/**
+ * Extract peak XP rate (XP/hr) over time for a skill.
+ * Returns monotonically increasing points: at each sample, the running max of
+ * per-window XP rates seen so far.
+ */
+function extractPeakRatePoints(skillData, skill, horizonMinutes) {
+  if (!skillData || !skillData.samples || skillData.samples.length < 2) return [];
+  const skillNameCaps = SKILL_DISPLAY[skill] || skill;
+
+  function getXp(sample) {
+    if (!sample.skills) return 0;
+    for (const [sName, sData] of Object.entries(sample.skills)) {
+      if (sName.toLowerCase() === skillNameCaps.toLowerCase() ||
+          sName.toLowerCase() === skill.toLowerCase()) {
+        return sData.xp || 0;
+      }
+    }
+    return 0;
+  }
+
+  let peakRate = 0;
+  const points = [];
+  const samples = skillData.samples;
+
+  for (let i = 0; i < samples.length; i++) {
+    const s = samples[i];
+    const x = s.elapsedMs / 60000;
+    if (x > horizonMinutes) break;
+
+    if (i > 0) {
+      const prev = samples[i - 1];
+      const deltaXp = getXp(s) - getXp(prev);
+      const deltaMs = s.elapsedMs - prev.elapsedMs;
+      if (deltaMs > 0 && deltaXp > 0) {
+        const rate = (deltaXp / deltaMs) * 3600000;
+        if (rate > peakRate) peakRate = rate;
+      }
+    }
+
+    points.push({ x, y: Math.round(peakRate) });
+  }
+
+  return points;
 }

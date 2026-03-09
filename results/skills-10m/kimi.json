@@ -3,6 +3,7 @@
   "skills": {
     "hitpoints": {
       "jobName": "skills-10m-kimi-20260306-101725",
+      "peakXpRate": 218400,
       "finalXp": 13687,
       "finalLevel": 38,
       "durationSeconds": 585.015,
@@ -577,19 +578,21 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-kimi-20260306-101725/hitpoints-xp-10m__dUSPPVr",
       "videoAvailable": true,
+      "videoDuration": 596,
       "containerStartedAt": "2026-03-06T15:39:28.790211Z",
       "containerFinishedAt": "2026-03-06T15:50:21.617028Z",
       "agentStartedAt": "2026-03-06T15:39:50.435480Z"
     },
     "strength": {
-      "jobName": "skills-10m-kimi-20260305-231653",
-      "finalXp": 15100,
-      "finalLevel": 39,
-      "durationSeconds": 591.705,
-      "sampleCount": 41,
+      "jobName": "strength-xp-10m-kimi-20260227-153822",
+      "peakXpRate": 527930,
+      "finalXp": 5200,
+      "finalLevel": 25,
+      "durationSeconds": 585.044,
+      "sampleCount": 40,
       "samples": [
         {
-          "elapsedMs": 0,
+          "elapsedMs": 1,
           "skills": {
             "Strength": {
               "level": 1,
@@ -601,7 +604,7 @@
           }
         },
         {
-          "elapsedMs": 6691,
+          "elapsedMs": 15006,
           "skills": {
             "Strength": {
               "level": 1,
@@ -613,7 +616,7 @@
           }
         },
         {
-          "elapsedMs": 21692,
+          "elapsedMs": 30006,
           "skills": {
             "Strength": {
               "level": 1,
@@ -625,7 +628,7 @@
           }
         },
         {
-          "elapsedMs": 36692,
+          "elapsedMs": 45006,
           "skills": {
             "Strength": {
               "level": 1,
@@ -637,7 +640,7 @@
           }
         },
         {
-          "elapsedMs": 51692,
+          "elapsedMs": 60006,
           "skills": {
             "Strength": {
               "level": 1,
@@ -649,7 +652,7 @@
           }
         },
         {
-          "elapsedMs": 66692,
+          "elapsedMs": 75008,
           "skills": {
             "Strength": {
               "level": 1,
@@ -661,7 +664,7 @@
           }
         },
         {
-          "elapsedMs": 81693,
+          "elapsedMs": 90010,
           "skills": {
             "Strength": {
               "level": 1,
@@ -673,7 +676,7 @@
           }
         },
         {
-          "elapsedMs": 96693,
+          "elapsedMs": 105011,
           "skills": {
             "Strength": {
               "level": 1,
@@ -685,7 +688,7 @@
           }
         },
         {
-          "elapsedMs": 111693,
+          "elapsedMs": 120012,
           "skills": {
             "Strength": {
               "level": 1,
@@ -697,7 +700,7 @@
           }
         },
         {
-          "elapsedMs": 126693,
+          "elapsedMs": 135014,
           "skills": {
             "Strength": {
               "level": 1,
@@ -709,7 +712,7 @@
           }
         },
         {
-          "elapsedMs": 141693,
+          "elapsedMs": 150014,
           "skills": {
             "Strength": {
               "level": 1,
@@ -721,7 +724,7 @@
           }
         },
         {
-          "elapsedMs": 156693,
+          "elapsedMs": 165015,
           "skills": {
             "Strength": {
               "level": 1,
@@ -733,7 +736,7 @@
           }
         },
         {
-          "elapsedMs": 171694,
+          "elapsedMs": 180018,
           "skills": {
             "Strength": {
               "level": 1,
@@ -745,7 +748,7 @@
           }
         },
         {
-          "elapsedMs": 186694,
+          "elapsedMs": 195018,
           "skills": {
             "Strength": {
               "level": 1,
@@ -757,7 +760,199 @@
           }
         },
         {
-          "elapsedMs": 201694,
+          "elapsedMs": 210018,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 225020,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 240021,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 255021,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 270021,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 285023,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 300024,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 315025,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 330026,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 345028,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 360028,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 375028,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 390029,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 405030,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 420030,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 435031,
+          "skills": {
+            "Strength": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 450032,
           "skills": {
             "Strength": {
               "level": 7,
@@ -769,7 +964,67 @@
           }
         },
         {
-          "elapsedMs": 216694,
+          "elapsedMs": 465033,
+          "skills": {
+            "Strength": {
+              "level": 7,
+              "xp": 700
+            },
+            "Hitpoints": {
+              "level": 11
+            }
+          }
+        },
+        {
+          "elapsedMs": 480035,
+          "skills": {
+            "Strength": {
+              "level": 7,
+              "xp": 700
+            },
+            "Hitpoints": {
+              "level": 11
+            }
+          }
+        },
+        {
+          "elapsedMs": 495039,
+          "skills": {
+            "Strength": {
+              "level": 7,
+              "xp": 700
+            },
+            "Hitpoints": {
+              "level": 11
+            }
+          }
+        },
+        {
+          "elapsedMs": 510039,
+          "skills": {
+            "Strength": {
+              "level": 7,
+              "xp": 700
+            },
+            "Hitpoints": {
+              "level": 11
+            }
+          }
+        },
+        {
+          "elapsedMs": 525039,
+          "skills": {
+            "Strength": {
+              "level": 7,
+              "xp": 700
+            },
+            "Hitpoints": {
+              "level": 11
+            }
+          }
+        },
+        {
+          "elapsedMs": 540041,
           "skills": {
             "Strength": {
               "level": 12,
@@ -781,19 +1036,7 @@
           }
         },
         {
-          "elapsedMs": 231695,
-          "skills": {
-            "Strength": {
-              "level": 19,
-              "xp": 2900
-            },
-            "Hitpoints": {
-              "level": 15
-            }
-          }
-        },
-        {
-          "elapsedMs": 246695,
+          "elapsedMs": 555043,
           "skills": {
             "Strength": {
               "level": 21,
@@ -805,278 +1048,26 @@
           }
         },
         {
-          "elapsedMs": 261695,
+          "elapsedMs": 570044,
           "skills": {
             "Strength": {
-              "level": 26,
-              "xp": 5700
+              "level": 25,
+              "xp": 5200
             },
             "Hitpoints": {
-              "level": 19
+              "level": 18
             }
           }
         },
         {
-          "elapsedMs": 276696,
+          "elapsedMs": 585044,
           "skills": {
             "Strength": {
-              "level": 28,
-              "xp": 6400
+              "level": 25,
+              "xp": 5200
             },
             "Hitpoints": {
-              "level": 19
-            }
-          }
-        },
-        {
-          "elapsedMs": 291696,
-          "skills": {
-            "Strength": {
-              "level": 30,
-              "xp": 7800
-            },
-            "Hitpoints": {
-              "level": 21
-            }
-          }
-        },
-        {
-          "elapsedMs": 306696,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 321697,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 336697,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 351698,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 366698,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 381698,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 396698,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 411698,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 9300
-            },
-            "Hitpoints": {
-              "level": 22
-            }
-          }
-        },
-        {
-          "elapsedMs": 426699,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 10000
-            },
-            "Hitpoints": {
-              "level": 23
-            }
-          }
-        },
-        {
-          "elapsedMs": 441700,
-          "skills": {
-            "Strength": {
-              "level": 33,
-              "xp": 10000
-            },
-            "Hitpoints": {
-              "level": 23
-            }
-          }
-        },
-        {
-          "elapsedMs": 456700,
-          "skills": {
-            "Strength": {
-              "level": 34,
-              "xp": 10700
-            },
-            "Hitpoints": {
-              "level": 24
-            }
-          }
-        },
-        {
-          "elapsedMs": 471701,
-          "skills": {
-            "Strength": {
-              "level": 34,
-              "xp": 10700
-            },
-            "Hitpoints": {
-              "level": 24
-            }
-          }
-        },
-        {
-          "elapsedMs": 486702,
-          "skills": {
-            "Strength": {
-              "level": 36,
-              "xp": 12200
-            },
-            "Hitpoints": {
-              "level": 25
-            }
-          }
-        },
-        {
-          "elapsedMs": 501703,
-          "skills": {
-            "Strength": {
-              "level": 37,
-              "xp": 13000
-            },
-            "Hitpoints": {
-              "level": 25
-            }
-          }
-        },
-        {
-          "elapsedMs": 516703,
-          "skills": {
-            "Strength": {
-              "level": 38,
-              "xp": 13700
-            },
-            "Hitpoints": {
-              "level": 26
-            }
-          }
-        },
-        {
-          "elapsedMs": 531704,
-          "skills": {
-            "Strength": {
-              "level": 38,
-              "xp": 13700
-            },
-            "Hitpoints": {
-              "level": 26
-            }
-          }
-        },
-        {
-          "elapsedMs": 546704,
-          "skills": {
-            "Strength": {
-              "level": 38,
-              "xp": 14400
-            },
-            "Hitpoints": {
-              "level": 26
-            }
-          }
-        },
-        {
-          "elapsedMs": 561705,
-          "skills": {
-            "Strength": {
-              "level": 38,
-              "xp": 14400
-            },
-            "Hitpoints": {
-              "level": 26
-            }
-          }
-        },
-        {
-          "elapsedMs": 576705,
-          "skills": {
-            "Strength": {
-              "level": 39,
-              "xp": 15100
-            },
-            "Hitpoints": {
-              "level": 27
-            }
-          }
-        },
-        {
-          "elapsedMs": 591705,
-          "skills": {
-            "Strength": {
-              "level": 39,
-              "xp": 15100
-            },
-            "Hitpoints": {
-              "level": 27
+              "level": 18
             }
           }
         }
@@ -1087,12 +1078,52 @@
           "text": "[kimi-loop] Run 1 starting (budget=600s)"
         },
         {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
+        },
+        {
           "source": "agent",
-          "text": " I'll start by checking the agent's current state and then begin Strength training immediately."
+          "text": " Let me start by connecting to the bot and checking its current state, then immediately begin Strength training."
+        },
+        {
+          "source": "agent",
+          "text": "  I can see the bot is connected. Strength is at level 1 with 0 XP. I have a Bronze sword in inventory. Let me start training immediately by equipping it and attacking a nearby monster with Aggressive style."
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent state"
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "tool",
+          "text": "bash: .ls -la bots/agent/ 2>/dev/null || echo \"No agent folder\""
+        },
+        {
+          "source": "agent",
+          "text": "Let me check the SDK documentation or examples:"
+        },
+        {
+          "source": "tool",
+          "text": "todowrite"
         },
         {
           "source": "tool",
@@ -1101,6 +1132,18 @@
         {
           "source": "tool",
           "text": "glob"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/package.json"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/API.md"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/learnings/combat.md"
         },
         {
           "source": "tool",
@@ -1108,55 +1151,79 @@
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/test/combat-training.ts"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/agents.md"
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la /app/bots/"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots/agent/bot.env"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent --server localhost 2>&1 | head -100"
+          "text": "rs-agent_execute_code"
         },
         {
           "source": "agent",
-          "text": "  Agent is in-game with 0 Strength XP. Starting Strength training immediately with combat."
+          "text": "Now I understand the SDK! Let me start training Strength immediately with a minimal script:"
         },
         {
           "source": "tool",
-          "text": "bash: cat > /tmp/strength_train.ts << 'EOF'\nimport { BotSDK } from './sdk';\nimport { BotActions } from './sdk/actions';\n\nconst sdk = new BotSDK({\n    botUsername: 'agent',\n    password: 'test',\n    ho"
+          "text": "todowrite"
         },
         {
           "source": "tool",
-          "text": "bash: cat > /app/strength_train.ts << 'EOF'\nimport { BotSDK } from './sdk';\nimport { BotActions } from './sdk/actions';\n\nconst sdk = new BotSDK({\n    botUsername: 'agent',\n    password: 'test',\n    ho"
+          "text": "glob"
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent --server localhost 2>&1 | grep -A 30 \"Skills\""
+          "text": "glob"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/package.json"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/API.md"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/learnings/combat.md"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/README.md"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
         },
         {
           "source": "agent",
-          "text": "   Excellent! Agent gained **9,300 Strength XP** reaching level 33. Let me continue training to maximize gains for the remaining time."
+          "text": " Now I understand the SDK! Let me start training Strength immediately with a minimal script:"
         },
         {
           "source": "tool",
-          "text": "bash: cat > /app/strength_continue.ts << 'EOF'\nimport { BotSDK } from './sdk';\nimport { BotActions } from './sdk/actions';\n\nconst sdk = new BotSDK({\n    botUsername: 'agent',\n    password: 'test',\n   "
+          "text": "rs-agent_execute_code"
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent --server localhost 2>&1 | head -60"
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "tool",
+          "text": "todowrite"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
         },
         {
           "source": "agent",
-          "text": "    Current: **Strength Level 38 (13,700 XP)**. Running optimized final training session."
+          "text": " Sword is equipped but combat style is still 0 (Accurate). Let me attack a target and try to fix the combat style:"
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
+        },
+        {
+          "source": "agent",
+          "text": " Excellent! I'm now in combat and already gained **100 Strength XP** and reached **Strength level 2**! Combat style is now \"Slash (Aggressive) - trains Strength\" which is perfect."
+        },
+        {
+          "source": "tool",
+          "text": "rs-agent_execute_code"
         },
         {
           "source": "agent",
@@ -1164,7 +1231,7 @@
         },
         {
           "source": "agent",
-          "text": "[kimi-loop] Elapsed: 600s, Remaining: 0s"
+          "text": "[kimi-loop] Elapsed: 601s, Remaining: -1s"
         },
         {
           "source": "agent",
@@ -1176,14 +1243,16 @@
         }
       ],
       "trimmedSamples": 1,
-      "trialDir": "jobs/skills-10m-kimi-20260305-231653/strength-xp-10m__DQ3nAuz",
+      "trialDir": "jobs/strength-xp-10m-kimi-20260227-153822/strength-xp-10m__7k9kDig",
       "videoAvailable": true,
-      "containerStartedAt": "2026-03-06T04:38:58.879883Z",
-      "containerFinishedAt": "2026-03-06T04:50:37.328898Z",
-      "agentStartedAt": "2026-03-06T04:39:20.489962Z"
+      "videoDuration": 611,
+      "containerStartedAt": "2026-02-27T20:39:23.191692Z",
+      "containerFinishedAt": "2026-02-27T20:50:58.941574Z",
+      "agentStartedAt": "2026-02-27T20:39:54.362336Z"
     },
     "magic": {
       "jobName": "skills-10m-kimi-20260305-154959",
+      "peakXpRate": 101993,
       "finalXp": 2725,
       "finalLevel": 18,
       "durationSeconds": 585.057,
@@ -1919,16 +1988,18 @@
       "trimmedSamples": 2,
       "trialDir": "jobs/skills-10m-kimi-20260305-154959/magic-xp-10m__9HFMdFW",
       "videoAvailable": true,
+      "videoDuration": 614,
       "containerStartedAt": "2026-03-05T23:59:42.709349Z",
       "containerFinishedAt": "2026-03-06T00:11:19.580592Z",
       "agentStartedAt": "2026-03-06T00:00:17.264282Z"
     },
     "firemaking": {
-      "jobName": "skills-10m-kimi-20260305-154959",
-      "finalXp": 73000,
-      "finalLevel": 61,
-      "durationSeconds": 545.464,
-      "sampleCount": 38,
+      "jobName": "skills-10m-kimi-20260306-101725",
+      "peakXpRate": 2399680,
+      "finalXp": 69000,
+      "finalLevel": 60,
+      "durationSeconds": 585.041,
+      "sampleCount": 40,
       "samples": [
         {
           "elapsedMs": 0,
@@ -1943,7 +2014,7 @@
           }
         },
         {
-          "elapsedMs": 5448,
+          "elapsedMs": 15002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -1955,7 +2026,7 @@
           }
         },
         {
-          "elapsedMs": 20451,
+          "elapsedMs": 30003,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -1967,7 +2038,7 @@
           }
         },
         {
-          "elapsedMs": 35452,
+          "elapsedMs": 45004,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -1979,7 +2050,7 @@
           }
         },
         {
-          "elapsedMs": 50452,
+          "elapsedMs": 60005,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -1991,7 +2062,7 @@
           }
         },
         {
-          "elapsedMs": 65452,
+          "elapsedMs": 75006,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2003,7 +2074,7 @@
           }
         },
         {
-          "elapsedMs": 80452,
+          "elapsedMs": 90006,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2015,7 +2086,7 @@
           }
         },
         {
-          "elapsedMs": 95452,
+          "elapsedMs": 105008,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2027,7 +2098,7 @@
           }
         },
         {
-          "elapsedMs": 110452,
+          "elapsedMs": 120008,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2039,91 +2110,52 @@
           }
         },
         {
-          "elapsedMs": 125452,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Firemaking": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 140452,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Firemaking": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 155453,
+          "elapsedMs": 135009,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 15
+              "level": 11
             },
             "Firemaking": {
-              "level": 15,
-              "xp": 2000
+              "level": 10,
+              "xp": 1000
             }
           }
         },
         {
-          "elapsedMs": 170453,
+          "elapsedMs": 150010,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 28
+              "level": 23
             },
             "Firemaking": {
-              "level": 33,
-              "xp": 10000
+              "level": 27,
+              "xp": 6000
             }
           }
         },
         {
-          "elapsedMs": 185453,
+          "elapsedMs": 165012,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 33
+              "level": 30
             },
             "Firemaking": {
-              "level": 40,
-              "xp": 16000
+              "level": 36,
+              "xp": 12000
             }
           }
         },
         {
-          "elapsedMs": 200455,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 33
-            },
-            "Firemaking": {
-              "level": 40,
-              "xp": 16000
-            }
-          }
-        },
-        {
-          "elapsedMs": 215455,
+          "elapsedMs": 180013,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2138,28 +2170,28 @@
           }
         },
         {
-          "elapsedMs": 230457,
+          "elapsedMs": 195013,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 39
+              "level": 40
             },
             "Firemaking": {
-              "level": 45,
-              "xp": 24000
+              "level": 46,
+              "xp": 26000
             }
           }
         },
         {
-          "elapsedMs": 245457,
+          "elapsedMs": 210014,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 43
+              "level": 42
             },
             "Firemaking": {
               "level": 48,
@@ -2168,7 +2200,37 @@
           }
         },
         {
-          "elapsedMs": 260458,
+          "elapsedMs": 225015,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 42
+            },
+            "Firemaking": {
+              "level": 48,
+              "xp": 30000
+            }
+          }
+        },
+        {
+          "elapsedMs": 240016,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 44
+            },
+            "Firemaking": {
+              "level": 51,
+              "xp": 36000
+            }
+          }
+        },
+        {
+          "elapsedMs": 255017,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2178,72 +2240,72 @@
             },
             "Firemaking": {
               "level": 52,
-              "xp": 39000
+              "xp": 38000
             }
           }
         },
         {
-          "elapsedMs": 275458,
+          "elapsedMs": 270017,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 47
+              "level": 48
             },
             "Firemaking": {
-              "level": 53,
-              "xp": 41000
+              "level": 54,
+              "xp": 44000
             }
           }
         },
         {
-          "elapsedMs": 290458,
+          "elapsedMs": 285017,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 47
-            },
-            "Firemaking": {
-              "level": 53,
-              "xp": 41000
-            }
-          }
-        },
-        {
-          "elapsedMs": 305459,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 50
+              "level": 49
             },
             "Firemaking": {
               "level": 55,
-              "xp": 49000
+              "xp": 48000
             }
           }
         },
         {
-          "elapsedMs": 320459,
+          "elapsedMs": 300018,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 52
+              "level": 49
             },
             "Firemaking": {
-              "level": 58,
-              "xp": 58000
+              "level": 55,
+              "xp": 48000
             }
           }
         },
         {
-          "elapsedMs": 335460,
+          "elapsedMs": 315020,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 51
+            },
+            "Firemaking": {
+              "level": 57,
+              "xp": 54000
+            }
+          }
+        },
+        {
+          "elapsedMs": 330022,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2253,967 +2315,262 @@
             },
             "Firemaking": {
               "level": 59,
-              "xp": 66000
+              "xp": 64000
             }
           }
         },
         {
-          "elapsedMs": 350460,
+          "elapsedMs": 345023,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 365461,
+          "elapsedMs": 360024,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 380461,
+          "elapsedMs": 375024,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 395461,
+          "elapsedMs": 390026,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 410462,
+          "elapsedMs": 405027,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 425462,
+          "elapsedMs": 420028,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 440463,
+          "elapsedMs": 435029,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 455463,
+          "elapsedMs": 450030,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 470463,
+          "elapsedMs": 465032,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 485463,
+          "elapsedMs": 480033,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 500463,
+          "elapsedMs": 495035,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 515464,
+          "elapsedMs": 510037,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 530464,
+          "elapsedMs": 525038,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 545464,
+          "elapsedMs": 540038,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 55
+              "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 73000
+              "level": 60,
+              "xp": 69000
             }
           }
-        }
-      ],
-      "trajectory": [
-        {
-          "source": "agent",
-          "text": "[kimi-loop] Run 1 starting (budget=600s)"
         },
         {
-          "source": "tool",
-          "text": "glob"
-        },
-        {
-          "source": "tool",
-          "text": "glob"
-        },
-        {
-          "source": "agent",
-          "text": "I'll start by exploring the codebase to understand the available SDK tools for interacting with the RuneScape server."
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la /app"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/README.md"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots/agent"
-        },
-        {
-          "source": "tool",
-          "text": "glob"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/test/woodcutting-firemaking.ts"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots/agent/bot.env"
-        },
-        {
-          "source": "agent",
-          "text": " I'll create a simple Firemaking script. The strategy is to chop trees for logs, then burn them for Firemaking XP."
-        },
-        {
-          "source": "tool",
-          "text": "write: /app/firemaking.ts"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/types.ts"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/firemaking.ts"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/firemaking.ts"
-        },
-        {
-          "source": "agent",
-          "text": "The file is already fixed. Let me run the script now to start training Firemaking immediately."
-        },
-        {
-          "source": "tool",
-          "text": "bash: BOT_NAME=agent bun firemaking.ts"
-        },
-        {
-          "source": "agent",
-          "text": "The script is working well - already burned 40 logs! It's gaining Firemaking XP. The timeout occurred because I set the bash timeout too short. Let me run it again with proper timeout for the full 10 minutes."
-        },
-        {
-          "source": "tool",
-          "text": "bash: BOT_NAME=agent bun firemaking.ts"
-        },
-        {
-          "source": "agent",
-          "text": "Good progress! The bot already has 41,000 XP and gained more. However, it's getting stuck wandering near doors. Let me create an improved script that handles this better."
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "tool",
-          "text": "skill"
-        },
-        {
-          "source": "tool",
-          "text": "read: "
-        },
-        {
-          "source": "tool",
-          "text": "read: "
-        },
-        {
-          "source": "tool",
-          "text": "bash: "
-        },
-        {
-          "source": "tool",
-          "text": "skill"
-        },
-        {
-          "source": "tool",
-          "text": "todowrite"
-        },
-        {
-          "source": "tool",
-          "text": "read: "
-        },
-        {
-          "source": "tool",
-          "text": "glob"
-        },
-        {
-          "source": "tool",
-          "text": "grep"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/index.ts"
-        },
-        {
-          "source": "tool",
-          "text": "todowrite"
-        },
-        {
-          "source": "agent",
-          "text": "The firemaking script is working! In the runs so far, the bot has:\n\n**Results:**\n- **Starting XP:** 41,000\n- **Logs burned:** 40+ in first 2 minutes\n- **Strategy:** Chops trees → burns logs for Firemaking XP\n\nThe script successfully connects to localhost, chops trees, and burns logs. The bot was gaining XP effectively but got stuck wandering near doors in Lumbridge.\n\nTo continue training, simply run:\n```bash\nBOT_NAME=agent bun firemaking.ts\n```\n\nThe script will run for 9.5 minutes and automatically report total XP gained at the end."
-        },
-        {
-          "source": "agent",
-          "text": "[kimi-loop] opencode exited after ${KIMI_RUN_DUR}s"
-        },
-        {
-          "source": "agent",
-          "text": "[kimi-loop] Elapsed: 545s, Remaining: 55s"
-        },
-        {
-          "source": "agent",
-          "text": "[kimi-loop] Less than 180s remaining, stopping restart loop"
-        },
-        {
-          "source": "agent",
-          "text": "[kimi-loop] Finished after 1 runs"
-        }
-      ],
-      "trialDir": "jobs/skills-10m-kimi-20260305-154959/firemaking-xp-10m__DASapyP",
-      "videoAvailable": true,
-      "containerStartedAt": "2026-03-05T23:59:42.717070Z",
-      "containerFinishedAt": "2026-03-06T00:10:01.463657Z",
-      "agentStartedAt": "2026-03-06T00:00:05.774595Z"
-    },
-    "prayer": {
-      "jobName": "skills-10m-kimi-20260306-101725",
-      "finalXp": 4050,
-      "finalLevel": 22,
-      "durationSeconds": 590.442,
-      "sampleCount": 41,
-      "samples": [
-        {
-          "elapsedMs": 1,
+          "elapsedMs": 555039,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
+            "Woodcutting": {
+              "level": 54
+            },
+            "Firemaking": {
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 5423,
+          "elapsedMs": 570040,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
+            "Woodcutting": {
+              "level": 54
+            },
+            "Firemaking": {
+              "level": 60,
+              "xp": 69000
             }
           }
         },
         {
-          "elapsedMs": 20425,
+          "elapsedMs": 585041,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 35426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 50426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 65426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 80426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 95426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 110426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 125426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 140426,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 155427,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 170427,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 185427,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 200428,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 215428,
-          "skills": {
-            "Attack": {
-              "level": 13
-            },
-            "Hitpoints": {
-              "level": 12
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 230429,
-          "skills": {
-            "Attack": {
-              "level": 19
-            },
-            "Hitpoints": {
-              "level": 15
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 245429,
-          "skills": {
-            "Attack": {
-              "level": 19
-            },
-            "Hitpoints": {
-              "level": 15
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 260429,
-          "skills": {
-            "Attack": {
-              "level": 19
-            },
-            "Hitpoints": {
-              "level": 15
-            },
-            "Prayer": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 275429,
-          "skills": {
-            "Attack": {
-              "level": 23
-            },
-            "Hitpoints": {
-              "level": 17
-            },
-            "Prayer": {
-              "level": 2,
-              "xp": 112
-            }
-          }
-        },
-        {
-          "elapsedMs": 290429,
-          "skills": {
-            "Attack": {
-              "level": 27
-            },
-            "Hitpoints": {
-              "level": 19
-            },
-            "Prayer": {
-              "level": 4,
-              "xp": 337
-            }
-          }
-        },
-        {
-          "elapsedMs": 305429,
-          "skills": {
-            "Attack": {
-              "level": 29
-            },
-            "Hitpoints": {
-              "level": 20
-            },
-            "Prayer": {
-              "level": 7,
-              "xp": 675
-            }
-          }
-        },
-        {
-          "elapsedMs": 320430,
-          "skills": {
-            "Attack": {
-              "level": 32
-            },
-            "Hitpoints": {
-              "level": 22
-            },
-            "Prayer": {
-              "level": 9,
-              "xp": 900
-            }
-          }
-        },
-        {
-          "elapsedMs": 335430,
-          "skills": {
-            "Attack": {
-              "level": 35
-            },
-            "Hitpoints": {
-              "level": 24
-            },
-            "Prayer": {
-              "level": 11,
-              "xp": 1237
-            }
-          }
-        },
-        {
-          "elapsedMs": 350430,
-          "skills": {
-            "Attack": {
-              "level": 36
-            },
-            "Hitpoints": {
-              "level": 25
-            },
-            "Prayer": {
-              "level": 12,
-              "xp": 1462
-            }
-          }
-        },
-        {
-          "elapsedMs": 365430,
-          "skills": {
-            "Attack": {
-              "level": 38
-            },
-            "Hitpoints": {
-              "level": 26
-            },
-            "Prayer": {
-              "level": 14,
-              "xp": 1687
-            }
-          }
-        },
-        {
-          "elapsedMs": 380430,
-          "skills": {
-            "Attack": {
-              "level": 40
-            },
-            "Hitpoints": {
-              "level": 27
-            },
-            "Prayer": {
-              "level": 15,
-              "xp": 2025
-            }
-          }
-        },
-        {
-          "elapsedMs": 395431,
-          "skills": {
-            "Attack": {
-              "level": 41
-            },
-            "Hitpoints": {
-              "level": 28
-            },
-            "Prayer": {
-              "level": 17,
-              "xp": 2362
-            }
-          }
-        },
-        {
-          "elapsedMs": 410431,
-          "skills": {
-            "Attack": {
-              "level": 42
-            },
-            "Hitpoints": {
-              "level": 29
-            },
-            "Prayer": {
-              "level": 18,
-              "xp": 2812
-            }
-          }
-        },
-        {
-          "elapsedMs": 425431,
-          "skills": {
-            "Attack": {
-              "level": 43
-            },
-            "Hitpoints": {
-              "level": 30
-            },
-            "Prayer": {
-              "level": 19,
-              "xp": 2925
-            }
-          }
-        },
-        {
-          "elapsedMs": 440431,
-          "skills": {
-            "Attack": {
-              "level": 44
-            },
-            "Hitpoints": {
-              "level": 31
-            },
-            "Prayer": {
-              "level": 20,
-              "xp": 3150
-            }
-          }
-        },
-        {
-          "elapsedMs": 455438,
-          "skills": {
-            "Attack": {
-              "level": 45
-            },
-            "Hitpoints": {
-              "level": 32
-            },
-            "Prayer": {
-              "level": 21,
-              "xp": 3487
-            }
-          }
-        },
-        {
-          "elapsedMs": 470439,
-          "skills": {
-            "Attack": {
-              "level": 45
-            },
-            "Hitpoints": {
-              "level": 32
-            },
-            "Prayer": {
-              "level": 21,
-              "xp": 3487
-            }
-          }
-        },
-        {
-          "elapsedMs": 485439,
-          "skills": {
-            "Attack": {
-              "level": 46
-            },
-            "Hitpoints": {
-              "level": 32
-            },
-            "Prayer": {
-              "level": 21,
-              "xp": 3600
-            }
-          }
-        },
-        {
-          "elapsedMs": 500440,
-          "skills": {
-            "Attack": {
-              "level": 47
-            },
-            "Hitpoints": {
-              "level": 33
-            },
-            "Prayer": {
-              "level": 22,
-              "xp": 3937
-            }
-          }
-        },
-        {
-          "elapsedMs": 515441,
-          "skills": {
-            "Attack": {
-              "level": 47
-            },
-            "Hitpoints": {
-              "level": 34
-            },
-            "Prayer": {
-              "level": 22,
-              "xp": 4050
-            }
-          }
-        },
-        {
-          "elapsedMs": 530441,
-          "skills": {
-            "Attack": {
-              "level": 47
-            },
-            "Hitpoints": {
-              "level": 34
-            },
-            "Prayer": {
-              "level": 22,
-              "xp": 4050
-            }
-          }
-        },
-        {
-          "elapsedMs": 545441,
-          "skills": {
-            "Attack": {
-              "level": 47
-            },
-            "Hitpoints": {
-              "level": 34
-            },
-            "Prayer": {
-              "level": 22,
-              "xp": 4050
-            }
-          }
-        },
-        {
-          "elapsedMs": 560442,
-          "skills": {
-            "Attack": {
-              "level": 47
-            },
-            "Hitpoints": {
-              "level": 34
-            },
-            "Prayer": {
-              "level": 22,
-              "xp": 4050
-            }
-          }
-        },
-        {
-          "elapsedMs": 575442,
-          "skills": {
-            "Attack": {
-              "level": 47
-            },
-            "Hitpoints": {
-              "level": 34
-            },
-            "Prayer": {
-              "level": 22,
-              "xp": 4050
-            }
-          }
-        },
-        {
-          "elapsedMs": 590442,
-          "skills": {
-            "Attack": {
-              "level": 47
-            },
-            "Hitpoints": {
-              "level": 34
-            },
-            "Prayer": {
-              "level": 22,
-              "xp": 4050
+            "Woodcutting": {
+              "level": 54
+            },
+            "Firemaking": {
+              "level": 60,
+              "xp": 69000
             }
           }
         }
@@ -3233,79 +2590,7 @@
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec \"return sdk.getInventory()\""
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la"
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat sdk/cli.ts | head -50"
-        },
-        {
-          "source": "agent",
-          "text": "Let me check for local server configuration and explore the SDK setup:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: ps aux | grep -i rune"
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la bots/"
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat bots/agent/bot.env"
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat bots/agent/config.json"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent state --server localhost"
-        },
-        {
-          "source": "tool",
-          "text": "bash: netstat -tlnp | grep -E ':(43594|8080|80)'"
-        },
-        {
-          "source": "agent",
-          "text": "Perfect! Connected to local server. I can see:\n- Player is at Lumbridge spawn (3222, 3222)\n- Prayer level 1 with 0 XP\n- I have combat gear and can see rats/imp to kill for bones\n\nTo gain Prayer XP, I need to:\n1. Kill creatures that drop bones\n2. Pick up the bones\n3. Bury them for Prayer XP\n\nLet me start by killing rats and imps for bones:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec --server localhost '\n// Kill rats for bones and bury them\nconst results = [];\nfor (let i = 0; i < 5; i++) {\n  const rat = sdk.findNpc(\"Rat\");\n  if (rat) {\n    await bot"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec --server localhost 'return sdk.findNpc(\"Rat\")'"
-        },
-        {
-          "source": "agent",
-          "text": "Let me attack a rat directly and check what happens:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec --server localhost 'return sdk.getInventory().map(i => i.name)'"
-        },
-        {
-          "source": "agent",
-          "text": "Let me try attacking a rat directly using the exec format:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec --server localhost '\nconst rat = sdk.findNpc(\"Rat\");\nif (rat) {\n  await bot.attackNpc(rat);\n  return \"Attacked rat\";\n}\nreturn \"No rat found\";\n' 2>&1"
-        },
-        {
-          "source": "tool",
           "text": "read: /app/sdk/cli.ts"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/index.ts"
         },
         {
           "source": "tool",
@@ -3313,27 +2598,15 @@
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/runner.ts"
+          "text": "read: /app/sdk/test/woodcutting-firemaking.ts"
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/test/prayer.ts"
-        },
-        {
-          "source": "agent",
-          "text": "Now I understand. Let me create a script to train Prayer by killing monsters and burying bones:"
+          "text": "glob"
         },
         {
           "source": "tool",
-          "text": "write: /app/train-prayer.ts"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
+          "text": "read: /app/bots/_template/bot.env"
         },
         {
           "source": "tool",
@@ -3341,11 +2614,23 @@
         },
         {
           "source": "tool",
-          "text": "grep"
+          "text": "bash: ls -la bots/"
         },
         {
           "source": "tool",
-          "text": "grep"
+          "text": "bash: mkdir -p bots/agent && cat > bots/agent/bot.env << 'EOF'\nBOT_USERNAME=agent\nPASSWORD=agent\nSERVER=localhost\nSHOW_CHAT=false\nEOF"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent state"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun --env-file=bots/agent/bot.env sdk/cli.ts agent"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun --env-file=bots/agent/bot.env sdk/cli.ts agent state"
         },
         {
           "source": "tool",
@@ -3353,7 +2638,19 @@
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/index.ts"
+          "text": "bash: bun --env-file=bots/agent/bot.env sdk/cli.ts agent exec \"return sdk.findNearbyLoc(/^tree$/i)\""
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/runner.ts"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/train-firemaking.ts"
+        },
+        {
+          "source": "tool",
+          "text": "edit"
         },
         {
           "source": "tool",
@@ -3361,71 +2658,19 @@
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/actions-helpers.ts"
+          "text": "bash: grep -A 10 \"export interface SkillState\" /app/sdk/types.ts"
         },
         {
           "source": "tool",
-          "text": "grep"
+          "text": "edit"
         },
         {
           "source": "tool",
-          "text": "write: /app/train-prayer.ts"
+          "text": "edit"
         },
         {
           "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
-        },
-        {
-          "source": "agent",
-          "text": "I see the issue - no bones were collected. Rats might not drop bones reliably. Let me modify the script to find and kill monsters that definitely drop bones (like chickens or goblins), and improve item detection:"
-        },
-        {
-          "source": "tool",
-          "text": "write: /app/train-prayer.ts"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
-        },
-        {
-          "source": "agent",
-          "text": "Great! Gained 675 Prayer XP and reached level 7. Let me continue training to maximize XP within the time limit:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
-        },
-        {
-          "source": "agent",
-          "text": "Excellent! Now at 1,237 Prayer XP (level 11). Continuing to maximize gains:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
-        },
-        {
-          "source": "agent",
-          "text": "Great! Now at 2,025 Prayer XP (level 15). Continuing:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
-        },
-        {
-          "source": "agent",
-          "text": "Excellent progress! Now at 2,925 Prayer XP (level 19). Running one more round:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
-        },
-        {
-          "source": "agent",
-          "text": "Great! Now at 3,487 Prayer XP (level 21). Running final round:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-prayer.ts 2>&1"
+          "text": "edit"
         },
         {
           "source": "agent",
@@ -3445,14 +2690,812 @@
         }
       ],
       "trimmedSamples": 1,
-      "trialDir": "jobs/skills-10m-kimi-20260306-101725/prayer-xp-10m__WL8nxon",
+      "trialDir": "jobs/skills-10m-kimi-20260306-101725/firemaking-xp-10m__W79Hd6h",
       "videoAvailable": true,
-      "containerStartedAt": "2026-03-06T15:39:28.779871Z",
-      "containerFinishedAt": "2026-03-06T15:50:23.902819Z",
-      "agentStartedAt": "2026-03-06T15:39:52.213271Z"
+      "videoDuration": 606,
+      "containerStartedAt": "2026-03-06T15:39:28.784033Z",
+      "containerFinishedAt": "2026-03-06T15:50:29.292223Z",
+      "agentStartedAt": "2026-03-06T15:40:01.077676Z"
+    },
+    "prayer": {
+      "jobName": "skills-10m-kimi-20260305-231653",
+      "peakXpRate": 108000,
+      "finalXp": 3262,
+      "finalLevel": 20,
+      "durationSeconds": 585.017,
+      "sampleCount": 40,
+      "samples": [
+        {
+          "elapsedMs": 0,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 15001,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 30001,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 45001,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 60002,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 75003,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 90005,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 105006,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 120006,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Prayer": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 135007,
+          "skills": {
+            "Attack": {
+              "level": 12
+            },
+            "Hitpoints": {
+              "level": 12
+            },
+            "Prayer": {
+              "level": 3,
+              "xp": 225
+            }
+          }
+        },
+        {
+          "elapsedMs": 150008,
+          "skills": {
+            "Attack": {
+              "level": 17
+            },
+            "Hitpoints": {
+              "level": 14
+            },
+            "Prayer": {
+              "level": 4,
+              "xp": 337
+            }
+          }
+        },
+        {
+          "elapsedMs": 165008,
+          "skills": {
+            "Attack": {
+              "level": 22
+            },
+            "Hitpoints": {
+              "level": 16
+            },
+            "Prayer": {
+              "level": 6,
+              "xp": 562
+            }
+          }
+        },
+        {
+          "elapsedMs": 180008,
+          "skills": {
+            "Attack": {
+              "level": 26
+            },
+            "Hitpoints": {
+              "level": 18
+            },
+            "Prayer": {
+              "level": 10,
+              "xp": 1012
+            }
+          }
+        },
+        {
+          "elapsedMs": 195008,
+          "skills": {
+            "Attack": {
+              "level": 30
+            },
+            "Hitpoints": {
+              "level": 20
+            },
+            "Prayer": {
+              "level": 11,
+              "xp": 1237
+            }
+          }
+        },
+        {
+          "elapsedMs": 210008,
+          "skills": {
+            "Attack": {
+              "level": 32
+            },
+            "Hitpoints": {
+              "level": 22
+            },
+            "Prayer": {
+              "level": 12,
+              "xp": 1462
+            }
+          }
+        },
+        {
+          "elapsedMs": 225008,
+          "skills": {
+            "Attack": {
+              "level": 33
+            },
+            "Hitpoints": {
+              "level": 22
+            },
+            "Prayer": {
+              "level": 12,
+              "xp": 1462
+            }
+          }
+        },
+        {
+          "elapsedMs": 240008,
+          "skills": {
+            "Attack": {
+              "level": 35
+            },
+            "Hitpoints": {
+              "level": 24
+            },
+            "Prayer": {
+              "level": 13,
+              "xp": 1575
+            }
+          }
+        },
+        {
+          "elapsedMs": 255009,
+          "skills": {
+            "Attack": {
+              "level": 35
+            },
+            "Hitpoints": {
+              "level": 24
+            },
+            "Prayer": {
+              "level": 13,
+              "xp": 1575
+            }
+          }
+        },
+        {
+          "elapsedMs": 270009,
+          "skills": {
+            "Attack": {
+              "level": 36
+            },
+            "Hitpoints": {
+              "level": 25
+            },
+            "Prayer": {
+              "level": 14,
+              "xp": 1800
+            }
+          }
+        },
+        {
+          "elapsedMs": 285009,
+          "skills": {
+            "Attack": {
+              "level": 38
+            },
+            "Hitpoints": {
+              "level": 26
+            },
+            "Prayer": {
+              "level": 15,
+              "xp": 1912
+            }
+          }
+        },
+        {
+          "elapsedMs": 300009,
+          "skills": {
+            "Attack": {
+              "level": 39
+            },
+            "Hitpoints": {
+              "level": 27
+            },
+            "Prayer": {
+              "level": 16,
+              "xp": 2137
+            }
+          }
+        },
+        {
+          "elapsedMs": 315009,
+          "skills": {
+            "Attack": {
+              "level": 41
+            },
+            "Hitpoints": {
+              "level": 28
+            },
+            "Prayer": {
+              "level": 17,
+              "xp": 2362
+            }
+          }
+        },
+        {
+          "elapsedMs": 330009,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2587
+            }
+          }
+        },
+        {
+          "elapsedMs": 345010,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 360011,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 375011,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 390011,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 405012,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 420012,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 435013,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 450013,
+          "skills": {
+            "Attack": {
+              "level": 42
+            },
+            "Hitpoints": {
+              "level": 29
+            },
+            "Prayer": {
+              "level": 18,
+              "xp": 2700
+            }
+          }
+        },
+        {
+          "elapsedMs": 465013,
+          "skills": {
+            "Attack": {
+              "level": 43
+            },
+            "Hitpoints": {
+              "level": 30
+            },
+            "Prayer": {
+              "level": 19,
+              "xp": 2925
+            }
+          }
+        },
+        {
+          "elapsedMs": 480013,
+          "skills": {
+            "Attack": {
+              "level": 44
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3150
+            }
+          }
+        },
+        {
+          "elapsedMs": 495014,
+          "skills": {
+            "Attack": {
+              "level": 45
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3262
+            }
+          }
+        },
+        {
+          "elapsedMs": 510016,
+          "skills": {
+            "Attack": {
+              "level": 45
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3262
+            }
+          }
+        },
+        {
+          "elapsedMs": 525015,
+          "skills": {
+            "Attack": {
+              "level": 45
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3262
+            }
+          }
+        },
+        {
+          "elapsedMs": 540016,
+          "skills": {
+            "Attack": {
+              "level": 45
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3262
+            }
+          }
+        },
+        {
+          "elapsedMs": 555016,
+          "skills": {
+            "Attack": {
+              "level": 45
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3262
+            }
+          }
+        },
+        {
+          "elapsedMs": 570017,
+          "skills": {
+            "Attack": {
+              "level": 45
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3262
+            }
+          }
+        },
+        {
+          "elapsedMs": 585017,
+          "skills": {
+            "Attack": {
+              "level": 45
+            },
+            "Hitpoints": {
+              "level": 31
+            },
+            "Prayer": {
+              "level": 20,
+              "xp": 3262
+            }
+          }
+        }
+      ],
+      "trajectory": [
+        {
+          "source": "agent",
+          "text": "[kimi-loop] Run 1 starting (budget=600s)"
+        },
+        {
+          "source": "tool",
+          "text": "glob"
+        },
+        {
+          "source": "agent",
+          "text": " I'll help you maximize Prayer XP. Let me start by exploring the available files and checking the current state."
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent state"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/test/prayer.ts"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/test/prayer-activation.ts"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/actions.ts"
+        },
+        {
+          "source": "agent",
+          "text": "  Let me check the prayer test files and SDK documentation to understand how to train Prayer:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: ps aux | grep -E \"(rs|runescape|server|bun)\" | head -20"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/cli.ts"
+        },
+        {
+          "source": "agent",
+          "text": " Let me check the server status and SDK CLI documentation:"
+        },
+        {
+          "source": "tool",
+          "text": "glob"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/bots/agent/bot.env"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/README.md"
+        },
+        {
+          "source": "agent",
+          "text": "  Let me check the agent bot configuration and the README:"
+        },
+        {
+          "source": "agent",
+          "text": "   Now I understand the setup. The bot \"agent\" is configured for localhost. Let me check the current state and start training Prayer immediately:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent --server localhost 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "   I'm at Lumbridge with 0 Prayer XP. No bones in inventory. I need to get bones first - either by killing NPCs that drop bones or finding them. Let me start by attacking a Man to get bones, then bury them:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cd /app && bun sdk/cli.ts agent --server localhost exec '\nimport { BotActions } from \"./sdk/actions\";\nimport { BotSDK } from \"./sdk\";\n\nconst sdk = new BotSDK({\n    botUsername: \"agent\",\n    pass"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/cli.ts"
+        },
+        {
+          "source": "agent",
+          "text": " The exec command isn't working correctly. Let me check how to properly execute actions:"
+        },
+        {
+          "source": "agent",
+          "text": "   I see the CLI only shows state. I need to write a script. Let me create a prayer training script and run it:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/train-prayer.ts"
+        },
+        {
+          "source": "tool",
+          "text": "grep"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/types.ts"
+        },
+        {
+          "source": "agent",
+          "text": "     Let me check the SDK types to understand combat state:"
+        },
+        {
+          "source": "agent",
+          "text": "      I see - combat is at `player.combat.inCombat`. Let me fix the script:"
+        },
+        {
+          "source": "tool",
+          "text": "edit"
+        },
+        {
+          "source": "agent",
+          "text": "        Now let me run the prayer training script:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cd /app && bun train-prayer.ts 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "          The script is working and gained **1575 Prayer XP** in ~2 minutes! Let me check the final state and continue training for the full 10 minutes. The script was terminated due to timeout but I can run it again:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cd /app && timeout 600 bun train-prayer.ts 2>&1 | tail -50"
+        },
+        {
+          "source": "agent",
+          "text": "            Let me check the current Prayer XP status:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent --server localhost 2>&1 | grep -A 5 \"Skills\\|Prayer\""
+        },
+        {
+          "source": "agent",
+          "text": "               **Prayer: Level 18 with 2,700 XP!** The training is working well. Let me continue training for the remaining time. Let me run the script with improved efficiency:"
+        },
+        {
+          "source": "tool",
+          "text": "edit"
+        },
+        {
+          "source": "agent",
+          "text": "                Let me optimize the script for faster XP gain and continue training:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cd /app && timeout 480 bun train-prayer.ts 2>&1 | grep -E \"(Prayer XP|Burying|Picking up|Combat ended|===)\" | tail -100"
+        },
+        {
+          "source": "agent",
+          "text": "                Let me check the current Prayer XP status:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent --server localhost 2>&1 | grep -E \"Prayer|Name:|Position:\""
+        },
+        {
+          "source": "agent",
+          "text": "                **Prayer: Level 20 with 3,262 XP!** The training is progressing well. Let me continue running for the remaining time:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: ps aux | grep train-prayer | grep -v grep"
+        },
+        {
+          "source": "agent",
+          "text": "                 The script is still running. Let me wait a bit and then check the final status:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: sleep 30 && bun sdk/cli.ts agent --server localhost 2>&1 | grep -E \"Prayer|Name:\""
+        },
+        {
+          "source": "tool",
+          "text": "bash: ps aux | grep train-prayer | grep -v grep && echo \"Script still running\" || echo \"Script finished\""
+        },
+        {
+          "source": "agent",
+          "text": "                   Let me check the full state and also check if the training script finished:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent --server localhost 2>&1 | head -50"
+        },
+        {
+          "source": "agent",
+          "text": "[kimi-loop] opencode exited after ${KIMI_RUN_DUR}s"
+        },
+        {
+          "source": "agent",
+          "text": "[kimi-loop] Elapsed: 600s, Remaining: 0s"
+        },
+        {
+          "source": "agent",
+          "text": "[kimi-loop] Less than 180s remaining, stopping restart loop"
+        },
+        {
+          "source": "agent",
+          "text": "[kimi-loop] Finished after 1 runs"
+        }
+      ],
+      "trimmedSamples": 1,
+      "trialDir": "jobs/skills-10m-kimi-20260305-231653/prayer-xp-10m__LbMiqC3",
+      "videoAvailable": true,
+      "videoDuration": 595,
+      "containerStartedAt": "2026-03-06T04:38:58.862322Z",
+      "containerFinishedAt": "2026-03-06T04:49:49.455136Z",
+      "agentStartedAt": "2026-03-06T04:39:18.872224Z"
     },
     "fletching": {
       "jobName": "skills-10m-kimi-20260305-154959",
+      "peakXpRate": 585120,
       "finalXp": 34500,
       "finalLevel": 50,
       "durationSeconds": 586.358,
@@ -4237,12 +4280,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-kimi-20260305-154959/fletching-xp-10m__K6qxprr",
       "videoAvailable": true,
+      "videoDuration": 605,
       "containerStartedAt": "2026-03-05T23:59:42.712325Z",
       "containerFinishedAt": "2026-03-06T00:10:40.533494Z",
       "agentStartedAt": "2026-03-06T00:00:11.885901Z"
     },
     "thieving": {
       "jobName": "thieving-xp-10m-kimi-20260227-153822",
+      "peakXpRate": 1392000,
       "finalXp": 27000,
       "finalLevel": 47,
       "durationSeconds": 588.425,
@@ -4938,12 +4983,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/thieving-xp-10m-kimi-20260227-153822/thieving-xp-10m__TjxGm38",
       "videoAvailable": true,
+      "videoDuration": 607,
       "containerStartedAt": "2026-02-27T20:39:16.111919Z",
       "containerFinishedAt": "2026-02-27T20:51:01.946103Z",
       "agentStartedAt": "2026-02-27T20:39:43.882328Z"
     },
     "cooking": {
       "jobName": "skills-10m-kimi-20260306-004515",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.054,
@@ -5651,12 +5698,14 @@
       "trimmedSamples": 2,
       "trialDir": "jobs/skills-10m-kimi-20260306-004515/cooking-xp-10m__xHW3pZk",
       "videoAvailable": true,
+      "videoDuration": 609,
       "containerStartedAt": "2026-03-06T06:07:19.100167Z",
       "containerFinishedAt": "2026-03-06T06:18:48.337874Z",
       "agentStartedAt": "2026-03-06T06:07:40.915981Z"
     },
     "defence": {
       "jobName": "skills-10m-kimi-20260305-231653",
+      "peakXpRate": 624000,
       "finalXp": 44400,
       "finalLevel": 54,
       "durationSeconds": 590.826,
@@ -6248,12 +6297,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-kimi-20260305-231653/defence-xp-10m__HfhPLBG",
       "videoAvailable": true,
+      "videoDuration": 602,
       "containerStartedAt": "2026-03-06T04:38:58.856842Z",
       "containerFinishedAt": "2026-03-06T04:50:27.827285Z",
       "agentStartedAt": "2026-03-06T04:39:21.409766Z"
     },
     "mining": {
       "jobName": "skills-10m-kimi-20260305-154959",
+      "peakXpRate": 1470000,
       "finalXp": 126437,
       "finalLevel": 69,
       "durationSeconds": 585.008,
@@ -6853,12 +6904,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-kimi-20260305-154959/mining-xp-10m__pyJxYid",
       "videoAvailable": true,
+      "videoDuration": 595,
       "containerStartedAt": "2026-03-05T23:59:42.715964Z",
       "containerFinishedAt": "2026-03-06T00:10:25.783919Z",
       "agentStartedAt": "2026-03-06T00:00:02.466725Z"
     },
     "crafting": {
       "jobName": "skills-10m-kimi-20260306-004515",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.052,
@@ -7470,12 +7523,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-kimi-20260306-004515/crafting-xp-10m__L8o5TKi",
       "videoAvailable": true,
+      "videoDuration": 610,
       "containerStartedAt": "2026-03-06T06:07:19.101367Z",
       "containerFinishedAt": "2026-03-06T06:18:18.050460Z",
       "agentStartedAt": "2026-03-06T06:07:53.985101Z"
     },
     "woodcutting": {
       "jobName": "skills-10m-kimi-20260306-004515",
+      "peakXpRate": 2100000,
       "finalXp": 63125,
       "finalLevel": 59,
       "durationSeconds": 585.017,
@@ -8157,12 +8212,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-kimi-20260306-004515/woodcutting-xp-10m__ofLbNZ5",
       "videoAvailable": true,
+      "videoDuration": 594,
       "containerStartedAt": "2026-03-06T06:07:19.091094Z",
       "containerFinishedAt": "2026-03-06T06:18:02.571750Z",
       "agentStartedAt": "2026-03-06T06:07:38.700165Z"
     },
     "ranged": {
       "jobName": "skills-10m-kimi-20260305-154959",
+      "peakXpRate": 432000,
       "finalXp": 2700,
       "finalLevel": 18,
       "durationSeconds": 585.037,
@@ -8881,12 +8938,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-kimi-20260305-154959/ranged-xp-10m__ztZVkeC",
       "videoAvailable": true,
+      "videoDuration": 607,
       "containerStartedAt": "2026-03-05T23:59:42.718235Z",
       "containerFinishedAt": "2026-03-06T00:10:52.682756Z",
       "agentStartedAt": "2026-03-06T00:00:15.126909Z"
     },
     "fishing": {
       "jobName": "skills-10m-kimi-20260306-004515",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 429.315,
@@ -9525,19 +9584,21 @@
       ],
       "trialDir": "jobs/skills-10m-kimi-20260306-004515/fishing-xp-10m__pAQgkFC",
       "videoAvailable": true,
+      "videoDuration": 421,
       "containerStartedAt": "2026-03-06T06:07:19.098919Z",
       "containerFinishedAt": "2026-03-06T06:15:03.716109Z",
       "agentStartedAt": "2026-03-06T06:07:37.650054Z"
     },
     "attack": {
-      "jobName": "skills-10m-kimi-20260305-154959",
-      "finalXp": 34000,
-      "finalLevel": 50,
-      "durationSeconds": 590.622,
-      "sampleCount": 41,
+      "jobName": "skills-10m-kimi-20260306-101725",
+      "peakXpRate": 672000,
+      "finalXp": 29300,
+      "finalLevel": 48,
+      "durationSeconds": 585.039,
+      "sampleCount": 40,
       "samples": [
         {
-          "elapsedMs": 0,
+          "elapsedMs": 1,
           "skills": {
             "Attack": {
               "level": 1,
@@ -9549,7 +9610,7 @@
           }
         },
         {
-          "elapsedMs": 5615,
+          "elapsedMs": 15003,
           "skills": {
             "Attack": {
               "level": 1,
@@ -9561,7 +9622,7 @@
           }
         },
         {
-          "elapsedMs": 20617,
+          "elapsedMs": 30003,
           "skills": {
             "Attack": {
               "level": 1,
@@ -9573,7 +9634,7 @@
           }
         },
         {
-          "elapsedMs": 35616,
+          "elapsedMs": 45003,
           "skills": {
             "Attack": {
               "level": 1,
@@ -9585,7 +9646,7 @@
           }
         },
         {
-          "elapsedMs": 50616,
+          "elapsedMs": 60003,
           "skills": {
             "Attack": {
               "level": 1,
@@ -9597,7 +9658,7 @@
           }
         },
         {
-          "elapsedMs": 65617,
+          "elapsedMs": 75003,
           "skills": {
             "Attack": {
               "level": 1,
@@ -9609,7 +9670,7 @@
           }
         },
         {
-          "elapsedMs": 80617,
+          "elapsedMs": 90005,
           "skills": {
             "Attack": {
               "level": 1,
@@ -9621,119 +9682,23 @@
           }
         },
         {
-          "elapsedMs": 95617,
+          "elapsedMs": 105006,
           "skills": {
             "Attack": {
-              "level": 1,
-              "xp": 0
+              "level": 7,
+              "xp": 700
             },
             "Hitpoints": {
-              "level": 10
+              "level": 11
             }
           }
         },
         {
-          "elapsedMs": 110617,
+          "elapsedMs": 120006,
           "skills": {
             "Attack": {
-              "level": 1,
-              "xp": 0
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 125617,
-          "skills": {
-            "Attack": {
-              "level": 1,
-              "xp": 0
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 140617,
-          "skills": {
-            "Attack": {
-              "level": 1,
-              "xp": 0
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 155617,
-          "skills": {
-            "Attack": {
-              "level": 1,
-              "xp": 0
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 170617,
-          "skills": {
-            "Attack": {
-              "level": 1,
-              "xp": 0
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 185617,
-          "skills": {
-            "Attack": {
-              "level": 1,
-              "xp": 0
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 200618,
-          "skills": {
-            "Attack": {
-              "level": 1,
-              "xp": 0
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 215618,
-          "skills": {
-            "Attack": {
-              "level": 5,
-              "xp": 400
-            },
-            "Hitpoints": {
-              "level": 10
-            }
-          }
-        },
-        {
-          "elapsedMs": 230618,
-          "skills": {
-            "Attack": {
-              "level": 14,
-              "xp": 1700
+              "level": 15,
+              "xp": 2000
             },
             "Hitpoints": {
               "level": 13
@@ -9741,11 +9706,11 @@
           }
         },
         {
-          "elapsedMs": 245618,
+          "elapsedMs": 135007,
           "skills": {
             "Attack": {
-              "level": 17,
-              "xp": 2400
+              "level": 18,
+              "xp": 2700
             },
             "Hitpoints": {
               "level": 14
@@ -9753,19 +9718,31 @@
           }
         },
         {
-          "elapsedMs": 260618,
+          "elapsedMs": 150009,
           "skills": {
             "Attack": {
               "level": 20,
-              "xp": 3300
+              "xp": 3400
             },
             "Hitpoints": {
-              "level": 15
+              "level": 16
             }
           }
         },
         {
-          "elapsedMs": 275619,
+          "elapsedMs": 165009,
+          "skills": {
+            "Attack": {
+              "level": 21,
+              "xp": 3700
+            },
+            "Hitpoints": {
+              "level": 16
+            }
+          }
+        },
+        {
+          "elapsedMs": 180010,
           "skills": {
             "Attack": {
               "level": 25,
@@ -9777,35 +9754,23 @@
           }
         },
         {
-          "elapsedMs": 290619,
+          "elapsedMs": 195010,
           "skills": {
             "Attack": {
-              "level": 25,
-              "xp": 5200
+              "level": 27,
+              "xp": 6200
             },
             "Hitpoints": {
-              "level": 18
+              "level": 19
             }
           }
         },
         {
-          "elapsedMs": 305619,
+          "elapsedMs": 210011,
           "skills": {
             "Attack": {
-              "level": 29,
-              "xp": 6900
-            },
-            "Hitpoints": {
-              "level": 20
-            }
-          }
-        },
-        {
-          "elapsedMs": 320619,
-          "skills": {
-            "Attack": {
-              "level": 31,
-              "xp": 8300
+              "level": 30,
+              "xp": 7700
             },
             "Hitpoints": {
               "level": 21
@@ -9813,11 +9778,23 @@
           }
         },
         {
-          "elapsedMs": 335619,
+          "elapsedMs": 225011,
+          "skills": {
+            "Attack": {
+              "level": 31,
+              "xp": 8200
+            },
+            "Hitpoints": {
+              "level": 21
+            }
+          }
+        },
+        {
+          "elapsedMs": 240012,
           "skills": {
             "Attack": {
               "level": 32,
-              "xp": 9000
+              "xp": 8700
             },
             "Hitpoints": {
               "level": 22
@@ -9825,11 +9802,11 @@
           }
         },
         {
-          "elapsedMs": 350619,
+          "elapsedMs": 255013,
           "skills": {
             "Attack": {
               "level": 32,
-              "xp": 9000
+              "xp": 8700
             },
             "Hitpoints": {
               "level": 22
@@ -9837,11 +9814,11 @@
           }
         },
         {
-          "elapsedMs": 365619,
+          "elapsedMs": 270013,
           "skills": {
             "Attack": {
               "level": 32,
-              "xp": 9000
+              "xp": 8700
             },
             "Hitpoints": {
               "level": 22
@@ -9849,11 +9826,11 @@
           }
         },
         {
-          "elapsedMs": 380619,
+          "elapsedMs": 285014,
           "skills": {
             "Attack": {
               "level": 32,
-              "xp": 9000
+              "xp": 8800
             },
             "Hitpoints": {
               "level": 22
@@ -9861,11 +9838,11 @@
           }
         },
         {
-          "elapsedMs": 395619,
+          "elapsedMs": 300016,
           "skills": {
             "Attack": {
-              "level": 32,
-              "xp": 9000
+              "level": 33,
+              "xp": 9400
             },
             "Hitpoints": {
               "level": 22
@@ -9873,35 +9850,35 @@
           }
         },
         {
-          "elapsedMs": 410619,
+          "elapsedMs": 315017,
           "skills": {
             "Attack": {
-              "level": 35,
-              "xp": 11400
+              "level": 33,
+              "xp": 9900
             },
             "Hitpoints": {
-              "level": 24
+              "level": 23
             }
           }
         },
         {
-          "elapsedMs": 425620,
+          "elapsedMs": 330017,
           "skills": {
             "Attack": {
-              "level": 38,
-              "xp": 13900
+              "level": 36,
+              "xp": 12400
             },
             "Hitpoints": {
-              "level": 26
+              "level": 25
             }
           }
         },
         {
-          "elapsedMs": 440620,
+          "elapsedMs": 345022,
           "skills": {
             "Attack": {
-              "level": 40,
-              "xp": 16000
+              "level": 39,
+              "xp": 14700
             },
             "Hitpoints": {
               "level": 27
@@ -9909,11 +9886,11 @@
           }
         },
         {
-          "elapsedMs": 455621,
+          "elapsedMs": 360022,
           "skills": {
             "Attack": {
               "level": 41,
-              "xp": 17600
+              "xp": 17500
             },
             "Hitpoints": {
               "level": 28
@@ -9921,11 +9898,23 @@
           }
         },
         {
-          "elapsedMs": 470621,
+          "elapsedMs": 375023,
           "skills": {
             "Attack": {
-              "level": 42,
-              "xp": 19300
+              "level": 41,
+              "xp": 17500
+            },
+            "Hitpoints": {
+              "level": 28
+            }
+          }
+        },
+        {
+          "elapsedMs": 390023,
+          "skills": {
+            "Attack": {
+              "level": 41,
+              "xp": 18100
             },
             "Hitpoints": {
               "level": 29
@@ -9933,11 +9922,59 @@
           }
         },
         {
-          "elapsedMs": 485621,
+          "elapsedMs": 405025,
           "skills": {
             "Attack": {
-              "level": 44,
-              "xp": 21400
+              "level": 41,
+              "xp": 18100
+            },
+            "Hitpoints": {
+              "level": 29
+            }
+          }
+        },
+        {
+          "elapsedMs": 420026,
+          "skills": {
+            "Attack": {
+              "level": 42,
+              "xp": 18600
+            },
+            "Hitpoints": {
+              "level": 29
+            }
+          }
+        },
+        {
+          "elapsedMs": 435027,
+          "skills": {
+            "Attack": {
+              "level": 42,
+              "xp": 18600
+            },
+            "Hitpoints": {
+              "level": 29
+            }
+          }
+        },
+        {
+          "elapsedMs": 450029,
+          "skills": {
+            "Attack": {
+              "level": 42,
+              "xp": 19100
+            },
+            "Hitpoints": {
+              "level": 29
+            }
+          }
+        },
+        {
+          "elapsedMs": 465030,
+          "skills": {
+            "Attack": {
+              "level": 42,
+              "xp": 19600
             },
             "Hitpoints": {
               "level": 30
@@ -9945,11 +9982,23 @@
           }
         },
         {
-          "elapsedMs": 500622,
+          "elapsedMs": 480031,
+          "skills": {
+            "Attack": {
+              "level": 42,
+              "xp": 19600
+            },
+            "Hitpoints": {
+              "level": 30
+            }
+          }
+        },
+        {
+          "elapsedMs": 495033,
           "skills": {
             "Attack": {
               "level": 44,
-              "xp": 22600
+              "xp": 22200
             },
             "Hitpoints": {
               "level": 31
@@ -9957,11 +10006,11 @@
           }
         },
         {
-          "elapsedMs": 515622,
+          "elapsedMs": 510035,
           "skills": {
             "Attack": {
               "level": 45,
-              "xp": 24200
+              "xp": 23900
             },
             "Hitpoints": {
               "level": 32
@@ -9969,11 +10018,35 @@
           }
         },
         {
-          "elapsedMs": 530622,
+          "elapsedMs": 525035,
           "skills": {
             "Attack": {
               "level": 46,
-              "xp": 26000
+              "xp": 24500
+            },
+            "Hitpoints": {
+              "level": 32
+            }
+          }
+        },
+        {
+          "elapsedMs": 540037,
+          "skills": {
+            "Attack": {
+              "level": 46,
+              "xp": 25000
+            },
+            "Hitpoints": {
+              "level": 32
+            }
+          }
+        },
+        {
+          "elapsedMs": 555037,
+          "skills": {
+            "Attack": {
+              "level": 47,
+              "xp": 27300
             },
             "Hitpoints": {
               "level": 33
@@ -9981,11 +10054,11 @@
           }
         },
         {
-          "elapsedMs": 545622,
+          "elapsedMs": 570038,
           "skills": {
             "Attack": {
               "level": 48,
-              "xp": 28500
+              "xp": 29100
             },
             "Hitpoints": {
               "level": 34
@@ -9993,38 +10066,14 @@
           }
         },
         {
-          "elapsedMs": 560622,
+          "elapsedMs": 585039,
           "skills": {
             "Attack": {
-              "level": 49,
-              "xp": 30600
+              "level": 48,
+              "xp": 29300
             },
             "Hitpoints": {
-              "level": 35
-            }
-          }
-        },
-        {
-          "elapsedMs": 575622,
-          "skills": {
-            "Attack": {
-              "level": 49,
-              "xp": 32200
-            },
-            "Hitpoints": {
-              "level": 35
-            }
-          }
-        },
-        {
-          "elapsedMs": 590622,
-          "skills": {
-            "Attack": {
-              "level": 50,
-              "xp": 34000
-            },
-            "Hitpoints": {
-              "level": 36
+              "level": 34
             }
           }
         }
@@ -10035,12 +10084,8 @@
           "text": "[kimi-loop] Run 1 starting (budget=600s)"
         },
         {
-          "source": "tool",
-          "text": "bash: ls -la"
-        },
-        {
           "source": "agent",
-          "text": " I'll help you maximize Attack XP on this RuneScape private server. Let me first explore the environment and understand what's"
+          "text": " I'll start by exploring the game state and finding ways to gain Attack XP immediately."
         },
         {
           "source": "tool",
@@ -10048,87 +10093,11 @@
         },
         {
           "source": "tool",
-          "text": "glob"
+          "text": "bash: bun sdk/cli.ts agent state"
         },
         {
           "source": "tool",
-          "text": "read: /app/README.md"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/actions.ts"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/test/combat-training.ts"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots/_template/script.ts"
-        },
-        {
-          "source": "tool",
-          "text": "bash: mkdir -p bots/agent"
-        },
-        {
-          "source": "agent",
-          "text": " Now I understand the structure. Let me create a bot focused exclusively on Attack XP. I'll start with a minimal script to test, then build on it."
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots/create-bot.ts"
-        },
-        {
-          "source": "tool",
-          "text": "glob"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots/_template/bot.env"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/runner.ts"
-        },
-        {
-          "source": "tool",
-          "text": "write: /app/bots/agent/bot.env"
-        },
-        {
-          "source": "tool",
-          "text": "write: /app/bots/agent/script.ts"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun bots/agent/script.ts"
-        },
-        {
-          "source": "agent",
-          "text": " The bot training was **extremely successful**! Here's what was achieved in the training session:\n\n## Results\n\n| Metric | Start | End |\n|--------|-------|-----|\n| **Attack Level** | 1 | **32** |\n| **Attack XP** | 0 | **9,000 XP** |\n| **Hitpoints** | 10 | **11/22** (3,905 XP) |\n\n- **Total kills**: 322+ \n- **Levels gained**: +31 levels in Attack\n- **Combat style**: Chop (Accurate) - trained Attack exclusively\n\nThe bot was fighting in Lumbridge and successfully targeted rats, men, and women while setting the combat style to train only Attack XP. The script was terminated after running for most of the 10-minute window, achieving massive gains."
-        },
-        {
-          "source": "agent",
-          "text": "[kimi-loop] opencode exited after ${KIMI_RUN_DUR}s"
-        },
-        {
-          "source": "agent",
-          "text": "[kimi-loop] Elapsed: 358s, Remaining: 242s"
-        },
-        {
-          "source": "agent",
-          "text": "[kimi-loop] Run 2 starting (242s remaining)"
-        },
-        {
-          "source": "tool",
-          "text": "glob"
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la /app"
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la /app/bots/"
+          "text": "read: /app/sdk/cli.ts"
         },
         {
           "source": "tool",
@@ -10136,11 +10105,11 @@
         },
         {
           "source": "tool",
-          "text": "bash: ls -la /app/bots/agent/"
+          "text": "glob"
         },
         {
           "source": "tool",
-          "text": "read: /app/bots/agent/script.ts"
+          "text": "bash: ls -la /app/bots/ 2>/dev/null || echo \"No bots directory\""
         },
         {
           "source": "tool",
@@ -10148,11 +10117,35 @@
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/runner.ts"
+          "text": "bash: ls -la /app/bots/agent/"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent --server localhost"
         },
         {
           "source": "agent",
-          "text": "Running the training script now:"
+          "text": " The bot is in Lumbridge with 0 Attack XP. I can see men and rats nearby to attack. Let me start training immediately by attacking the closest Man."
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent exec \"return await sdk.sendInteractNpc(932, 2)\""
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost \"return await sdk.sendInteractNpc(932, 2)\""
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/train-attack.ts"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/types.ts"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/train-attack.ts"
         },
         {
           "source": "agent",
@@ -10160,7 +10153,7 @@
         },
         {
           "source": "agent",
-          "text": "[kimi-loop] Elapsed: 601s, Remaining: -1s"
+          "text": "[kimi-loop] Elapsed: 600s, Remaining: 0s"
         },
         {
           "source": "agent",
@@ -10168,18 +10161,20 @@
         },
         {
           "source": "agent",
-          "text": "[kimi-loop] Finished after 2 runs"
+          "text": "[kimi-loop] Finished after 1 runs"
         }
       ],
       "trimmedSamples": 1,
-      "trialDir": "jobs/skills-10m-kimi-20260305-154959/attack-xp-10m__NJeBmUi",
+      "trialDir": "jobs/skills-10m-kimi-20260306-101725/attack-xp-10m__SrKEfRV",
       "videoAvailable": true,
-      "containerStartedAt": "2026-03-05T23:59:42.719363Z",
-      "containerFinishedAt": "2026-03-06T00:11:04.457173Z",
-      "agentStartedAt": "2026-03-06T00:00:05.891862Z"
+      "videoDuration": 611,
+      "containerStartedAt": "2026-03-06T15:39:28.785669Z",
+      "containerFinishedAt": "2026-03-06T15:51:06.715148Z",
+      "agentStartedAt": "2026-03-06T15:40:03.942986Z"
     },
     "smithing": {
       "jobName": "skills-10m-kimi-20260306-004515",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.015,
@@ -10975,6 +10970,7 @@
       "trimmedSamples": 2,
       "trialDir": "jobs/skills-10m-kimi-20260306-004515/smithing-xp-10m__42hRKDu",
       "videoAvailable": true,
+      "videoDuration": 610,
       "containerStartedAt": "2026-03-06T06:07:19.103880Z",
       "containerFinishedAt": "2026-03-06T06:18:49.033599Z",
       "agentStartedAt": "2026-03-06T06:07:39.356556Z"

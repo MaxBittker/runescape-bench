@@ -135,9 +135,7 @@ class OpenCodeAdapter(BaseInstalledAgent):
         bash_timeout_expr = f"{vp}_TIMEOUT=${{{vp}_TIMEOUT:-{bash_timeout}}}; "
 
         run_command = (
-            f"echo '[{prefix}-setup] Starting game services...'; "
-            "/ensure-services.sh; "
-            f"echo '[{prefix}-setup] Services ready, starting opencode'; "
+            f"echo '[{prefix}-setup] Starting opencode'; "
             # Source NVM so the nvm-installed opencode binary is on PATH
             "export NVM_DIR=\"$HOME/.nvm\"; "
             "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" || true; "

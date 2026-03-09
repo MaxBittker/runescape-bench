@@ -72,9 +72,20 @@ bun extractors/extract-gold-results.ts
 
 ## Docker image
 
-All tasks use the pre-built image `ghcr.io/maxbittker/rs-agent-benchmark:v18` (8x game speed via `NODE_TICKRATE=50`). The image clones [rs-sdk](https://github.com/MaxBittker/rs-sdk) at a pinned ref. Variant tasks that need different env settings use a thin `FROM` layer on top.
+The Docker setup is split into two images to keep Modal pulls fast:
+
+- **Base image** (`rs-agent-benchmark-base:v1`) — Debian, chromium, JRE, ffmpeg, bun (~1.6GB). Rarely changes.
+- **App image** (`rs-agent-benchmark:vXX`) — rs-sdk, workspace deps, Claude CLI, config (~1GB on top of base). Changes per version bump.
+
+All tasks `FROM` the app image. Variant tasks that need different env settings use a thin `FROM` layer on top.
 
 Build and push:
 ```bash
-cd docker && ./build.sh
+cd docker
+
+# Base image (only when system deps change — should be rare)
+PUSH=1 IMAGE_TAG=v1 ./build.sh --base
+
+# App image (bump tag for each new version)
+PUSH=1 IMAGE_TAG=v26 ./build.sh
 ```

@@ -28,17 +28,20 @@ const CROP_FILTER = "crop=367:240:17:32";
 
 let horizon = "";
 let force = false;
+let fromResults = false;
 
 for (let i = 2; i < process.argv.length; i++) {
   if (process.argv[i] === "--horizon" && process.argv[i + 1]) {
     horizon = process.argv[++i];
   } else if (process.argv[i] === "--force") {
     force = true;
+  } else if (process.argv[i] === "--from-results") {
+    fromResults = true;
   }
 }
 
 if (!horizon) {
-  console.error("Usage: bun scripts/upload-videos.ts --horizon 10m|30m [--force]");
+  console.error("Usage: bun scripts/upload-videos.ts --horizon 10m|15m|30m [--force] [--from-results]");
   process.exit(1);
 }
 
@@ -54,21 +57,21 @@ interface VideoEntry {
 
 /** Parse single-task dir: {skill}-xp-{horizon}-{model}-{timestamp} */
 function parseSingleTaskDir(name: string): { skill: string; horizon: string; model: string; timestamp: string } | null {
-  const m = name.match(/^(.+)-xp-(10m|30m)-(.+)-(\d{8}-\d{6})$/);
+  const m = name.match(/^(.+)-xp-(10m|15m|30m)-(.+)-(\d{8}-\d{6})$/);
   if (!m) return null;
   return { skill: m[1], horizon: m[2], model: m[3], timestamp: m[4] };
 }
 
 /** Parse dataset dir: skills-{horizon}-{model}-{timestamp} */
 function parseDatasetDir(name: string): { horizon: string; model: string; timestamp: string } | null {
-  const m = name.match(/^skills-(10m|30m)-(.+)-(\d{8}-\d{6})$/);
+  const m = name.match(/^skills-(10m|15m|30m)-(.+)-(\d{8}-\d{6})$/);
   if (!m) return null;
   return { horizon: m[1], model: m[2], timestamp: m[3] };
 }
 
 /** Parse skill from trial dir name: {skill}-xp-{horizon}__{random} */
 function parseTrialSkill(trialName: string): string | null {
-  const m = trialName.match(/^(.+)-xp-(?:10m|30m)__/);
+  const m = trialName.match(/^(.+)-xp-(?:10m|15m|30m)__/);
   return m ? m[1] : null;
 }
 
@@ -99,55 +102,105 @@ function findDatasetRecordings(jobPath: string): { skill: string; localPath: str
   return results;
 }
 
-// ── Scan and deduplicate ──────────────────────────────────────────
+// ── Build video list ──────────────────────────────────────────────
 
-console.log(`Scanning jobs/ for ${horizon} recordings...\n`);
+let videos: VideoEntry[];
+/** Set of manifest keys that are valid for this horizon (used to clean stale entries) */
+let validManifestKeys: Set<string> | undefined;
 
-const allEntries: VideoEntry[] = [];
-const jobDirs = readdirSync(JOBS_DIR);
-
-for (const dir of jobDirs) {
-  // Try single-task format: {skill}-xp-{horizon}-{model}-{timestamp}
-  const single = parseSingleTaskDir(dir);
-  if (single && single.horizon === horizon) {
-    const recording = findRecording(join(JOBS_DIR, dir));
-    if (recording) {
-      allEntries.push({ ...single, localPath: recording });
-    }
-    continue;
+if (fromResults) {
+  // --from-results: read _combined.json and use trialDir to find recordings.
+  // This guarantees the uploaded video matches the extracted trajectory data.
+  const combinedPath = join(ROOT, "results", `skills-${horizon}`, "_combined.json");
+  if (!existsSync(combinedPath)) {
+    console.error(`No combined results found at ${combinedPath}. Run extract-skill-results.ts first.`);
+    process.exit(1);
   }
 
-  // Try dataset format: skills-{horizon}-{model}-{timestamp}
-  const dataset = parseDatasetDir(dir);
-  if (dataset && dataset.horizon === horizon) {
-    for (const rec of findDatasetRecordings(join(JOBS_DIR, dir))) {
-      allEntries.push({
-        skill: rec.skill,
-        horizon: dataset.horizon,
-        model: dataset.model,
-        timestamp: dataset.timestamp,
-        localPath: rec.localPath,
+  const combined: Record<string, Record<string, { trialDir?: string }>> = JSON.parse(
+    readFileSync(combinedPath, "utf-8"),
+  );
+
+  console.log(`Building video list from ${combinedPath}...\n`);
+
+  const entries: VideoEntry[] = [];
+  validManifestKeys = new Set();
+
+  for (const [model, skills] of Object.entries(combined)) {
+    for (const [skill, data] of Object.entries(skills)) {
+      validManifestKeys.add(`${horizon}/${model}/${skill}`);
+
+      if (!data.trialDir) continue;
+      const trialDir = join(ROOT, data.trialDir);
+      const videoPath = join(trialDir, "verifier", "recording.mp4");
+      if (!existsSync(videoPath)) continue;
+
+      entries.push({
+        skill,
+        horizon,
+        model,
+        timestamp: "", // not needed — we already know these are the correct runs
+        localPath: videoPath,
       });
     }
   }
-}
 
-// Keep only the latest run per skill-model
-const latest = new Map<string, VideoEntry>();
-for (const entry of allEntries) {
-  const key = `${entry.skill}-${entry.model}`;
-  const existing = latest.get(key);
-  if (!existing || entry.timestamp > existing.timestamp) {
-    latest.set(key, entry);
+  videos = entries.sort((a, b) => {
+    if (a.skill !== b.skill) return a.skill.localeCompare(b.skill);
+    return a.model.localeCompare(b.model);
+  });
+
+  console.log(`Found ${videos.length} videos from extracted results\n`);
+} else {
+  // Default: scan jobs/ directory and deduplicate by latest timestamp
+  console.log(`Scanning jobs/ for ${horizon} recordings...\n`);
+
+  const allEntries: VideoEntry[] = [];
+  const jobDirs = readdirSync(JOBS_DIR);
+
+  for (const dir of jobDirs) {
+    // Try single-task format: {skill}-xp-{horizon}-{model}-{timestamp}
+    const single = parseSingleTaskDir(dir);
+    if (single && single.horizon === horizon) {
+      const recording = findRecording(join(JOBS_DIR, dir));
+      if (recording) {
+        allEntries.push({ ...single, localPath: recording });
+      }
+      continue;
+    }
+
+    // Try dataset format: skills-{horizon}-{model}-{timestamp}
+    const dataset = parseDatasetDir(dir);
+    if (dataset && dataset.horizon === horizon) {
+      for (const rec of findDatasetRecordings(join(JOBS_DIR, dir))) {
+        allEntries.push({
+          skill: rec.skill,
+          horizon: dataset.horizon,
+          model: dataset.model,
+          timestamp: dataset.timestamp,
+          localPath: rec.localPath,
+        });
+      }
+    }
   }
+
+  // Keep only the latest run per skill-model
+  const latest = new Map<string, VideoEntry>();
+  for (const entry of allEntries) {
+    const key = `${entry.skill}-${entry.model}`;
+    const existing = latest.get(key);
+    if (!existing || entry.timestamp > existing.timestamp) {
+      latest.set(key, entry);
+    }
+  }
+
+  videos = [...latest.values()].sort((a, b) => {
+    if (a.skill !== b.skill) return a.skill.localeCompare(b.skill);
+    return a.model.localeCompare(b.model);
+  });
+
+  console.log(`Found ${videos.length} videos to process (${allEntries.length} total recordings, deduplicated to latest per skill-model)\n`);
 }
-
-const videos = [...latest.values()].sort((a, b) => {
-  if (a.skill !== b.skill) return a.skill.localeCompare(b.skill);
-  return a.model.localeCompare(b.model);
-});
-
-console.log(`Found ${videos.length} videos to process (${allEntries.length} total recordings, deduplicated to latest per skill-model)\n`);
 
 if (videos.length === 0) {
   console.log("Nothing to do.");
@@ -275,6 +328,21 @@ async function worker() {
   }
 }
 await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
+
+// ── Clean stale manifest entries ───────────────────────────────────
+
+if (validManifestKeys) {
+  let cleaned = 0;
+  for (const key of Object.keys(manifest)) {
+    if (key.startsWith(`${horizon}/`) && !validManifestKeys.has(key)) {
+      delete manifest[key];
+      cleaned++;
+    }
+  }
+  if (cleaned > 0) {
+    console.log(`\nCleaned ${cleaned} stale manifest entries for ${horizon}`);
+  }
+}
 
 // ── Write manifest ────────────────────────────────────────────────
 

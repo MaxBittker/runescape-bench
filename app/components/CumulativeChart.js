@@ -7,8 +7,8 @@ export function CumulativeChart({ data }) {
   const [pinnedSkill, setPinnedSkill] = useState(null);
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
-  const activeSkill = hoveredSkill || pinnedSkill;
-  const activeLabel = activeSkill ? `${SKILL_DISPLAY[activeSkill] || activeSkill} XP` : 'Total XP';
+  const activeSkill = (hoveredSkill && hoveredSkill !== '__total__') ? hoveredSkill : pinnedSkill;
+  const activeLabel = activeSkill ? `${SKILL_DISPLAY[activeSkill] || activeSkill} Peak Rate` : 'Total Peak Rate';
 
   useEffect(() => {
     if (!data || !chartRef.current || !legendRef.current) return;
@@ -37,9 +37,9 @@ export function CumulativeChart({ data }) {
       <div className="container is-max-widescreen">
         <div className="columns is-centered has-text-centered">
           <div className="column">
-            <h2 className="title is-3">Skill XP \u2014 30 min wall clock</h2>
+            <h2 className="title is-3">Peak XP Rate \u2014 30 min wall clock</h2>
             <p className="subtitle is-6" style=${{ color: '#888' }}>
-              Total XP gained across 16 skills in 30 minutes wall clock (4 hours in-game at 8x speed). Best of 1.${' '}
+              Peak training rate (XP/hr) across 16 skills in 30 minutes wall clock (8x game speed). Best of 1.${' '}
               <a href="views/graph-skills.html?horizon=30m">Full interactive view \u2192</a>
             </p>
           </div>
@@ -48,8 +48,10 @@ export function CumulativeChart({ data }) {
           <aside className="skill-rail" aria-label="Skill chart filter">
             <button
               type="button"
-              className=${`skill-rail-reset${activeSkill ? '' : ' active'}`}
+              className=${`skill-rail-reset${!pinnedSkill ? ' active' : ''}${hoveredSkill === '__total__' ? ' hovered' : ''}`}
               onClick=${() => { setPinnedSkill(null); setHoveredSkill(null); }}
+              onMouseEnter=${() => { if (pinnedSkill) setHoveredSkill('__total__'); }}
+              onMouseLeave=${() => { if (hoveredSkill === '__total__') setHoveredSkill(null); }}
             >
               Total
             </button>

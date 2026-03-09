@@ -1,4 +1,4 @@
-// Standalone cumulative chart renderer for rs-bench
+// Standalone cumulative peak rate chart renderer for rs-bench
 // Requires: Chart.js, shared-constants.js
 
 (function() {
@@ -91,7 +91,7 @@
     return tooltipEl;
   }
 
-  function makeTooltipHandler(cumulativeSkillFinalXp, activeSkill) {
+  function makeTooltipHandler(cumulativeSkillPeakRate, activeSkill) {
     return function(context) {
       const { chart, tooltip } = context;
       const el = getTooltipEl();
@@ -105,7 +105,7 @@
       const modelKey = ds._modelKey;
       const config = MODEL_CONFIG[modelKey] || { displayName: modelKey, color: '#999' };
       const minute = Math.floor(item.parsed.x * 10) / 10;
-      const xpValue = item.parsed.y;
+      const rateValue = item.parsed.y;
 
       let html = `<div class="chart-tooltip-title">`;
       if (config.icon) html += `<img src="${config.icon}">`;
@@ -114,23 +114,23 @@
       if (activeSkill) {
         const skillName = SKILL_DISPLAY[activeSkill] || activeSkill;
         const iconSrc = VIEWS_BASE + 'skill-icons/' + activeSkill + '.png';
-        html += `<div class="chart-tooltip-avg">${skillName}: ${xpValue.toLocaleString()} XP</div>`;
+        html += `<div class="chart-tooltip-avg">${skillName}: ${formatRate(rateValue)}</div>`;
         html += `<div class="chart-tooltip-skill">`;
         html += `<img src="${iconSrc}">`;
         html += `<span>${skillName}</span>`;
-        html += `<span class="xp">${formatXp(xpValue)}</span>`;
+        html += `<span class="xp">${formatRate(rateValue)}</span>`;
         html += `</div>`;
       } else {
-        html += `<div class="chart-tooltip-avg">Total: ${xpValue.toLocaleString()} XP</div>`;
+        html += `<div class="chart-tooltip-avg">Total: ${formatRate(rateValue)}</div>`;
 
-        const skills = cumulativeSkillFinalXp[modelKey] || [];
+        const skills = cumulativeSkillPeakRate[modelKey] || [];
         for (const s of skills) {
           const iconSrc = VIEWS_BASE + 'skill-icons/' + s.skill + '.png';
-          const zeroClass = s.finalXp === 0 ? ' zero' : '';
+          const zeroClass = s.peakRate === 0 ? ' zero' : '';
           html += `<div class="chart-tooltip-skill">`;
           html += `<img src="${iconSrc}">`;
           html += `<span>${s.label}</span>`;
-          html += `<span class="xp${zeroClass}">${formatXp(s.finalXp)}</span>`;
+          html += `<span class="xp${zeroClass}">${formatRate(s.peakRate)}</span>`;
           html += `</div>`;
         }
       }
@@ -153,16 +153,16 @@
   }
 
   /**
-   * Render a cumulative XP chart.
+   * Render a cumulative peak XP rate chart.
    * @param {Object} opts
    * @param {HTMLElement} opts.canvasContainer - element to hold the <canvas>
    * @param {HTMLElement} opts.legendContainer - element to hold the legend
-   * @param {Object} opts.data - combined data (model -> skill -> {samples, finalXp, ...})
+   * @param {Object} opts.data - combined data (model -> skill -> {samples, peakXpRate, ...})
    * @param {number} opts.horizonMinutes - e.g. 30
-   * @param {string|null} [opts.activeSkill] - selected skill key, or null for total XP
+   * @param {string|null} [opts.activeSkill] - selected skill key, or null for total
    */
   window.renderCumulativeChart = function({ canvasContainer, legendContainer, data, horizonMinutes, activeSkill = null, onClick }) {
-    const cumulativeSkillFinalXp = {};
+    const cumulativeSkillPeakRate = {};
     const hiddenModels = new Set();
     let chart = null;
 
@@ -171,22 +171,22 @@
         .sort((a, b) => ((MODEL_CONFIG[a] || {order:99}).order) - ((MODEL_CONFIG[b] || {order:99}).order));
     }
 
-    function getModelTotalXp(model) {
+    function getModelTotalRate(model) {
       const skills = data[model];
       if (!skills) return 0;
-      return Object.values(skills).map(s => s.finalXp || 0).reduce((a, b) => a + b, 0);
+      return Object.values(skills).map(s => s.peakXpRate || 0).reduce((a, b) => a + b, 0);
     }
 
-    function getModelSkillXp(model, skill) {
-      return data[model]?.[skill]?.finalXp || 0;
+    function getModelSkillRate(model, skill) {
+      return data[model]?.[skill]?.peakXpRate || 0;
     }
 
-    function getLegendXp(model) {
-      return activeSkill ? getModelSkillXp(model, activeSkill) : getModelTotalXp(model);
+    function getLegendRate(model) {
+      return activeSkill ? getModelSkillRate(model, activeSkill) : getModelTotalRate(model);
     }
 
     function getModelsByPerformance() {
-      return Object.keys(data).sort((a, b) => getLegendXp(b) - getLegendXp(a));
+      return Object.keys(data).sort((a, b) => getLegendRate(b) - getLegendRate(a));
     }
 
     function renderLegend() {
@@ -194,8 +194,8 @@
       legendContainer.innerHTML = models.map(name => {
         const config = MODEL_CONFIG[name] || { displayName: name, shortName: name, color: '#999' };
         const isHidden = hiddenModels.has(name);
-        const totalXp = getLegendXp(name);
-        const totalStr = totalXp > 0 ? formatXp(totalXp) : '-';
+        const totalRate = getLegendRate(name);
+        const totalStr = totalRate > 0 ? formatRate(totalRate) : '-';
         return `<div class="legend-item ${isHidden ? 'hidden' : ''}" data-model="${name}">
           <div class="legend-dot" style="background:${config.color}"></div>
           <span class="legend-label">${config.shortName || config.displayName}</span>
@@ -226,51 +226,51 @@
       const datasets = [];
       for (const model of models) {
         const config = MODEL_CONFIG[model] || { displayName: model, color: '#999' };
-        let avgPoints = [];
+        let ratePoints = [];
 
         if (activeSkill) {
-          avgPoints = extractSkillPoints(data[model]?.[activeSkill], activeSkill, horizonMinutes);
+          ratePoints = extractPeakRatePoints(data[model]?.[activeSkill], activeSkill, horizonMinutes);
         } else {
           const BUCKET_COUNT = horizonMinutes + 1;
           const bucketSums = new Array(BUCKET_COUNT).fill(0);
 
           for (const skill of SKILL_ORDER) {
-            const points = extractSkillPoints(data[model]?.[skill], skill, horizonMinutes);
+            const points = extractPeakRatePoints(data[model]?.[skill], skill, horizonMinutes);
             if (points.length === 0) continue;
 
             for (let min = 0; min < BUCKET_COUNT; min++) {
-              let lastXp = 0;
+              let lastRate = 0;
               for (const p of points) {
-                if (p.x <= min) lastXp = p.y;
+                if (p.x <= min) lastRate = p.y;
                 else break;
               }
-              bucketSums[min] += lastXp;
+              bucketSums[min] += lastRate;
             }
           }
 
-          const skillFinals = [];
+          const skillRates = [];
           for (const skill of SKILL_ORDER) {
             const sd = data[model]?.[skill];
-            if (sd) skillFinals.push({ skill, label: SKILL_DISPLAY[skill] || skill, finalXp: sd.finalXp || 0 });
+            if (sd) skillRates.push({ skill, label: SKILL_DISPLAY[skill] || skill, peakRate: sd.peakXpRate || 0 });
           }
-          skillFinals.sort((a, b) => b.finalXp - a.finalXp);
-          cumulativeSkillFinalXp[model] = skillFinals;
+          skillRates.sort((a, b) => b.peakRate - a.peakRate);
+          cumulativeSkillPeakRate[model] = skillRates;
 
           for (let min = 0; min < BUCKET_COUNT; min++) {
-            avgPoints.push({ x: min, y: Math.round(bucketSums[min]) });
+            ratePoints.push({ x: min, y: Math.round(bucketSums[min]) });
           }
         }
 
         datasets.push({
           label: config.displayName,
-          data: avgPoints,
+          data: ratePoints,
           borderColor: config.color,
           backgroundColor: config.color,
           fill: false,
           pointRadius: 0,
           pointHoverRadius: 4,
           borderWidth: 2.5,
-          tension: 0.3,
+          tension: 0,
           _modelKey: model,
         });
       }
@@ -307,7 +307,7 @@
                 color: '#999',
                 font: { size: 11, family: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace' },
                 maxTicksLimit: 8,
-                callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v,
+                callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k/hr' : v + '/hr',
               },
               grid: { color: '#f0f0f0', drawTicks: false },
               border: { color: '#e0e0e0' },
@@ -318,7 +318,7 @@
             legend: { display: false },
             tooltip: {
               enabled: false,
-              external: makeTooltipHandler(cumulativeSkillFinalXp, activeSkill),
+              external: makeTooltipHandler(cumulativeSkillPeakRate, activeSkill),
             },
           },
         },

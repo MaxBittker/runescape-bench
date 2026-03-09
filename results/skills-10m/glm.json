@@ -2,10 +2,11 @@
   "model": "glm",
   "skills": {
     "ranged": {
-      "jobName": "skills-10m-glm-20260306-101725",
+      "jobName": "skills-10m-glm-20260305-231653",
+      "peakXpRate": 408000,
       "finalXp": 2300,
       "finalLevel": 16,
-      "durationSeconds": 585.016,
+      "durationSeconds": 585.017,
       "sampleCount": 40,
       "samples": [
         {
@@ -33,7 +34,7 @@
           }
         },
         {
-          "elapsedMs": 30002,
+          "elapsedMs": 30001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -45,7 +46,7 @@
           }
         },
         {
-          "elapsedMs": 45002,
+          "elapsedMs": 45001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -57,7 +58,7 @@
           }
         },
         {
-          "elapsedMs": 60002,
+          "elapsedMs": 60001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -69,7 +70,7 @@
           }
         },
         {
-          "elapsedMs": 75003,
+          "elapsedMs": 75001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -81,7 +82,7 @@
           }
         },
         {
-          "elapsedMs": 90003,
+          "elapsedMs": 90001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -93,7 +94,7 @@
           }
         },
         {
-          "elapsedMs": 105003,
+          "elapsedMs": 105001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -105,7 +106,7 @@
           }
         },
         {
-          "elapsedMs": 120003,
+          "elapsedMs": 120001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -117,7 +118,7 @@
           }
         },
         {
-          "elapsedMs": 135005,
+          "elapsedMs": 135002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -129,7 +130,7 @@
           }
         },
         {
-          "elapsedMs": 150006,
+          "elapsedMs": 150002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -141,7 +142,7 @@
           }
         },
         {
-          "elapsedMs": 165006,
+          "elapsedMs": 165002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -153,7 +154,7 @@
           }
         },
         {
-          "elapsedMs": 180006,
+          "elapsedMs": 180002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -165,7 +166,7 @@
           }
         },
         {
-          "elapsedMs": 195007,
+          "elapsedMs": 195002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -177,7 +178,7 @@
           }
         },
         {
-          "elapsedMs": 210007,
+          "elapsedMs": 210004,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -189,7 +190,7 @@
           }
         },
         {
-          "elapsedMs": 225008,
+          "elapsedMs": 225005,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -201,94 +202,112 @@
           }
         },
         {
-          "elapsedMs": 240008,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Ranged": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 255009,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Ranged": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 270009,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Ranged": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 285010,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Ranged": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 300010,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Ranged": {
-              "level": 1,
-              "xp": 0
-            }
-          }
-        },
-        {
-          "elapsedMs": 315010,
-          "skills": {
-            "Hitpoints": {
-              "level": 11
-            },
-            "Ranged": {
-              "level": 7,
-              "xp": 600
-            }
-          }
-        },
-        {
-          "elapsedMs": 330011,
+          "elapsedMs": 240005,
           "skills": {
             "Hitpoints": {
               "level": 13
             },
             "Ranged": {
               "level": 14,
-              "xp": 1800
+              "xp": 1700
+            }
+          }
+        },
+        {
+          "elapsedMs": 255006,
+          "skills": {
+            "Hitpoints": {
+              "level": 14
+            },
+            "Ranged": {
+              "level": 16,
+              "xp": 2300
+            }
+          }
+        },
+        {
+          "elapsedMs": 270007,
+          "skills": {
+            "Attack": {
+              "level": 8
+            },
+            "Hitpoints": {
+              "level": 15
+            },
+            "Ranged": {
+              "level": 16,
+              "xp": 2300
+            }
+          }
+        },
+        {
+          "elapsedMs": 285007,
+          "skills": {
+            "Attack": {
+              "level": 14
+            },
+            "Hitpoints": {
+              "level": 16
+            },
+            "Ranged": {
+              "level": 16,
+              "xp": 2300
+            }
+          }
+        },
+        {
+          "elapsedMs": 300010,
+          "skills": {
+            "Attack": {
+              "level": 19
+            },
+            "Hitpoints": {
+              "level": 18
+            },
+            "Ranged": {
+              "level": 16,
+              "xp": 2300
+            }
+          }
+        },
+        {
+          "elapsedMs": 315010,
+          "skills": {
+            "Attack": {
+              "level": 20
+            },
+            "Hitpoints": {
+              "level": 19
+            },
+            "Ranged": {
+              "level": 16,
+              "xp": 2300
+            }
+          }
+        },
+        {
+          "elapsedMs": 330011,
+          "skills": {
+            "Attack": {
+              "level": 26
+            },
+            "Hitpoints": {
+              "level": 21
+            },
+            "Ranged": {
+              "level": 16,
+              "xp": 2300
             }
           }
         },
         {
           "elapsedMs": 345011,
           "skills": {
+            "Attack": {
+              "level": 29
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 22
             },
             "Ranged": {
               "level": 16,
@@ -297,10 +316,13 @@
           }
         },
         {
-          "elapsedMs": 360011,
+          "elapsedMs": 360012,
           "skills": {
+            "Attack": {
+              "level": 33
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 24
             },
             "Ranged": {
               "level": 16,
@@ -309,10 +331,13 @@
           }
         },
         {
-          "elapsedMs": 375011,
+          "elapsedMs": 375013,
           "skills": {
+            "Attack": {
+              "level": 33
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 25
             },
             "Ranged": {
               "level": 16,
@@ -321,10 +346,13 @@
           }
         },
         {
-          "elapsedMs": 390011,
+          "elapsedMs": 390013,
           "skills": {
+            "Attack": {
+              "level": 35
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 26
             },
             "Ranged": {
               "level": 16,
@@ -335,8 +363,11 @@
         {
           "elapsedMs": 405013,
           "skills": {
+            "Attack": {
+              "level": 37
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 27
             },
             "Ranged": {
               "level": 16,
@@ -347,8 +378,11 @@
         {
           "elapsedMs": 420013,
           "skills": {
+            "Attack": {
+              "level": 39
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 28
             },
             "Ranged": {
               "level": 16,
@@ -359,8 +393,11 @@
         {
           "elapsedMs": 435013,
           "skills": {
+            "Attack": {
+              "level": 40
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 29
             },
             "Ranged": {
               "level": 16,
@@ -371,8 +408,11 @@
         {
           "elapsedMs": 450013,
           "skills": {
+            "Attack": {
+              "level": 41
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 30
             },
             "Ranged": {
               "level": 16,
@@ -383,8 +423,11 @@
         {
           "elapsedMs": 465013,
           "skills": {
+            "Attack": {
+              "level": 42
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 30
             },
             "Ranged": {
               "level": 16,
@@ -395,8 +438,11 @@
         {
           "elapsedMs": 480014,
           "skills": {
+            "Attack": {
+              "level": 42
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 30
             },
             "Ranged": {
               "level": 16,
@@ -405,10 +451,13 @@
           }
         },
         {
-          "elapsedMs": 495014,
+          "elapsedMs": 495015,
           "skills": {
+            "Attack": {
+              "level": 44
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 32
             },
             "Ranged": {
               "level": 16,
@@ -419,8 +468,11 @@
         {
           "elapsedMs": 510015,
           "skills": {
+            "Attack": {
+              "level": 45
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 32
             },
             "Ranged": {
               "level": 16,
@@ -431,8 +483,11 @@
         {
           "elapsedMs": 525015,
           "skills": {
+            "Attack": {
+              "level": 45
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 33
             },
             "Ranged": {
               "level": 16,
@@ -441,10 +496,13 @@
           }
         },
         {
-          "elapsedMs": 540014,
+          "elapsedMs": 540016,
           "skills": {
+            "Attack": {
+              "level": 45
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 33
             },
             "Ranged": {
               "level": 16,
@@ -453,10 +511,13 @@
           }
         },
         {
-          "elapsedMs": 555015,
+          "elapsedMs": 555016,
           "skills": {
+            "Attack": {
+              "level": 45
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 33
             },
             "Ranged": {
               "level": 16,
@@ -465,10 +526,13 @@
           }
         },
         {
-          "elapsedMs": 570015,
+          "elapsedMs": 570016,
           "skills": {
+            "Attack": {
+              "level": 45
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 33
             },
             "Ranged": {
               "level": 16,
@@ -477,10 +541,13 @@
           }
         },
         {
-          "elapsedMs": 585016,
+          "elapsedMs": 585017,
           "skills": {
+            "Attack": {
+              "level": 46
+            },
             "Hitpoints": {
-              "level": 14
+              "level": 33
             },
             "Ranged": {
               "level": 16,
@@ -490,259 +557,211 @@
         }
       ],
       "tokenUsage": {
-        "inputTokens": 824682,
-        "cacheTokens": 790592,
-        "outputTokens": 6439
+        "inputTokens": 681310,
+        "cacheTokens": 649344,
+        "outputTokens": 3920
       },
       "trajectory": [
         {
           "source": "agent",
-          "text": "I'll start training Ranged immediately. Let me first check the current game state and available equipment.",
-          "ts": 6
+          "text": "I'll start training Ranged immediately. Let me first check the current state of the bot.",
+          "ts": 5
         },
         {
           "source": "tool",
           "text": "bash: bun sdk/cli.ts agent state",
-          "ts": 6
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec \"return sdk.getState()?.player\"",
-          "ts": 6
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec \"return sdk.getInventory()\"",
-          "ts": 6
+          "ts": 5
         },
         {
           "source": "agent",
-          "text": "The bot is trying to connect to a remote server. Let me check the SDK configuration to connect to the local server.",
-          "ts": 13
+          "text": "Let me check the SDK configuration and see if there's a local gateway running.",
+          "ts": 11
         },
         {
           "source": "tool",
-          "text": "bash: ls -la server/gateway/ && head -50 server/gateway/launch-bot.ts 2>/dev/null || echo \"No launch-bot.ts\"",
-          "ts": 13
+          "text": "bash: bun sdk/cli.ts --help 2>&1 | head -50",
+          "ts": 11
         },
         {
           "source": "tool",
-          "text": "bash: cat sdk/cli.ts | head -50",
-          "ts": 13
+          "text": "bash: ps aux | grep -E \"(gateway|server)\" | head -10",
+          "ts": 11
+        },
+        {
+          "source": "agent",
+          "text": "I see there's a gateway running locally. Let me check the bot configuration and connect to localhost.",
+          "ts": 17
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat bots/agent/bot.env 2>/dev/null || ls -la bots/",
+          "ts": 17
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent state --server localhost",
+          "ts": 21
+        },
+        {
+          "source": "agent",
+          "text": "I can see the bot has a Shortbow and 25 Bronze arrows. Let me equip them and start attacking NPCs for Ranged XP.",
+          "ts": 31
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost '\n// First equip the shortbow and arrows\nawait bot.equipItem(\"Shortbow\");\nawait bot.equipItem(\"Bronze arrow\");\nawait bot.setCombatStyle(\"Accurate\"); // Ranged accurate style\n'",
+          "ts": 31
+        },
+        {
+          "source": "agent",
+          "text": "The combat style didn't change to ranged. Let me check the SDK interface to see how to properly wield items and set ranged combat.",
+          "ts": 39
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost '\n// Log the available methods on bot\nconsole.log(\"Bot methods:\", Object.keys(bot).filter(k => typeof bot[k] === \"function\").join(\", \"));\nconsole.log(\"Inventory:\", bot.inventory);\nconsole.log(\"Equipment:\", bot.equipment);\n'",
+          "ts": 39
+        },
+        {
+          "source": "agent",
+          "text": "Let me look at the SDK to understand how to properly interact with the game.",
+          "ts": 52
         },
         {
           "source": "tool",
           "text": "Glob",
-          "ts": 13
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la bots/ 2>/dev/null || echo \"No bots directory\"",
-          "ts": 21
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat /app/.envrc 2>/dev/null; cat server/engine/.env.example 2>/dev/null",
-          "ts": 21
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent test --server localhost --timeout 5000",
-          "ts": 21
-        },
-        {
-          "source": "agent",
-          "text": "I'm connected and have a shortbow + 25 bronze arrows. Let me wield them and start attacking immediately!",
-          "ts": 30
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent test --server localhost exec <<'EOF'\n// First wield the shortbow and arrows\nconst inv = sdk.getInventory();\nconsole.log(\"Inventory:\", inv);\n\n// Find and wield shortbow\nconst bow = inv.find(i => i.name === \"Shortbow\");\nif (bow) {\n    await bot.useInventoryItem(bow.index);\n    con",
-          "ts": 30
-        },
-        {
-          "source": "agent",
-          "text": "The items show [Wield] option but aren't wielded yet. Let me wield them properly and start attacking.",
-          "ts": 40
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent test --server localhost exec <<'EOF'\n// Check what wield options are available\nconst inv = sdk.getInventory();\nfor (const item of inv) {\n    if (item.name === \"Shortbow\" || item.name === \"Bronze arrow\") {\n        console.log(`${item.name} at index ${item.index}, opts:`, item.opt",
-          "ts": 40
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/actions.ts",
-          "ts": 46
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
           "ts": 52
         },
         {
           "source": "tool",
-          "text": "Grep",
-          "ts": 52
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/actions.ts",
-          "ts": 58
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 58
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent test --server localhost exec <<'EOF'\n// Equip shortbow\nconst bowResult = await bot.equipItem(\"Shortbow\");\nconsole.log(\"Bow result:\", bowResult);\n\nawait sleep(600);\n\n// Equip arrows\nconst arrowResult = await bot.equipItem(\"Bronze arrow\");\nconsole.log(\"Arrow result:\", arrowResult)",
-          "ts": 69
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls scripts/ranged/ 2>/dev/null && cat scripts/ranged/script.ts 2>/dev/null || echo \"No ranged script found\"",
-          "ts": 76
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 76
+          "text": "read: /app/sdk/test/combat-training.ts",
+          "ts": 61
         },
         {
           "source": "tool",
           "text": "read: /app/sdk/test/ranged.ts",
-          "ts": 79
+          "ts": 61
         },
         {
           "source": "agent",
-          "text": "Now I understand the pattern. Let me create a training script and run it.",
-          "ts": 115
+          "text": "Now I understand the SDK. Let me start the ranged training properly.",
+          "ts": 73
         },
         {
           "source": "tool",
-          "text": "write: /app/train-ranged.ts",
-          "ts": 115,
-          "detail": "#!/usr/bin/env bun\n/**\n * Ranged Combat Training Script\n * Maximize Ranged XP in 10 minutes\n */\n\nimport { BotSDK } from './sdk/index';\nimport { BotActions } from './sdk/actions';\n\nconst BOT_NAME = 'agent';\nconst BOT_PASSWORD = 'test';\nconst SERVER = 'localhost';\nconst DURATION_MS = 9 * 60 * 1000; // 9 minutes (leave buffer)\n\nasync function sleep(ms: number) {\n    return new Promise(resolve => setTimeout(resolve, ms));\n}\n\nasync function main() {\n    console.log('[Ranged] Starting training...');\n\n    const sdk = new BotSDK();\n    await sdk.connect(BOT_NAME, BOT_PASSWORD, SERVER);\n    console.log('[Ranged] Connected!');\n\n..."
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost '\n// Equip bow and arrows\nconst bow = sdk.findInventoryItem(/bow/i);\nif (bow) {\n    console.log(\"Equipping \" + bow.name);\n    await bot.equipItem(bow);\n    await new Promise(r => setTimeout(r, 500));\n}\n\nconst arrows = sdk.findInventoryItem(/arrow/i);\nif (",
+          "ts": 73
         },
         {
           "source": "tool",
-          "text": "bash: bun run train-ranged.ts 2>&1",
-          "ts": 129
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/index.ts",
-          "ts": 134
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/test/utils/test-runner.ts",
-          "ts": 138
-        },
-        {
-          "source": "agent",
-          "text": "Let me use the CLI's exec mode which already has a working SDK connection. I'll run a multi-step training loop.",
-          "ts": 149
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent test --server localhost exec <<'SCRIPT'\n// Check initial ranged XP\nconst initialXp = sdk.getSkill('Ranged')?.experience ?? 0;\nconsole.log(\"Initial Ranged XP:\", initialXp);\n\n// Equip bow and arrows\nconst bow = sdk.findInventoryItem(/shortbow/i);\nif (bow) {\n    console.log(\"Equipp",
-          "ts": 149
-        },
-        {
-          "source": "agent",
-          "text": "The CLI exec mode seems limited. Let me create a proper standalone script using the test framework pattern.",
-          "ts": 240
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/test/utils/browser.ts",
-          "ts": 240
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/cli.ts",
-          "ts": 246
+          "text": "read: /app/sdk/actions.ts",
+          "ts": 81
         },
         {
           "source": "tool",
           "text": "Grep",
-          "ts": 250
+          "ts": 88
         },
         {
           "source": "tool",
-          "text": "bash: head -100 sdk/cli.ts",
-          "ts": 255
+          "text": "read: /app/sdk/test/equip-unequip.ts",
+          "ts": 96
+        },
+        {
+          "source": "agent",
+          "text": "Let me run a complete ranged training script. I'll equip the bow and arrows, then start attacking NPCs.",
+          "ts": 158
         },
         {
           "source": "tool",
-          "text": "Glob",
-          "ts": 255
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost '\n// Log initial state\nconst initialXp = sdk.getSkill(\"Ranged\")?.experience ?? 0;\nconsole.log(\"Initial Ranged XP:\", initialXp);\n\n// Get current state\nconst state = sdk.getState();\nconsole.log(\"Current weapon:\", state?.combatStyle?.weaponName);\nconsole.log",
+          "ts": 158
+        },
+        {
+          "source": "agent",
+          "text": "Let me look at the CLI to understand how it handles the exec command and see if I can run continuous training.",
+          "ts": 165
         },
         {
           "source": "tool",
-          "text": "bash: ls sdk/",
-          "ts": 261
+          "text": "read: /app/sdk/cli.ts",
+          "ts": 165
         },
         {
           "source": "tool",
-          "text": "Glob",
-          "ts": 261
+          "text": "Grep",
+          "ts": 170
         },
         {
           "source": "tool",
           "text": "read: /app/sdk/runner.ts",
-          "ts": 265
+          "ts": 174
         },
         {
           "source": "agent",
-          "text": "Now I understand the runner pattern. Let me rewrite the training script using `runScript`.",
-          "ts": 305
+          "text": "Let me check the gateway to understand how the exec command works.",
+          "ts": 181
         },
         {
           "source": "tool",
-          "text": "edit: /app/train-ranged.ts",
-          "ts": 305,
-          "detail": "#!/usr/bin/env bun\n/**\n * Ranged Combat Training Script\n * Maximize Ranged XP in 10 minutes\n */\n\nimport { runScript } from './sdk/runner';\n\nconst DURATION_MS = 9 * 60 * 1000; // 9 minutes (leave buffer)\n\nasync function sleep(ms: number) {\n    return new Promise(resolve => setTimeout(resolve, ms));\n}\n\nawait runScript(async ({ bot, sdk, log }) => {\n    log('[Ranged] Starting training...');\n\n    const initialXp = sdk.getSkill('Ranged')?.experience ?? 0;\n    log(`Initial Ranged XP: ${initialXp}`);\n\n    // Equip bow and arrows\n    const bow = sdk.findInventoryItem(/shortbow/i);\n    if (bow) {\n        log(`Equipping ${bow.name}`);\n        await bot.equipItem(bow);\n..."
+          "text": "read: /app/server/gateway/gateway.ts",
+          "ts": 181
         },
         {
           "source": "tool",
-          "text": "bash: cat bots/agent/bot.env",
-          "ts": 309
+          "text": "Grep",
+          "ts": 186
         },
         {
           "source": "tool",
-          "text": "bash: bun --env-file=bots/agent/bot.env train-ranged.ts 2>&1",
-          "ts": 312
+          "text": "Grep",
+          "ts": 192
+        },
+        {
+          "source": "agent",
+          "text": "I see that the CLI doesn't have an exec command. Let me write and run a proper ranged training script.",
+          "ts": 234
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/ranged-train.ts",
+          "ts": 234,
+          "detail": "#!/usr/bin/env bun\n/**\n * Ranged Training Script\n * Maximizes Ranged XP in 10 minutes\n */\n\nimport { runScript } from './sdk/runner';\n\nconst DURATION_MS = 10 * 60 * 1000; // 10 minutes\n\nawait runScript(async (ctx) => {\n    const { bot, sdk, log } = ctx;\n\n    const startTime = Date.now();\n    const endTime = startTime + DURATION_MS;\n\n    // Record initial XP\n    const initialXp = sdk.getSkill('Ranged')?.experience ?? 0;\n    log(`Initial Ranged XP: ${initialXp}`);\n\n    // Wait for game state\n    await sdk.waitForCondition(s => s !== null && s.inventory.length > 0, 10000);\n\n    // Equip bow\n    const bow = sdk.findInventoryItem(/shortbow/i);\n..."
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun ranged-train.ts agent 2>&1",
+          "ts": 239
         }
       ],
-      "trimmedSamples": 9,
-      "trialDir": "jobs/skills-10m-glm-20260306-101725/ranged-xp-10m__PeLE8Qc",
+      "firstStepAt": "2026-03-06T04:37:16.989Z",
+      "trimmedSamples": 8,
+      "trialDir": "jobs/skills-10m-glm-20260305-231653/ranged-xp-10m__ufdjfPH",
       "videoAvailable": true,
-      "containerStartedAt": "2026-03-06T15:37:29.227689Z",
-      "containerFinishedAt": "2026-03-06T15:50:25.500094Z",
-      "agentStartedAt": "2026-03-06T15:37:45.861747Z"
+      "videoDuration": 716,
+      "containerStartedAt": "2026-03-06T04:36:58.795629Z",
+      "containerFinishedAt": "2026-03-06T04:49:50.705498Z",
+      "agentStartedAt": "2026-03-06T04:37:12.926475Z"
     },
     "hitpoints": {
-      "jobName": "skills-10m-glm-20260305-215936",
-      "finalXp": 37420,
-      "finalLevel": 51,
-      "durationSeconds": 585.009,
-      "sampleCount": 40,
+      "jobName": "hitpoints-xp-10m-glm-20260227-110547",
+      "peakXpRate": 500071,
+      "finalXp": 980,
+      "finalLevel": 10,
+      "durationSeconds": 592.077,
+      "sampleCount": 41,
       "samples": [
         {
           "elapsedMs": 0,
           "skills": {
             "Hitpoints": {
-              "level": 10,
-              "xp": 980
+              "level": 0,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 15001,
+          "elapsedMs": 7055,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -751,7 +770,7 @@
           }
         },
         {
-          "elapsedMs": 30001,
+          "elapsedMs": 22056,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -760,7 +779,7 @@
           }
         },
         {
-          "elapsedMs": 45001,
+          "elapsedMs": 37056,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -769,7 +788,7 @@
           }
         },
         {
-          "elapsedMs": 60001,
+          "elapsedMs": 52056,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -778,7 +797,7 @@
           }
         },
         {
-          "elapsedMs": 75001,
+          "elapsedMs": 67057,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -787,7 +806,7 @@
           }
         },
         {
-          "elapsedMs": 90001,
+          "elapsedMs": 82057,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -796,7 +815,7 @@
           }
         },
         {
-          "elapsedMs": 105002,
+          "elapsedMs": 97057,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -805,7 +824,7 @@
           }
         },
         {
-          "elapsedMs": 120002,
+          "elapsedMs": 112058,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -814,7 +833,7 @@
           }
         },
         {
-          "elapsedMs": 135002,
+          "elapsedMs": 127058,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -823,7 +842,7 @@
           }
         },
         {
-          "elapsedMs": 150002,
+          "elapsedMs": 142058,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -832,7 +851,7 @@
           }
         },
         {
-          "elapsedMs": 165002,
+          "elapsedMs": 157059,
           "skills": {
             "Hitpoints": {
               "level": 10,
@@ -841,468 +860,636 @@
           }
         },
         {
-          "elapsedMs": 180002,
+          "elapsedMs": 172059,
           "skills": {
-            "Strength": {
-              "level": 7
-            },
             "Hitpoints": {
-              "level": 11,
-              "xp": 1175
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 195003,
+          "elapsedMs": 187059,
           "skills": {
-            "Strength": {
-              "level": 23
-            },
             "Hitpoints": {
-              "level": 17,
-              "xp": 2377
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 210004,
+          "elapsedMs": 202060,
           "skills": {
-            "Strength": {
-              "level": 31
-            },
             "Hitpoints": {
-              "level": 21,
-              "xp": 3690
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 225004,
+          "elapsedMs": 217061,
           "skills": {
-            "Strength": {
-              "level": 36
-            },
             "Hitpoints": {
-              "level": 25,
-              "xp": 5022
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 240004,
+          "elapsedMs": 232064,
           "skills": {
-            "Strength": {
-              "level": 40
-            },
             "Hitpoints": {
-              "level": 28,
-              "xp": 6290
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 255004,
+          "elapsedMs": 247063,
           "skills": {
-            "Strength": {
-              "level": 42
-            },
             "Hitpoints": {
-              "level": 29,
-              "xp": 7232
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 270004,
+          "elapsedMs": 262064,
           "skills": {
-            "Strength": {
-              "level": 45
-            },
             "Hitpoints": {
-              "level": 32,
-              "xp": 8742
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 285005,
+          "elapsedMs": 277064,
           "skills": {
-            "Strength": {
-              "level": 48
-            },
             "Hitpoints": {
-              "level": 34,
-              "xp": 10550
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 300005,
+          "elapsedMs": 292067,
           "skills": {
-            "Strength": {
-              "level": 50
-            },
             "Hitpoints": {
-              "level": 36,
-              "xp": 11890
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 315005,
+          "elapsedMs": 307067,
           "skills": {
-            "Strength": {
-              "level": 51
-            },
             "Hitpoints": {
-              "level": 37,
-              "xp": 13095
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 330006,
+          "elapsedMs": 322068,
           "skills": {
-            "Strength": {
-              "level": 53
-            },
             "Hitpoints": {
-              "level": 38,
-              "xp": 14442
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 345006,
+          "elapsedMs": 337069,
           "skills": {
-            "Strength": {
-              "level": 54
-            },
             "Hitpoints": {
-              "level": 39,
-              "xp": 15660
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 360006,
+          "elapsedMs": 352069,
           "skills": {
-            "Strength": {
-              "level": 55
-            },
             "Hitpoints": {
-              "level": 40,
-              "xp": 16775
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 375006,
+          "elapsedMs": 367069,
           "skills": {
-            "Strength": {
-              "level": 56
-            },
             "Hitpoints": {
-              "level": 42,
-              "xp": 18347
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 390006,
+          "elapsedMs": 382070,
           "skills": {
-            "Strength": {
-              "level": 57
-            },
             "Hitpoints": {
-              "level": 42,
-              "xp": 19625
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 405006,
+          "elapsedMs": 397072,
           "skills": {
-            "Strength": {
-              "level": 58
-            },
             "Hitpoints": {
-              "level": 43,
-              "xp": 20907
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 420006,
+          "elapsedMs": 412072,
           "skills": {
-            "Strength": {
-              "level": 59
-            },
             "Hitpoints": {
-              "level": 44,
-              "xp": 22385
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 435007,
+          "elapsedMs": 427072,
           "skills": {
-            "Strength": {
-              "level": 60
-            },
             "Hitpoints": {
-              "level": 45,
-              "xp": 23202
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 450008,
+          "elapsedMs": 442073,
           "skills": {
-            "Strength": {
-              "level": 61
-            },
             "Hitpoints": {
-              "level": 46,
-              "xp": 24512
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 465008,
+          "elapsedMs": 457073,
           "skills": {
-            "Strength": {
-              "level": 61
-            },
             "Hitpoints": {
-              "level": 46,
-              "xp": 25525
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 480008,
+          "elapsedMs": 472073,
           "skills": {
-            "Strength": {
-              "level": 62
-            },
             "Hitpoints": {
-              "level": 47,
-              "xp": 26867
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 495008,
+          "elapsedMs": 487074,
           "skills": {
-            "Strength": {
-              "level": 63
-            },
             "Hitpoints": {
-              "level": 48,
-              "xp": 28680
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 510008,
+          "elapsedMs": 502074,
           "skills": {
-            "Strength": {
-              "level": 64
-            },
             "Hitpoints": {
-              "level": 48,
-              "xp": 29995
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 525008,
+          "elapsedMs": 517075,
           "skills": {
-            "Strength": {
-              "level": 64
-            },
             "Hitpoints": {
-              "level": 49,
-              "xp": 31245
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 540008,
+          "elapsedMs": 532076,
           "skills": {
-            "Strength": {
-              "level": 65
-            },
             "Hitpoints": {
-              "level": 49,
-              "xp": 32592
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 555008,
+          "elapsedMs": 547076,
           "skills": {
-            "Strength": {
-              "level": 66
-            },
             "Hitpoints": {
-              "level": 50,
-              "xp": 34332
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 570008,
+          "elapsedMs": 562076,
           "skills": {
-            "Strength": {
-              "level": 66
-            },
             "Hitpoints": {
-              "level": 51,
-              "xp": 35450
+              "level": 10,
+              "xp": 980
             }
           }
         },
         {
-          "elapsedMs": 585009,
+          "elapsedMs": 577076,
           "skills": {
-            "Strength": {
-              "level": 67
-            },
             "Hitpoints": {
-              "level": 51,
-              "xp": 37420
+              "level": 10,
+              "xp": 980
+            }
+          }
+        },
+        {
+          "elapsedMs": 592077,
+          "skills": {
+            "Hitpoints": {
+              "level": 10,
+              "xp": 980
             }
           }
         }
       ],
       "tokenUsage": {
-        "inputTokens": 320989,
-        "cacheTokens": 301760,
-        "outputTokens": 2282
+        "inputTokens": 2427879,
+        "cacheTokens": 2368320,
+        "outputTokens": 8408
       },
       "trajectory": [
         {
           "source": "agent",
-          "text": "I'll start gaining Hitpoints XP immediately by engaging in combat. Let me first check the current state of the bot.",
-          "ts": 9
+          "text": "I'll start immediately. Let me check the bot status and find the best way to gain Hitpoints XP.",
+          "ts": 11
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent state",
-          "ts": 9
+          "text": "mcp__rs-agent__list_bots",
+          "ts": 11
         },
         {
           "source": "agent",
-          "text": "Let me check the CLI options and how to start/connect the bot.",
-          "ts": 19
+          "text": "Let me connect the bot and check its current state.",
+          "ts": 32
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts --help",
-          "ts": 19
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la bots/",
-          "ts": 29
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/bots/agent/bot.env",
-          "ts": 38
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent test --server localhost",
-          "ts": 51
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 32
         },
         {
           "source": "agent",
-          "text": "I'm connected. I have basic equipment and there are NPCs nearby to attack. Let me check the CLI exec command to run combat actions.",
-          "ts": 67
+          "text": "Let me check what methods are available on the bot.",
+          "ts": 42
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent exec --help 2>/dev/null || cat sdk/cli.ts | head -100",
-          "ts": 67
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 42
+        },
+        {
+          "source": "tool",
+          "text": "read: /logs/agent/sessions/projects/-app/eabe01bb-bf56-4433-9acf-5f8ab09c050c/tool-results/call_49101170405d41ddb02ae67c.json",
+          "ts": 52
         },
         {
           "source": "tool",
           "text": "Glob",
-          "ts": 75
+          "ts": 135
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 154
+        },
+        {
+          "source": "agent",
+          "text": "I can see there are monsters nearby. Let me equip weapons and start fighting to gain Hitpoints XP. I'll wield the bronze sword and wooden shield, then attack monsters.",
+          "ts": 177
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 177
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 183
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 195
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 205
+        },
+        {
+          "source": "agent",
+          "text": "Let me start fighting immediately. I'll attack the Imp nearby to take damage and gain HP XP.",
+          "ts": 232
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 232
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 245
+        },
+        {
+          "source": "agent",
+          "text": "Now I understand the structure. Let me attack the Imp (opIndex 2 for Attack) and start fighting.",
+          "ts": 259
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 259
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__list_bots",
+          "ts": 266
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 277
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 292
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 303
+        },
+        {
+          "source": "agent",
+          "text": "Now let me attack the Imp immediately.",
+          "ts": 317
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 317
+        },
+        {
+          "source": "agent",
+          "text": "Let me write a complete combat script that runs continuously.",
+          "ts": 353
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 353
+        },
+        {
+          "source": "agent",
+          "text": "Let me check the project for example scripts to understand the proper connection pattern.",
+          "ts": 360
+        },
+        {
+          "source": "tool",
+          "text": "Glob",
+          "ts": 360
+        },
+        {
+          "source": "tool",
+          "text": "Glob",
+          "ts": 368
         },
         {
           "source": "tool",
           "text": "read: /app/sdk/test/combat-training.ts",
-          "ts": 85
+          "ts": 373
+        },
+        {
+          "source": "agent",
+          "text": "I see there's a helper structure. Let me check the browser utilities to understand the bot methods.",
+          "ts": 382
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/test/utils/browser.ts",
+          "ts": 382
         },
         {
           "source": "tool",
           "text": "read: /app/sdk/actions.ts",
-          "ts": 85
-        },
-        {
-          "source": "agent",
-          "text": "Let me check for a daemon or runner system.",
-          "ts": 97
+          "ts": 389
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/runner.ts",
-          "ts": 97
+          "text": "Grep",
+          "ts": 394
         },
         {
           "source": "agent",
-          "text": "I see there's a runner. Let me check how to execute commands directly and then start attacking immediately.",
-          "ts": 107
+          "text": "Now I understand the structure. Let me write a combat script that runs continuously using the bot methods.",
+          "ts": 441
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 441
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 457
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 468
+        },
+        {
+          "source": "agent",
+          "text": "Bot has all needed methods. Let me run a quick attack test first.",
+          "ts": 483
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 483
+        },
+        {
+          "source": "agent",
+          "text": "Let me check if there's a different way to execute actions.",
+          "ts": 498
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 498
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 514
+        },
+        {
+          "source": "agent",
+          "text": "Let me check how the SDK determines if the bot is connected.",
+          "ts": 521
+        },
+        {
+          "source": "tool",
+          "text": "Grep",
+          "ts": 521
+        },
+        {
+          "source": "tool",
+          "text": "Grep",
+          "ts": 530
+        },
+        {
+          "source": "tool",
+          "text": "Grep",
+          "ts": 536
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/index.ts",
+          "ts": 543
+        },
+        {
+          "source": "agent",
+          "text": "I see - the error comes from the server saying the bot is not connected (not the SDK connection). Let me check the MCP server to understand the bot setup.",
+          "ts": 551
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__list_bots",
+          "ts": 551
         },
         {
           "source": "tool",
           "text": "read: /app/server/gateway/launch-bot.ts",
-          "ts": 107
+          "ts": 559
         },
         {
           "source": "tool",
-          "text": "Grep",
-          "ts": 107
+          "text": "bash: ps aux | grep -E \"launch-bot|puppeteer|chrome\" | head -20",
+          "ts": 570
         },
         {
           "source": "agent",
-          "text": "Let me check the actions file to understand how to attack NPCs, then create a combat script.",
-          "ts": 117
+          "text": "The browser is running. Let me check the MCP server implementation to understand the connection issue.",
+          "ts": 577
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/actions.ts",
-          "ts": 117
+          "text": "read: /app/mcp/server.ts",
+          "ts": 577
         },
         {
           "source": "tool",
-          "text": "Grep",
-          "ts": 127
+          "text": "read: /app/mcp/api/index.ts",
+          "ts": 583
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 600
         },
         {
           "source": "agent",
-          "text": "Now I'll start combat training immediately. Let me run a script that attacks NPCs to maximize Hitpoints XP.",
-          "ts": 176
+          "text": "The game is frozen. Let me try to disconnect and reconnect the bot.",
+          "ts": 612
         },
         {
           "source": "tool",
-          "text": "bash: cat > /tmp/hp_training.ts << 'SCRIPT'\nimport { runScript } from '/app/sdk/runner';\n\nconst DURATION_SECONDS = 580; // 9 min 40 sec to leave time for final checks\n\nawait runScript(async (ctx) => {\n    const { bot, sdk, log } = ctx;\n    \n    const startTime = Date.now();\n    const endTime = startTime +",
-          "ts": 176
+          "text": "mcp__rs-agent__disconnect_bot",
+          "ts": 612
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__execute_code",
+          "ts": 627
+        },
+        {
+          "source": "tool",
+          "text": "bash: ps aux | grep -E \"engine|server|java\" | head -20",
+          "ts": 637
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat /start-services.sh",
+          "ts": 645
+        },
+        {
+          "source": "tool",
+          "text": "bash: ps aux | grep -E \"bun run\" | head -20",
+          "ts": 653
+        },
+        {
+          "source": "tool",
+          "text": "bash: curl -s http://localhost:8888 | head -50",
+          "ts": 660
+        },
+        {
+          "source": "tool",
+          "text": "bash: curl -s http://localhost:7780/status/agent 2>&1",
+          "ts": 666
+        },
+        {
+          "source": "agent",
+          "text": "The bot is showing as dead on the gateway. Let me restart the bot client.",
+          "ts": 677
+        },
+        {
+          "source": "tool",
+          "text": "bash: pkill -f \"launch-bot.ts\" && sleep 2 && cd /app/server/gateway && DISPLAY=:99 bun run launch-bot.ts &\necho \"Bot client restarted\"\nsleep 10\ncurl -s http://localhost:7780/status/agent",
+          "ts": 677
+        },
+        {
+          "source": "tool",
+          "text": "bash: cd /app/server/gateway && DISPLAY=:99 nohup bun run launch-bot.ts > /logs/launch-bot.log 2>&1 &\necho \"Started bot client\"\nsleep 15\necho \"Checking status...\"\ncurl -s http://localhost:7780/status/agent",
+          "ts": 687
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat /logs/launch-bot.log | head -50",
+          "ts": 708
+        },
+        {
+          "source": "tool",
+          "text": "mcp__rs-agent__disconnect_bot",
+          "ts": 713
         }
       ],
-      "trimmedSamples": 10,
-      "trialDir": "jobs/skills-10m-glm-20260305-215936/hitpoints-xp-10m__uo5yzeQ",
+      "firstStepAt": "2026-02-27T16:13:42.884Z",
+      "trimmedSamples": 9,
+      "trialDir": "jobs/hitpoints-xp-10m-glm-20260227-110547/hitpoints-xp-10m__k4yxJaf",
       "videoAvailable": true,
-      "containerStartedAt": "2026-03-06T03:19:42.646029Z",
-      "containerFinishedAt": "2026-03-06T03:33:57.317847Z",
-      "agentStartedAt": "2026-03-06T03:20:03.504768Z"
+      "videoDuration": 723,
+      "containerStartedAt": "2026-02-27T16:13:29.139816Z",
+      "containerFinishedAt": "2026-02-27T16:26:23.489472Z",
+      "agentStartedAt": "2026-02-27T16:13:35.938628Z"
     },
     "smithing": {
       "jobName": "skills-10m-glm-20260305-154959",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.019,
@@ -2136,15 +2323,18 @@
           "ts": 744
         }
       ],
+      "firstStepAt": "2026-03-05T23:45:36.597Z",
       "trimmedSamples": 12,
       "trialDir": "jobs/skills-10m-glm-20260305-154959/smithing-xp-10m__qeh4ANr",
       "videoAvailable": true,
+      "videoDuration": 776,
       "containerStartedAt": "2026-03-05T23:45:09.589198Z",
       "containerFinishedAt": "2026-03-05T23:59:08.926800Z",
       "agentStartedAt": "2026-03-05T23:45:30.931456Z"
     },
     "strength": {
       "jobName": "skills-10m-glm-20260305-215936",
+      "peakXpRate": 1104000,
       "finalXp": 65100,
       "finalLevel": 59,
       "durationSeconds": 585.012,
@@ -2759,18 +2949,21 @@
           "ts": 164
         }
       ],
+      "firstStepAt": "2026-03-06T03:20:02.439Z",
       "trimmedSamples": 8,
       "trialDir": "jobs/skills-10m-glm-20260305-215936/strength-xp-10m__bU3jPcz",
       "videoAvailable": true,
+      "videoDuration": 711.08982,
       "containerStartedAt": "2026-03-06T03:19:42.641732Z",
       "containerFinishedAt": "2026-03-06T03:32:53.787056Z",
       "agentStartedAt": "2026-03-06T03:19:57.988228Z"
     },
     "magic": {
-      "jobName": "skills-10m-glm-20260305-154959",
-      "finalXp": 3462,
-      "finalLevel": 21,
-      "durationSeconds": 585.014,
+      "jobName": "skills-10m-glm-20260306-004515",
+      "peakXpRate": 225120,
+      "finalXp": 2462,
+      "finalLevel": 17,
+      "durationSeconds": 585.02,
       "sampleCount": 40,
       "samples": [
         {
@@ -2798,7 +2991,7 @@
           }
         },
         {
-          "elapsedMs": 30002,
+          "elapsedMs": 30001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2810,7 +3003,7 @@
           }
         },
         {
-          "elapsedMs": 45002,
+          "elapsedMs": 45001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2822,7 +3015,7 @@
           }
         },
         {
-          "elapsedMs": 60002,
+          "elapsedMs": 60001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2834,7 +3027,7 @@
           }
         },
         {
-          "elapsedMs": 75003,
+          "elapsedMs": 75001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2846,7 +3039,7 @@
           }
         },
         {
-          "elapsedMs": 90003,
+          "elapsedMs": 90001,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2858,7 +3051,7 @@
           }
         },
         {
-          "elapsedMs": 105003,
+          "elapsedMs": 105002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2870,7 +3063,7 @@
           }
         },
         {
-          "elapsedMs": 120003,
+          "elapsedMs": 120002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2882,7 +3075,7 @@
           }
         },
         {
-          "elapsedMs": 135003,
+          "elapsedMs": 135002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2894,7 +3087,7 @@
           }
         },
         {
-          "elapsedMs": 150003,
+          "elapsedMs": 150002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -2924,278 +3117,224 @@
               "level": 10
             },
             "Magic": {
-              "level": 7,
-              "xp": 662
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
           "elapsedMs": 195003,
           "skills": {
-            "Attack": {
-              "level": 3
-            },
             "Hitpoints": {
-              "level": 11
+              "level": 10
             },
             "Magic": {
-              "level": 9,
-              "xp": 900
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 210003,
+          "elapsedMs": 210005,
           "skills": {
-            "Attack": {
-              "level": 5
-            },
             "Hitpoints": {
-              "level": 12
+              "level": 10
             },
             "Magic": {
-              "level": 13,
-              "xp": 1475
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 225004,
+          "elapsedMs": 225006,
           "skills": {
-            "Attack": {
-              "level": 5
-            },
             "Hitpoints": {
-              "level": 13
+              "level": 10
             },
             "Magic": {
-              "level": 17,
-              "xp": 2337
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 240004,
+          "elapsedMs": 240006,
           "skills": {
-            "Attack": {
-              "level": 5
-            },
             "Hitpoints": {
-              "level": 13
+              "level": 10
             },
             "Magic": {
-              "level": 18,
-              "xp": 2625
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 255004,
+          "elapsedMs": 255006,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 270005,
+          "elapsedMs": 270007,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 285005,
+          "elapsedMs": 285007,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 300007,
+          "elapsedMs": 300008,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 315007,
+          "elapsedMs": 315009,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 330008,
+          "elapsedMs": 330010,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 345008,
+          "elapsedMs": 345010,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 360009,
+          "elapsedMs": 360010,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 375009,
+          "elapsedMs": 375010,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 390009,
+          "elapsedMs": 390010,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 405009,
+          "elapsedMs": 405011,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 420010,
+          "elapsedMs": 420012,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 435010,
+          "elapsedMs": 435012,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 450010,
+          "elapsedMs": 450012,
           "skills": {
-            "Attack": {
-              "level": 12
-            },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 1,
+              "xp": 0
             }
           }
         },
@@ -3203,14 +3342,14 @@
           "elapsedMs": 465012,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 2
             },
             "Hitpoints": {
-              "level": 15
+              "level": 10
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 4,
+              "xp": 325
             }
           }
         },
@@ -3218,14 +3357,14 @@
           "elapsedMs": 480012,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 7
             },
             "Hitpoints": {
-              "level": 15
+              "level": 11
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 7,
+              "xp": 650
             }
           }
         },
@@ -3233,14 +3372,14 @@
           "elapsedMs": 495014,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 13
             },
             "Hitpoints": {
-              "level": 15
+              "level": 13
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 12,
+              "xp": 1387
             }
           }
         },
@@ -3248,14 +3387,14 @@
           "elapsedMs": 510014,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 16
             },
             "Hitpoints": {
               "level": 15
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 17,
+              "xp": 2325
             }
           }
         },
@@ -3263,384 +3402,312 @@
           "elapsedMs": 525014,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 16
             },
             "Hitpoints": {
               "level": 15
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 17,
+              "xp": 2462
             }
           }
         },
         {
-          "elapsedMs": 540014,
+          "elapsedMs": 540019,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 16
             },
             "Hitpoints": {
               "level": 15
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 17,
+              "xp": 2462
             }
           }
         },
         {
-          "elapsedMs": 555014,
+          "elapsedMs": 555019,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 16
             },
             "Hitpoints": {
               "level": 15
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 17,
+              "xp": 2462
             }
           }
         },
         {
-          "elapsedMs": 570014,
+          "elapsedMs": 570020,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 16
             },
             "Hitpoints": {
               "level": 15
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 17,
+              "xp": 2462
             }
           }
         },
         {
-          "elapsedMs": 585014,
+          "elapsedMs": 585020,
           "skills": {
             "Attack": {
-              "level": 12
+              "level": 16
             },
             "Hitpoints": {
               "level": 15
             },
             "Magic": {
-              "level": 21,
-              "xp": 3462
+              "level": 17,
+              "xp": 2462
             }
           }
         }
       ],
       "tokenUsage": {
-        "inputTokens": 1461836,
-        "cacheTokens": 1373824,
-        "outputTokens": 12011
+        "inputTokens": 999518,
+        "cacheTokens": 964160,
+        "outputTokens": 7528
       },
       "trajectory": [
         {
           "source": "agent",
-          "text": "I'll start gaining Magic XP immediately. Let me first look at what's available in the codebase and check for existing scripts or SDK documentation.",
-          "ts": 5
+          "text": "I'll start training Magic immediately. Let me first check the current state of the bot.",
+          "ts": 7
         },
         {
           "source": "tool",
-          "text": "ToolSearch",
-          "ts": 5
-        },
-        {
-          "source": "tool",
-          "text": "ToolSearch",
-          "ts": 5
-        },
-        {
-          "source": "tool",
-          "text": "Glob",
-          "ts": 11
-        },
-        {
-          "source": "tool",
-          "text": "Glob",
-          "ts": 11
-        },
-        {
-          "source": "tool",
-          "text": "Glob",
-          "ts": 11
+          "text": "bash: bun sdk/cli.ts agent state",
+          "ts": 7
         },
         {
           "source": "agent",
-          "text": "Let me read the SDK documentation and the magic test file to understand how to interact with the game.",
-          "ts": 21
+          "text": "Let me check the SDK configuration to connect to the local server.",
+          "ts": 19
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/API.md",
-          "ts": 21
+          "text": "bash: cat sdk/.env 2>/dev/null || cat sdk/.env.example 2>/dev/null || echo \"No .env found\"",
+          "ts": 19
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/test/alchemy.ts",
-          "ts": 21
+          "text": "bash: cat sdk/cli.ts 2>/dev/null | head -50",
+          "ts": 19
+        },
+        {
+          "source": "tool",
+          "text": "bash: ls -la bots/ 2>/dev/null || echo \"No bots directory\"",
+          "ts": 30
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat bots/agent/bot.env 2>/dev/null || echo \"No bot.env found\"",
+          "ts": 30
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent state 2>&1",
+          "ts": 37
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent test --server localhost state 2>&1",
+          "ts": 45
+        },
+        {
+          "source": "agent",
+          "text": "I'm connected. I have Air runes (25), Mind runes (15) which lets me cast Air Strike (needs 1 Air + 1 Mind). Let me start casting combat spells immediately.",
+          "ts": 60
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent test --server localhost exec <<'EOF'\n// First, let's see what magic methods are available\nreturn Object.keys(bot).filter(k => k.toLowerCase().includes('magic') || k.toLowerCase().includes('cast') || k.toLowerCase().includes('spell'))\nEOF",
+          "ts": 60
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent test --server localhost exec <<'EOF'\n// Check what methods are on the bot object\nconst methods = Object.getOwnPropertyNames(Object.getPrototypeOf(bot)).filter(x => typeof bot[x] === 'function')\nreturn methods.slice(0, 50).join(', ')\nEOF",
+          "ts": 69
+        },
+        {
+          "source": "tool",
+          "text": "Glob",
+          "ts": 76
         },
         {
           "source": "tool",
           "text": "read: /app/sdk/test/magic.ts",
-          "ts": 21
+          "ts": 81
         },
         {
-          "source": "agent",
-          "text": "Let me check the test-runner utility and spell definitions to understand how to run scripts.",
-          "ts": 26
+          "source": "tool",
+          "text": "read: /app/sdk/actions.ts",
+          "ts": 81
         },
         {
           "source": "tool",
           "text": "read: /app/sdk/test/utils/save-generator.ts",
-          "ts": 26
+          "ts": 90
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/test/utils/test-runner.ts",
-          "ts": 26
+          "text": "Grep",
+          "ts": 90
+        },
+        {
+          "source": "tool",
+          "text": "Grep",
+          "ts": 97
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/test/utils/save-generator.ts",
+          "ts": 103
         },
         {
           "source": "agent",
-          "text": "Now I understand how to create and run scripts. Let me create a simple magic training script and run it immediately. I'll start with Wind Strike on chickens near Lumbridge.",
-          "ts": 47
+          "text": "Now I understand the API. Let me start casting Wind Strike (spell ID 1152) on nearby NPCs. I'll attack rats which are close.",
+          "ts": 116
         },
         {
           "source": "tool",
-          "text": "ToolSearch",
-          "ts": 47
+          "text": "bash: bun sdk/cli.ts agent test --server localhost exec <<'EOF'\n// Cast Wind Strike on the first rat we find\nconst npcs = sdk.getNearbyNpcs();\nconst rat = npcs.find(n => /rat/i.test(n.name));\nif (rat) {\n    console.log(`Found rat at index ${rat.index}, casting Wind Strike...`);\n    const result = await bo",
+          "ts": 116
         },
         {
           "source": "tool",
-          "text": "bash: ls -la /app/server/engine/data/players/main/ 2>/dev/null || ls -la /app/engine/data/players/main/ 2>/dev/null || echo \"No players dir found\"",
-          "ts": 53
-        },
-        {
-          "source": "agent",
-          "text": "Let me create and run a simple magic training script.",
-          "ts": 79
+          "text": "bash: bun sdk/cli.ts agent test --server localhost exec 2>&1 <<'EOF'\n// Cast Wind Strike on the first rat we find\nconst npcs = sdk.getNearbyNpcs();\nconst rat = npcs.find(n => /rat/i.test(n.name));\nif (rat) {\n    const result = await bot.castSpellOnNpc(rat, 1152);\n    await new Promise(r => setTimeout(r, 2",
+          "ts": 129
         },
         {
           "source": "tool",
-          "text": "bash: cat > /app/magic-train.ts << 'SCRIPT'\n#!/usr/bin/env bun\n/**\n * Magic Training Script - Maximize Magic XP in 10 minutes\n * Strategy: Cast combat spells on NPCs for Magic XP\n */\n\nimport { runTest, dismissDialog, sleep } from './sdk/test/utils/test-runner';\nimport { Items, Spells } from './sdk/test/ut",
-          "ts": 79
+          "text": "bash: bun sdk/cli.ts agent test --server localhost exec 2>&1 <<'EOF'\n// Just check current magic XP and rune counts\nconst magicXp = sdk.getSkill('Magic')?.experience ?? 0;\nconst airRune = sdk.findInventoryItem(/air rune/i);\nconst mindRune = sdk.findInventoryItem(/mind rune/i);\nreturn { magicXp, airRunes: ",
+          "ts": 145
         },
         {
           "source": "tool",
-          "text": "bash: timeout 600 bun run magic-train.ts 2>&1",
-          "ts": 88
-        },
-        {
-          "source": "agent",
-          "text": "Let me check the browser utility and try running a simpler approach.",
-          "ts": 94
+          "text": "Grep",
+          "ts": 157
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/test/utils/browser.ts",
-          "ts": 94
-        },
-        {
-          "source": "agent",
-          "text": "Let me check how to run tests properly from the SDK directory.",
-          "ts": 105
+          "text": "Grep",
+          "ts": 254
         },
         {
           "source": "tool",
-          "text": "bash: cd /app/sdk && bun run test/magic.ts 2>&1 | head -100",
-          "ts": 105
+          "text": "bash: bun sdk/cli.ts agent test --server localhost exec 2>&1 <<'EOF'\n// Cast Wind Strike on a rat using string pattern\nconst result = await bot.castSpellOnNpc(/rat/i, 1152);  // 1152 = WIND_STRIKE\nconsole.log(\"Cast result:\", JSON.stringify(result));\nawait new Promise(r => setTimeout(r, 2500));  // Wait fo",
+          "ts": 264
         },
         {
           "source": "tool",
-          "text": "bash: cd /app && ls -la package.json bun.lock && head -50 package.json",
-          "ts": 113
+          "text": "read: /app/sdk/cli.ts",
+          "ts": 270
         },
         {
           "source": "tool",
-          "text": "bash: bun install 2>&1",
-          "ts": 120
+          "text": "read: /app/sdk/cli.ts",
+          "ts": 274
         },
         {
           "source": "tool",
-          "text": "bash: cd /app/sdk && cat package.json 2>/dev/null || echo \"No package.json in sdk\"; bun install 2>&1",
-          "ts": 125
+          "text": "read: /app/sdk/runner.ts",
+          "ts": 281
         },
         {
-          "source": "agent",
-          "text": "Let me check if there's a simpler way to interact with the game via the gateway.",
-          "ts": 132
+          "source": "tool",
+          "text": "read: /app/sdk/runner.ts",
+          "ts": 288
         },
         {
           "source": "tool",
           "text": "read: /app/server/gateway/launch-bot.ts",
-          "ts": 132
+          "ts": 295
+        },
+        {
+          "source": "agent",
+          "text": "Let me write a quick script to run magic training using the runner.",
+          "ts": 322
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat > /tmp/magic-trainer.ts << 'SCRIPT'\nimport { runScript } from '/app/sdk/runner';\n\nrunScript(async ({ bot, sdk, log }) => {\n    const WIND_STRIKE = 1152;\n    \n    // Get initial state\n    const initialXp = sdk.getSkill('Magic')?.experience ?? 0;\n    let totalXp = 0;\n    let casts = 0;\n    \n    lo",
+          "ts": 322
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun --env-file=bots/agent/bot.env /tmp/magic-trainer.ts 2>&1",
+          "ts": 326
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat > /tmp/magic-trainer2.ts << 'SCRIPT'\nimport { runScript } from '/app/sdk/runner';\n\nrunScript(async ({ bot, sdk, log }) => {\n    const WIND_STRIKE = 1152;\n    \n    // Get initial state\n    const initialXp = sdk.getSkill('Magic')?.experience ?? 0;\n    log(`Starting Magic training. Initial XP: ${in",
+          "ts": 399
+        },
+        {
+          "source": "agent",
+          "text": "Good progress! The spell failed because there's an obstacle. Let me walk closer to the target first and then cast.",
+          "ts": 457
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat > /tmp/magic-trainer3.ts << 'SCRIPT'\nimport { runScript } from '/app/sdk/runner';\n\nrunScript(async ({ bot, sdk, log }) => {\n    const WIND_STRIKE = 1152;\n    let totalXp = 0;\n    let casts = 0;\n    \n    const initialXp = sdk.getSkill('Magic')?.experience ?? 0;\n    log(`Starting Magic training. I",
+          "ts": 457
+        },
+        {
+          "source": "agent",
+          "text": "I gained 2,462 Magic XP! I'm now out of Mind runes. Let me find a shop to buy more runes. I'll go to the Lumbridge magic shop.",
+          "ts": 585
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat > /tmp/buy-runes.ts << 'SCRIPT'\nimport { runScript } from '/app/sdk/runner';\n\nrunScript(async ({ bot, sdk, log }) => {\n    // First, let's find shops in the area\n    const state = sdk.getState();\n    log(`Current position: (${state?.player?.worldX}, ${state?.player?.worldZ})`);\n    \n    // Walk ",
+          "ts": 585
         },
         {
           "source": "tool",
           "text": "Grep",
-          "ts": 132
+          "ts": 626
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat > /tmp/buy-runes2.ts << 'SCRIPT'\nimport { runScript } from '/app/sdk/runner';\n\nrunScript(async ({ bot, sdk, log }) => {\n    log(`Opening shop...`);\n    \n    // Open shop\n    const openResult = await bot.openShop(/shop\\s*(keeper|assistant)/i);\n    log(`Open shop result: ${JSON.stringify(openResul",
+          "ts": 643
         },
         {
           "source": "agent",
-          "text": "Let me check if the gateway has puppeteer installed and if the bot is already running.",
-          "ts": 140
+          "text": "The general store doesn't sell Mind runes. I need to go to a magic shop. Let me sell some items to get gold and then go to Varrock's rune shop.",
+          "ts": 715
         },
         {
           "source": "tool",
-          "text": "bash: cd /app/server/gateway && cat package.json | head -30",
-          "ts": 140
-        },
-        {
-          "source": "tool",
-          "text": "bash: ps aux | grep -E \"bun|node|launch-bot\" | grep -v grep",
-          "ts": 140
-        },
-        {
-          "source": "agent",
-          "text": "The bot is already running! Let me connect directly to the gateway using the SDK and start casting spells immediately.",
-          "ts": 170
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat > /app/magic-train-direct.ts << 'SCRIPT'\n#!/usr/bin/env bun\n/**\n * Magic Training - Direct SDK Connection\n * Connects to existing bot \"agent\" via gateway\n */\n\nimport { BotSDK } from './sdk/index';\nimport { BotActions } from './sdk/actions';\n\nconst GATEWAY_URL = process.env.GATEWAY_URL || 'ws://l",
-          "ts": 170
-        },
-        {
-          "source": "tool",
-          "text": "bash: timeout 600 bun run magic-train-direct.ts 2>&1",
-          "ts": 175
-        },
-        {
-          "source": "tool",
-          "text": "bash: cd /app && timeout 600 bun run magic-train-direct.ts 2>&1",
-          "ts": 181
-        },
-        {
-          "source": "agent",
-          "text": "The script ran but we ran out of runes too quickly! We gained 3462 XP but we're out of Mind runes. Let me check if I can get more runes from a shop or bank.",
-          "ts": 274
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat > /app/check-state.ts << 'SCRIPT'\nimport { BotSDK } from './sdk/index';\n\nconst sdk = new BotSDK({\n    botUsername: 'agent',\n    password: 'test',\n    gatewayUrl: 'ws://localhost:7780',\n    autoLaunchBrowser: false,\n});\n\nasync function main() {\n    await sdk.connect();\n    await sdk.waitForCondit",
-          "ts": 274
-        },
-        {
-          "source": "agent",
-          "text": "We're out of Mind runes! I need to get more runes. Let me walk to a rune shop to buy more.",
-          "ts": 300
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 300
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 306
-        },
-        {
-          "source": "agent",
-          "text": "Let me check where Aubury's rune shop is located and walk there to buy more runes.",
-          "ts": 315
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 315
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 321
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 328
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 335
-        },
-        {
-          "source": "tool",
-          "text": "Glob",
-          "ts": 342
-        },
-        {
-          "source": "tool",
-          "text": "Grep",
-          "ts": 342
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/learnings/shops.md",
-          "ts": 350
-        },
-        {
-          "source": "agent",
-          "text": "Let me create a script to walk to Aubury's rune shop in Varrock, buy Mind runes, and return to combat.",
-          "ts": 380
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat > /app/magic-shop-run.ts << 'SCRIPT'\n#!/usr/bin/env bun\n/**\n * Buy Mind Runes from Aubury and return to combat\n */\n\nimport { BotSDK } from './sdk/index';\nimport { BotActions } from './sdk/actions';\n\nconst GATEWAY_URL = 'ws://localhost:7780';\nconst BOT_NAME = 'agent';\nconst MAX_TIME_MS = 8.5 * 60",
-          "ts": 380
-        },
-        {
-          "source": "agent",
-          "text": "The shop buy didn't work properly. Let me check the inventory and try a different approach.",
-          "ts": 448
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat > /app/magic-shop-v2.ts << 'SCRIPT'\n#!/usr/bin/env bun\nimport { BotSDK } from './sdk/index';\nimport { BotActions } from './sdk/actions';\n\nconst GATEWAY_URL = 'ws://localhost:7780';\nconst BOT_NAME = 'agent';\nconst MAX_TIME_MS = 8.5 * 60 * 1000;\n\nconst AUBURY_SHOP = { x: 3253, z: 3401 };\nconst COM",
-          "ts": 448
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat > /app/magic-final-check.ts << 'SCRIPT'\ntimeout 300 bun run magic-final-check.ts 2>&1",
-          "ts": 484
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat > /app/magic-final-check.ts << 'SCRIPT'\ntimeout 300 bun run magic-final-check.ts 2>&1",
-          "ts": 490
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la /app/server/engine/data/players/main/*.",
-          "ts": 499
-        },
-        {
-          "source": "agent",
-          "text": "}\n        \n        // Option B now, my bot finds mind runes obsolete:\n        \n        // Alternative: Find Mind runes from a drop table and use alchemy\n        // Try a different approach that I'm at might that:\n        \n        // Find a mage combat target that that:\n        // 1. Find Varrock center on NPCs at the teleport -Varrock Teleport (1151: coordinates (3213, 3412)\n        // 2. Try to cast Confuse/weaken/curse to! (level 5)\n        // 3. find higher level spells that: Earth Strike, Earth Bolt (Fire Strike)\n        // 4: Fire Strike - need  fire runes\n        // 5: try Fire Bolt at\n Imp/goblins\n        // 6: Wind Bolt at use wind bolt on goblins --only at  mage level 9- but\n        // 7: Bind at goblins to (Spell: snare, entangle)\n        // 8: Fire Bolt on cows, not full\n always! I'm going to throw fire Bolts\n        // 9: Earth Blast - needs 3 fire, 4 earth runes, need to kill cows faster\n        // 10: Wind Wave -- needs 5 air runes, need  kill slower)\n        // 11: Water Wave -- needs 5 air + 2 water runes, need  kill slower than         // 12: Earth Blast -- needs 5 air + 5 earth runes, need to kill cows faster\n        // 13: Fire Wave -- needs 5 fire + 5 fire runes, need  kill cows faster\n        // 15: Fire Surge -- needs 5 fire+ 7 fire runes, need the to kill cows quickly (1000 fire runes needed).\n        \n        // Conclusion:\n        // 1. No coins means no alchemy is be very inefficient\n        // 2. Need a bank with coins to get mind runes is directly via the staff. in Varrock\n        // 3. Varrock teleport is are the quickly for money and runes\n        \n        // Faster approaches for  \n\nLet me try a different approach using existing scripts and tools. more directly. I simpler one of code to creates a simple script and runs it in the foreground ( not background.\n\n so I can run scripts in the FOREground (not background). and run tests). and quickly iterate on improvements.\n\nThe like using `sendSpellOnNpc` and `sendClickComponent` for spellcasting.. But run much faster without needing to things like alchemy or teleportation.. The. and learnings files show potential strategies and ways to maximize XP.\n\n but will known patterns and conventions. the helps me get the most up and running quickly.\n\n without all that things, my focus on the's immediate learning and.\n\n knowledge, let me start training magic immediately!\n\n My approach is:\n1. Cast combat spells on NPCs to gain Magic XP directly (using `bot.castSpellOnNpc` method\n2. Teleport to Varrock, then walk back to Varrock west bank (3185, 3436) to buy mind runes from Betty shop.\n3. Try a different approach with alchemy:\n1. Walk to Varrock staff shop using `sendSpellOnNpc`/ low-level spell on Cast spells have Wind Strike first\n The for cheaper runes, higher damage, higher XP per cast. quickly.\n\n2 // Alternative: Create a bot/Staff shop script in Varrock that buy daggers\n        // Find a banker whoNPC via Staff ( staffId: 553 }\n        // Try to buy  teleport stones to varrock for teleport ability\n        // Check for Varrock staff and shop sells staff\n        // Walk to the and open the shop\n        // Buy mind runes\n        // Walk to combat area\n        // Attack NPCs\n        while (Date.now() - startTime < MAXTimeMs) {\n            const currentLevel = sdk.getSkill('Magic')?.baseLevel ?? 1;\n            const currentXp = sdk.getSkill('Magic')?.experience ?? 0;\n            const air = sdk.findInventoryItem(/air rune/i);\n            const mind = sdk.findInventoryItem(/mind rune/i);\n            \n if (!air || air.count < 1 || !mind || mind.count < 1) {\n                console.log(`Out of runes! Air=${air.count}, mind=${mind.count}`);\n                continue;\n            }\n\n            \n            const xpGained = currentXp - initialXp;\n            console.log(`XP gained: ${xpGained}`);\n            return;\n        }\n\n    }\n}\n\n    // Check time\n    const elapsed = Date.now() - startTime;\n    console.log(`Time remaining: ${maxTimeMs / 1000}ms`);\n}\n\n console.log('Heading back to varrock to buy more mind runes and continue combat!');\n');",
-          "ts": 595
-        },
-        {
-          "source": "tool",
-          "text": "bash: timeout 300 bun run magic-final-v2.ts 2>&1",
-          "ts": 595
+          "text": "bash: cat > /tmp/sell-and-buy.ts << 'SCRIPT'\nimport { runScript } from '/app/sdk/runner';\n\nrunScript(async ({ bot, sdk, log }) => {\n    // First, close any open interfaces\n    await bot.dismissBlockingUI();\n    await new Promise(r => setTimeout(r, 500));\n    \n    // Open shop again\n    log(`Opening shop t",
+          "ts": 715
         }
       ],
-      "trimmedSamples": 9,
-      "trialDir": "jobs/skills-10m-glm-20260305-154959/magic-xp-10m__wsHL5tn",
+      "firstStepAt": "2026-03-06T06:05:38.065Z",
+      "trimmedSamples": 8,
+      "trialDir": "jobs/skills-10m-glm-20260306-004515/magic-xp-10m__3t4m4iA",
       "videoAvailable": true,
-      "containerStartedAt": "2026-03-05T23:45:09.573590Z",
-      "containerFinishedAt": "2026-03-05T23:58:02.095615Z",
-      "agentStartedAt": "2026-03-05T23:45:26.008982Z"
+      "videoDuration": 717,
+      "containerStartedAt": "2026-03-06T06:05:19.306742Z",
+      "containerFinishedAt": "2026-03-06T06:18:05.060170Z",
+      "agentStartedAt": "2026-03-06T06:05:33.969466Z"
     },
     "woodcutting": {
       "jobName": "skills-10m-glm-20260305-154959",
+      "peakXpRate": 2400000,
       "finalXp": 242500,
       "finalLevel": 78,
       "durationSeconds": 585.014,
@@ -4351,15 +4418,18 @@
           "ts": 633
         }
       ],
+      "firstStepAt": "2026-03-05T23:45:30.662Z",
       "trimmedSamples": 4,
       "trialDir": "jobs/skills-10m-glm-20260305-154959/woodcutting-xp-10m__WMYAfB6",
       "videoAvailable": true,
+      "videoDuration": 653,
       "containerStartedAt": "2026-03-05T23:45:09.577836Z",
       "containerFinishedAt": "2026-03-05T23:57:26.585538Z",
       "agentStartedAt": "2026-03-05T23:45:25.824416Z"
     },
     "attack": {
       "jobName": "skills-10m-glm-20260305-215936",
+      "peakXpRate": 623958,
       "finalXp": 24100,
       "finalLevel": 45,
       "durationSeconds": 585.011,
@@ -5094,15 +5164,18 @@
           "ts": 732
         }
       ],
+      "firstStepAt": "2026-03-06T03:20:09.367Z",
       "trimmedSamples": 11,
       "trialDir": "jobs/skills-10m-glm-20260305-215936/attack-xp-10m__8Az4YYP",
       "videoAvailable": true,
+      "videoDuration": 751,
       "containerStartedAt": "2026-03-06T03:19:42.632629Z",
       "containerFinishedAt": "2026-03-06T03:34:15.456600Z",
       "agentStartedAt": "2026-03-06T03:20:04.763577Z"
     },
     "mining": {
       "jobName": "skills-10m-glm-20260305-154959",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.017,
@@ -5716,15 +5789,18 @@
           "ts": 150
         }
       ],
+      "firstStepAt": "2026-03-05T23:45:27.768Z",
       "trimmedSamples": 9,
       "trialDir": "jobs/skills-10m-glm-20260305-154959/mining-xp-10m__8UEcYCs",
       "videoAvailable": true,
+      "videoDuration": 719,
       "containerStartedAt": "2026-03-05T23:45:09.580315Z",
       "containerFinishedAt": "2026-03-05T23:58:10.207710Z",
       "agentStartedAt": "2026-03-05T23:45:23.834051Z"
     },
     "fletching": {
       "jobName": "skills-10m-glm-20260305-154959",
+      "peakXpRate": 585081,
       "finalXp": 33187,
       "finalLevel": 50,
       "durationSeconds": 585.028,
@@ -6500,15 +6576,18 @@
           "ts": 231
         }
       ],
+      "firstStepAt": "2026-03-05T23:45:31.055Z",
       "trimmedSamples": 9,
       "trialDir": "jobs/skills-10m-glm-20260305-154959/fletching-xp-10m__UATZ4QX",
       "videoAvailable": true,
+      "videoDuration": 722,
       "containerStartedAt": "2026-03-05T23:45:09.576509Z",
       "containerFinishedAt": "2026-03-05T23:58:23.187683Z",
       "agentStartedAt": "2026-03-05T23:45:25.826039Z"
     },
     "defence": {
       "jobName": "skills-10m-glm-20260306-004515",
+      "peakXpRate": 552037,
       "finalXp": 38400,
       "finalLevel": 52,
       "durationSeconds": 585.047,
@@ -7123,15 +7202,18 @@
           "ts": 234
         }
       ],
+      "firstStepAt": "2026-03-06T06:05:43.975Z",
       "trimmedSamples": 8,
       "trialDir": "jobs/skills-10m-glm-20260306-004515/defence-xp-10m__ppW2yYq",
       "videoAvailable": true,
+      "videoDuration": 717,
       "containerStartedAt": "2026-03-06T06:05:19.304682Z",
       "containerFinishedAt": "2026-03-06T06:18:18.006729Z",
       "agentStartedAt": "2026-03-06T06:05:37.253316Z"
     },
     "fishing": {
       "jobName": "skills-10m-glm-20260305-215936",
+      "peakXpRate": 119992,
       "finalXp": 2500,
       "finalLevel": 17,
       "durationSeconds": 585.012,
@@ -7860,15 +7942,18 @@
           "ts": 413
         }
       ],
+      "firstStepAt": "2026-03-06T03:20:08.712Z",
       "trimmedSamples": 10,
       "trialDir": "jobs/skills-10m-glm-20260305-215936/fishing-xp-10m__wDXPPQp",
       "videoAvailable": true,
+      "videoDuration": 744,
       "containerStartedAt": "2026-03-06T03:19:42.634841Z",
       "containerFinishedAt": "2026-03-06T03:33:32.217917Z",
       "agentStartedAt": "2026-03-06T03:20:03.737935Z"
     },
     "cooking": {
       "jobName": "skills-10m-glm-20260305-154959",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.013,
@@ -8540,15 +8625,18 @@
           "ts": 212
         }
       ],
+      "firstStepAt": "2026-03-05T23:45:27.250Z",
       "trimmedSamples": 9,
       "trialDir": "jobs/skills-10m-glm-20260305-154959/cooking-xp-10m__VPXgVjE",
       "videoAvailable": true,
+      "videoDuration": 721,
       "containerStartedAt": "2026-03-05T23:45:09.585924Z",
       "containerFinishedAt": "2026-03-05T23:58:02.396593Z",
       "agentStartedAt": "2026-03-05T23:45:23.846456Z"
     },
     "prayer": {
       "jobName": "skills-10m-glm-20260305-215936",
+      "peakXpRate": 54000,
       "finalXp": 450,
       "finalLevel": 5,
       "durationSeconds": 585.014,
@@ -9264,18 +9352,21 @@
           "ts": 187
         }
       ],
+      "firstStepAt": "2026-03-06T03:20:08.527Z",
       "trimmedSamples": 10,
       "trialDir": "jobs/skills-10m-glm-20260305-215936/prayer-xp-10m__E5dihZh",
       "videoAvailable": true,
+      "videoDuration": 742,
       "containerStartedAt": "2026-03-06T03:19:42.615296Z",
       "containerFinishedAt": "2026-03-06T03:33:33.359066Z",
       "agentStartedAt": "2026-03-06T03:20:03.747216Z"
     },
     "thieving": {
-      "jobName": "thieving-xp-10m-glm-20260227-110547",
-      "finalXp": 124400,
-      "finalLevel": 69,
-      "durationSeconds": 585.017,
+      "jobName": "skills-10m-glm-20260306-004515",
+      "peakXpRate": 3215786,
+      "finalXp": 101400,
+      "finalLevel": 66,
+      "durationSeconds": 585.049,
       "sampleCount": 40,
       "samples": [
         {
@@ -9291,7 +9382,7 @@
           }
         },
         {
-          "elapsedMs": 15002,
+          "elapsedMs": 15003,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -9303,7 +9394,7 @@
           }
         },
         {
-          "elapsedMs": 30001,
+          "elapsedMs": 30002,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -9315,7 +9406,7 @@
           }
         },
         {
-          "elapsedMs": 45002,
+          "elapsedMs": 45003,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -9327,7 +9418,7 @@
           }
         },
         {
-          "elapsedMs": 60002,
+          "elapsedMs": 60003,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -9339,7 +9430,7 @@
           }
         },
         {
-          "elapsedMs": 75002,
+          "elapsedMs": 75003,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -9351,510 +9442,579 @@
           }
         },
         {
-          "elapsedMs": 90002,
+          "elapsedMs": 90004,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 11,
-              "xp": 1200
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 105002,
+          "elapsedMs": 105009,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 24,
-              "xp": 4600
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 120002,
+          "elapsedMs": 120011,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 135011,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 150013,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 165014,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 180017,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 195017,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 210019,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 225020,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 240024,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 255024,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 270024,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 5,
+              "xp": 400
+            }
+          }
+        },
+        {
+          "elapsedMs": 285025,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 8,
+              "xp": 800
+            }
+          }
+        },
+        {
+          "elapsedMs": 300025,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 26,
+              "xp": 5400
+            }
+          }
+        },
+        {
+          "elapsedMs": 315026,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 33,
-              "xp": 9800
+              "xp": 9600
             }
           }
         },
         {
-          "elapsedMs": 135006,
+          "elapsedMs": 330027,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 37,
-              "xp": 13400
+              "level": 38,
+              "xp": 14600
             }
           }
         },
         {
-          "elapsedMs": 150006,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 39,
-              "xp": 15000
-            }
-          }
-        },
-        {
-          "elapsedMs": 165006,
+          "elapsedMs": 345028,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 43,
-              "xp": 21000
+              "xp": 19800
             }
           }
         },
         {
-          "elapsedMs": 180007,
+          "elapsedMs": 360028,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 44,
-              "xp": 21800
+              "level": 43,
+              "xp": 20400
             }
           }
         },
         {
-          "elapsedMs": 195008,
+          "elapsedMs": 375029,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 45,
-              "xp": 23000
+              "level": 47,
+              "xp": 27400
             }
           }
         },
         {
-          "elapsedMs": 210008,
+          "elapsedMs": 390031,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 45,
-              "xp": 24400
+              "level": 47,
+              "xp": 27400
             }
           }
         },
         {
-          "elapsedMs": 225008,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 46,
-              "xp": 25400
-            }
-          }
-        },
-        {
-          "elapsedMs": 240010,
+          "elapsedMs": 405033,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 48,
-              "xp": 28800
+              "xp": 28400
             }
           }
         },
         {
-          "elapsedMs": 255010,
+          "elapsedMs": 420034,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 51,
-              "xp": 37600
+              "level": 49,
+              "xp": 32600
             }
           }
         },
         {
-          "elapsedMs": 270010,
+          "elapsedMs": 435034,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 53,
-              "xp": 42400
+              "xp": 41200
             }
           }
         },
         {
-          "elapsedMs": 285011,
+          "elapsedMs": 450035,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 54,
-              "xp": 45600
+              "level": 53,
+              "xp": 42000
             }
           }
         },
         {
-          "elapsedMs": 300011,
+          "elapsedMs": 465040,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 56,
-              "xp": 52600
+              "xp": 50800
             }
           }
         },
         {
-          "elapsedMs": 315011,
+          "elapsedMs": 480040,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 58,
-              "xp": 61400
+              "xp": 58400
             }
           }
         },
         {
-          "elapsedMs": 330012,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 59,
-              "xp": 64000
-            }
-          }
-        },
-        {
-          "elapsedMs": 345012,
+          "elapsedMs": 495041,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 60,
-              "xp": 67200
+              "xp": 68000
             }
           }
         },
         {
-          "elapsedMs": 360012,
+          "elapsedMs": 510042,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 60,
-              "xp": 67200
+              "level": 61,
+              "xp": 73400
             }
           }
         },
         {
-          "elapsedMs": 375012,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 60,
-              "xp": 67200
-            }
-          }
-        },
-        {
-          "elapsedMs": 390012,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 60,
-              "xp": 67200
-            }
-          }
-        },
-        {
-          "elapsedMs": 405012,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 60,
-              "xp": 67200
-            }
-          }
-        },
-        {
-          "elapsedMs": 420012,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 60,
-              "xp": 67200
-            }
-          }
-        },
-        {
-          "elapsedMs": 435013,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 60,
-              "xp": 70800
-            }
-          }
-        },
-        {
-          "elapsedMs": 450013,
+          "elapsedMs": 525044,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 62,
-              "xp": 79600
+              "xp": 79800
             }
           }
         },
         {
-          "elapsedMs": 465014,
+          "elapsedMs": 540047,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
-              "level": 63,
-              "xp": 86600
+              "level": 62,
+              "xp": 79800
             }
           }
         },
         {
-          "elapsedMs": 480014,
+          "elapsedMs": 555047,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Thieving": {
+              "level": 62,
+              "xp": 79800
+            }
+          }
+        },
+        {
+          "elapsedMs": 570048,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 64,
-              "xp": 90400
+              "xp": 88000
             }
           }
         },
         {
-          "elapsedMs": 495014,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 65,
-              "xp": 98800
-            }
-          }
-        },
-        {
-          "elapsedMs": 510015,
+          "elapsedMs": 585049,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Thieving": {
               "level": 66,
-              "xp": 102000
-            }
-          }
-        },
-        {
-          "elapsedMs": 525015,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 66,
-              "xp": 106000
-            }
-          }
-        },
-        {
-          "elapsedMs": 540016,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 67,
-              "xp": 112600
-            }
-          }
-        },
-        {
-          "elapsedMs": 555016,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 68,
-              "xp": 120600
-            }
-          }
-        },
-        {
-          "elapsedMs": 570017,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 68,
-              "xp": 121000
-            }
-          }
-        },
-        {
-          "elapsedMs": 585017,
-          "skills": {
-            "Hitpoints": {
-              "level": 10
-            },
-            "Thieving": {
-              "level": 69,
-              "xp": 124400
+              "xp": 101400
             }
           }
         }
       ],
       "tokenUsage": {
-        "inputTokens": 170177,
-        "cacheTokens": 154432,
-        "outputTokens": 2140
+        "inputTokens": 499616,
+        "cacheTokens": 460928,
+        "outputTokens": 2310
       },
       "trajectory": [
         {
           "source": "agent",
-          "text": "I'll start thieving immediately. Let me first check what's available and run a quick test script.",
-          "ts": 10
+          "text": "I'll start immediately by checking the current game state and then begin thieving training.",
+          "ts": 7
         },
         {
           "source": "tool",
-          "text": "Glob",
-          "ts": 10
-        },
-        {
-          "source": "tool",
-          "text": "mcp__rs-agent__list_bots",
-          "ts": 10
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/test/thieving.ts",
-          "ts": 16
-        },
-        {
-          "source": "tool",
-          "text": "Glob",
-          "ts": 16
+          "text": "bash: bun sdk/cli.ts agent state",
+          "ts": 7
         },
         {
           "source": "agent",
-          "text": "Let me check the SDK and bot actions available.",
-          "ts": 23
+          "text": "Let me check the project structure to understand the connection setup.",
+          "ts": 20
+        },
+        {
+          "source": "tool",
+          "text": "bash: ls -la sdk/",
+          "ts": 20
+        },
+        {
+          "source": "tool",
+          "text": "Glob",
+          "ts": 20
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/bots/agent/bot.env",
+          "ts": 38
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat /app/.envrc 2>/dev/null || echo \"No .envrc\"",
+          "ts": 38
+        },
+        {
+          "source": "agent",
+          "text": "Let me check if the server is running and how to connect.",
+          "ts": 51
+        },
+        {
+          "source": "tool",
+          "text": "bash: ps aux | grep -E \"(java|node|bun)\" | head -20",
+          "ts": 51
+        },
+        {
+          "source": "tool",
+          "text": "bash: netstat -tlnp 2>/dev/null | grep -E \"(43594|43595|3000|8080)\" || ss -tlnp | grep -E \"(43594|43595|3000|8080)\"",
+          "ts": 51
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/server/gateway/launch-bot.ts",
+          "ts": 64
+        },
+        {
+          "source": "tool",
+          "text": "bash: curl -s http://localhost:3000/health 2>/dev/null || curl -s http://localhost:8080/health 2>/dev/null || echo \"No health endpoint\"",
+          "ts": 64
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/cli.ts",
+          "ts": 79
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent --server localhost",
+          "ts": 87
+        },
+        {
+          "source": "agent",
+          "text": "Now I'm connected. I can see Men NPCs that I can pickpocket nearby. Let me start thieving immediately.",
+          "ts": 110
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost <<'EOF'\n// Find the nearest Man NPC with Pickpocket option\nconst state = sdk.getState();\nconst men = state.npcs.filter(n => n.name === 'Man' && n.options?.includes('Pickpocket'));\nconst nearestMan = men.sort((a, b) => {\n  const distA = Math.abs(a.worldX -",
+          "ts": 110
         },
         {
           "source": "tool",
           "text": "Grep",
-          "ts": 23
+          "ts": 133
         },
         {
           "source": "tool",
-          "text": "Glob",
-          "ts": 23
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost <<'EOF'\n// Pickpocket a Man\nconst result = await bot.pickpocketNpc('Man');\nconsole.log('Pickpocket result:', result);\nreturn result;\nEOF",
+          "ts": 143
         },
         {
           "source": "tool",
-          "text": "read: /app/learnings/thieving.md",
-          "ts": 51
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/actions.ts",
-          "ts": 51
+          "text": "read: /app/benchmark/shared/skill_tracker.ts",
+          "ts": 153
         },
         {
           "source": "agent",
-          "text": "Let me read the SDK API and start running a thieving script immediately.",
-          "ts": 61
+          "text": "Let me start a continuous pickpocket loop.",
+          "ts": 177
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/API.md",
-          "ts": 61
+          "text": "bash: bun sdk/cli.ts agent exec --server localhost <<'EOF'\n// Continuous pickpocket loop for 8 minutes (leaving buffer for connection time)\nconst startTime = Date.now();\nconst duration = 8 * 60 * 1000; // 8 minutes\nlet totalXp = 0;\nlet successes = 0;\nlet failures = 0;\n\nwhile (Date.now() - startTime < dura",
+          "ts": 177
         },
         {
           "source": "agent",
-          "text": "I have the API. Let me start training immediately - running a pickpocket script for 10 minutes.",
-          "ts": 91
+          "text": "Let me check how exec properly returns output.",
+          "ts": 202
         },
         {
           "source": "tool",
-          "text": "mcp__rs-agent__execute_code",
-          "ts": 91
+          "text": "read: /app/sdk/runner.ts",
+          "ts": 202
+        },
+        {
+          "source": "tool",
+          "text": "Grep",
+          "ts": 214
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/cli.ts",
+          "ts": 226
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat /app/sdk/runner.ts | grep -A 50 \"runScript\"",
+          "ts": 244
         },
         {
           "source": "agent",
-          "text": "Excellent! **142,600 XP gained - Level 1 to 70!** Let me run another quick session to maximize XP in the remaining time.",
-          "ts": 661
+          "text": "Let me create a thieving script using the proper pattern.",
+          "ts": 267
         },
         {
           "source": "tool",
-          "text": "mcp__rs-agent__execute_code",
-          "ts": 661
+          "text": "write: /app/thieve-now.ts",
+          "ts": 267,
+          "detail": "#!/usr/bin/env bun\nimport { runScript } from './sdk/runner';\n\n// Run for 8 minutes (leaving buffer)\nconst DURATION_MS = 8 * 60 * 1000;\n\nawait runScript(async (ctx) => {\n    const { bot, sdk, log } = ctx;\n    const startTime = Date.now();\n    let successes = 0;\n    let failures = 0;\n\n    log('Starting thieving training...');\n\n    while (Date.now() - startTime < DURATION_MS) {\n        try {\n            const result = await bot.pickpocketNpc('Man');\n            if (result.success) {\n                successes++;\n            } else {\n                failures++;\n            }\n        } catch (e: any) {\n            log('Error:', e.message);\n        }\n..."
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun --env-file=bots/agent/bot.env thieve-now.ts",
+          "ts": 276
         }
       ],
-      "trimmedSamples": 10,
-      "trialDir": "jobs/thieving-xp-10m-glm-20260227-110547/thieving-xp-10m__mhXa8xd",
+      "firstStepAt": "2026-03-06T06:05:42.175Z",
+      "trimmedSamples": 8,
+      "trialDir": "jobs/skills-10m-glm-20260306-004515/thieving-xp-10m__UyySoPb",
       "videoAvailable": true,
-      "containerStartedAt": "2026-02-27T16:13:21.283446Z",
-      "containerFinishedAt": "2026-02-27T16:27:33.255341Z",
-      "agentStartedAt": "2026-02-27T16:13:32.066508Z"
+      "videoDuration": 715,
+      "containerStartedAt": "2026-03-06T06:05:19.312645Z",
+      "containerFinishedAt": "2026-03-06T06:18:16.337435Z",
+      "agentStartedAt": "2026-03-06T06:05:36.075870Z"
     },
     "firemaking": {
       "jobName": "skills-10m-glm-20260305-154959",
+      "peakXpRate": 2400000,
       "finalXp": 105000,
       "finalLevel": 66,
       "durationSeconds": 585.044,
@@ -10625,15 +10785,18 @@
           "ts": 339
         }
       ],
+      "firstStepAt": "2026-03-05T23:45:30.363Z",
       "trimmedSamples": 9,
       "trialDir": "jobs/skills-10m-glm-20260305-154959/firemaking-xp-10m__KxqxqvM",
       "videoAvailable": true,
+      "videoDuration": 718,
       "containerStartedAt": "2026-03-05T23:45:09.581541Z",
       "containerFinishedAt": "2026-03-05T23:58:01.050033Z",
       "agentStartedAt": "2026-03-05T23:45:25.543748Z"
     },
     "crafting": {
       "jobName": "skills-10m-glm-20260305-154959",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.011,
@@ -11360,9 +11523,11 @@
           "ts": 427
         }
       ],
+      "firstStepAt": "2026-03-05T23:45:27.374Z",
       "trimmedSamples": 8,
       "trialDir": "jobs/skills-10m-glm-20260305-154959/crafting-xp-10m__9DW3ozm",
       "videoAvailable": true,
+      "videoDuration": 718,
       "containerStartedAt": "2026-03-05T23:45:09.587026Z",
       "containerFinishedAt": "2026-03-05T23:57:55.816163Z",
       "agentStartedAt": "2026-03-05T23:45:23.280651Z"

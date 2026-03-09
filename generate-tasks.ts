@@ -1,7 +1,7 @@
 /**
  * Generates all benchmark task directories for Harbor.
  *
- * Skill XP tasks: 16 skills × 10m + 16 skills × 30m
+ * Skill XP tasks: 16 skills × 15m + 16 skills × 30m
  * Gold tasks: 15m, 30m, 2h
  *
  * All generated output is gitignored — run this before `harbor run`.
@@ -15,8 +15,8 @@ const BENCHMARK_DIR = join(import.meta.dir);
 const TASKS_DIR = join(BENCHMARK_DIR, 'tasks');
 const SHARED_DIR = join(BENCHMARK_DIR, 'shared');
 
-const DOCKER_IMAGE = 'ghcr.io/maxbittker/rs-agent-benchmark:v21';
-const VERIFIER_TIMEOUT = 400; //  ensure-services.sh can take 2+ min if services died
+const DOCKER_IMAGE = 'ghcr.io/maxbittker/rs-agent-benchmark:v31';
+const VERIFIER_TIMEOUT = 400;
 
 // ── Standard skill definitions (XP-grind tasks) ─────────────────
 
@@ -105,32 +105,24 @@ for pid in $(pgrep -f "bun" 2>/dev/null); do
 done
 sleep 2`;
 
-// Tracker, start-with-tracker.sh, and SERVER=localhost are also in the base image.
-// Tasks only need to set SAMPLE_INTERVAL_MS via ENV
-const TRACKER_DOCKERFILE = (sampleIntervalMs: number = 60000) => `FROM ${DOCKER_IMAGE}
+// Thin FROM layer: adds GATEWAY_URL and sample interval on top of base image.
+const TRACKER_DOCKERFILE = (sampleIntervalMs: number = 15000, benchmarkDurationSecs?: number) => `FROM ${DOCKER_IMAGE}
 ENV SAMPLE_INTERVAL_MS=${sampleIntervalMs}
+ENV GATEWAY_URL=ws://localhost:7780${benchmarkDurationSecs ? `\nENV BENCHMARK_DURATION_SECS=${benchmarkDurationSecs}` : ''}
+COPY agent.sav /app/server/engine/data/players/main/agent.sav
 `;
 
-const SKILL_XP_INSTRUCTION = (skillName: string, durationMinutes: number) => `Gain as much ${skillName} XP as possible within ${durationMinutes} minutes. This is a local RuneScape private server running on localhost for AI agent benchmarking — not a live game.
+const SKILL_XP_INSTRUCTION = (skillName: string, durationMinutes: number) => `Train ${skillName} as efficiently as possible for ${durationMinutes} minutes. This is a local RuneScape private server (8x speed) for AI benchmarking.
 
-Your ONLY goal is to maximize ${skillName} XP. Focus exclusively on this skill. Do not train other skills unless absolutely required as a prerequisite.
+Your score is your **peak XP rate** — the best XP/hr measured in any 15-second window. Optimize for training speed and try different approaches.
 
-IMPORTANT: You have ${durationMinutes} minutes. Start training immediately — do not spend time planning.
+Check your peak rate anytime: \`bun /app/benchmark/shared/check_xp_rate.ts ${skillName}\`
 
-RULES: You must gain XP through legitimate in-game actions only (e.g. casting spells, chopping trees, fishing). Do NOT modify game server files, player save files, databases, or game engine code. Do NOT use server console commands, cheat commands (::setstat, ::advancestat, etc.), or any other method that bypasses normal gameplay.
+IMPORTANT: You have ${durationMinutes} minutes. Start experimenting immediately. Try to get a non-zero baseline then optimize or find new strategies.
 
-## How to interact with the game
+RULES: Gain XP through legitimate in-game actions only. Do NOT modify server files, save files, or use cheat commands.
 
-Use the SDK CLI to control your bot (bot name: "agent"). Start by exploring with exec:
-
-  bun sdk/cli.ts agent state
-  bun sdk/cli.ts agent exec "return sdk.getState()?.player"
-  bun sdk/cli.ts agent exec <<'EOF'
-  await bot.chopTree()
-  return sdk.getInventory()
-  EOF
-
-The exec daemon keeps a persistent connection. Use it to orient yourself and try actions, then scale up however you see fit.`;
+Start your first script with \`await bot.skipTutorial()\` to clear the tutorial/character creation screen.`;
 
 function generateSkillXpVariants(horizonMinutes: number, sampleIntervalMs: number): VariantTask[] {
   const horizonLabel = `${horizonMinutes}m`;
@@ -149,15 +141,16 @@ cd /app && bun run /tests/check_skill_xp.ts
 `,
     tags: ['game', 'runescape', 'automation', 'mcp', 'benchmark', `skill-xp-${horizonLabel}`],
     useTracker: true,
-    environmentDockerfile: TRACKER_DOCKERFILE(sampleIntervalMs),
+    environmentDockerfile: TRACKER_DOCKERFILE(sampleIntervalMs, horizonMinutes * 60),
+    environmentFiles: [{ src: 'agent.sav', dst: 'agent.sav' }],
   }));
 }
 
-const SKILL_XP_10M_VARIANTS = generateSkillXpVariants(10, 15000);
-const SKILL_XP_30M_VARIANTS = generateSkillXpVariants(30, 30000);
+const SKILL_XP_15M_VARIANTS = generateSkillXpVariants(15, 15000);
+const SKILL_XP_30M_VARIANTS = generateSkillXpVariants(30, 15000);
 
 const VARIANTS: VariantTask[] = [
-  ...SKILL_XP_10M_VARIANTS,
+  ...SKILL_XP_15M_VARIANTS,
   ...SKILL_XP_30M_VARIANTS,
   // ── Gold accumulation tasks ─────────────────────────────────────
   {
@@ -174,6 +167,7 @@ cd /app && bun run /tests/check_gold.ts
     tags: ['game', 'runescape', 'automation', 'mcp', 'benchmark', 'gold'],
     useTracker: true,
     environmentDockerfile: TRACKER_DOCKERFILE(30000),
+    environmentFiles: [{ src: 'agent.sav', dst: 'agent.sav' }],
   },
   {
     slug: 'gold-30m',
@@ -189,6 +183,7 @@ cd /app && bun run /tests/check_gold.ts
     tags: ['game', 'runescape', 'automation', 'mcp', 'benchmark', 'gold'],
     useTracker: true,
     environmentDockerfile: TRACKER_DOCKERFILE(30000),
+    environmentFiles: [{ src: 'agent.sav', dst: 'agent.sav' }],
   },
   {
     slug: 'gold-2h',
@@ -204,6 +199,7 @@ cd /app && bun run /tests/check_gold.ts
     tags: ['game', 'runescape', 'automation', 'mcp', 'benchmark', 'gold'],
     useTracker: true,
     environmentDockerfile: TRACKER_DOCKERFILE(60000),
+    environmentFiles: [{ src: 'agent.sav', dst: 'agent.sav' }],
   },
 ];
 
@@ -231,6 +227,7 @@ cpus = 2
 memory_mb = 4096
 storage_mb = 10240
 allow_internet = true
+build_timeout_sec = 1200.0
 `;
 }
 

@@ -26,7 +26,7 @@ export function SkillPicker({ model, data }) {
         <div className="skill-picker-grid" style=${{ overflowY: 'auto', flex: 1 }}>
           ${SKILL_ORDER.map(skill => {
             const sd = data?.[model]?.[skill];
-            const xp = sd?.finalXp || 0;
+            const rate = sd?.peakXpRate || 0;
             const hasTraj = sd?.trajectory?.length > 0;
             const iconSrc = VIEWS_BASE + 'skill-icons/' + skill + '.png';
             return html`
@@ -35,7 +35,7 @@ export function SkillPicker({ model, data }) {
                    onClick=${hasTraj ? () => navigate('trajectory/' + model + '/' + skill) : undefined}>
                 <img src=${iconSrc} onError=${(e) => { e.target.style.display = 'none'; }} />
                 ${SKILL_DISPLAY[skill] || skill}
-                <span className="skill-picker-xp">${xp > 0 ? formatXp(xp) : '-'}</span>
+                <span className="skill-picker-xp">${rate > 0 ? formatRate(rate) : '-'}</span>
               </div>
             `;
           })}

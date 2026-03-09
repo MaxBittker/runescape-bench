@@ -1,7 +1,14 @@
 import { html, useMemo } from '../html.js';
 import { navigate } from '../router.js';
 
-const HORIZON_MS = 30 * 60 * 1000;
+// Normalize XP/hr → display units (÷60 for per-minute, ÷25, ÷8)
+function normRate(xpPerHr) {
+  return xpPerHr / 12000;
+}
+
+function formatNorm(v, pad) {
+  return String(Math.round(v)).padStart(pad || 1, '\u2007');
+}
 
 const TIERS = {
   zero: { bg: '#e8e8e8', color: '#aaa' },
@@ -10,41 +17,37 @@ const TIERS = {
   high: { bg: '#43a047', color: '#fff' },
 };
 
-function levelAtHorizon(skillData, skill) {
-  if (!skillData) return 1;
-  const samples = skillData.samples;
-  if (!samples || samples.length === 0) return skillData.finalLevel || 1;
-  const skillName = SKILL_DISPLAY[skill];
-  let lastLevel = 1;
-  for (const s of samples) {
-    if (s.elapsedMs > HORIZON_MS) break;
-    if (s.skills) {
-      for (const [name, d] of Object.entries(s.skills)) {
-        if (name.toLowerCase() === skillName.toLowerCase() || name.toLowerCase() === skill) {
-          lastLevel = d.level || 1;
-        }
-      }
-    }
-  }
-  return lastLevel;
+function cellTier(rate, maxRate) {
+  if (rate <= 0 || maxRate <= 0) return TIERS.zero;
+  const t = rate / maxRate;
+  if (t >= 0.9) return TIERS.high;
+  if (t >= 0.5) return TIERS.mid;
+  return TIERS.low;
+}
+
+function peakRateAtHorizon(skillData, skill) {
+  if (!skillData) return 0;
+  return skillData.peakXpRate || 0;
 }
 
 export function Heatmap({ data }) {
-  const { models, skillOrder, tiers } = useMemo(() => {
-    if (!data) return { models: [], skillOrder: [], tiers: {} };
+  const { models, skillOrder, skillMax, skillPad } = useMemo(() => {
+    if (!data) return { models: [], skillOrder: [], skillMax: {} };
 
     const models = Object.keys(data).map(key => {
       const skills = {};
-      let totalLevel = 0;
+      let sum = 0;
+      let count = 0;
       for (const skill of SKILL_ORDER) {
-        const level = levelAtHorizon(data[key]?.[skill], skill);
-        skills[skill] = level;
-        totalLevel += level;
+        const rate = peakRateAtHorizon(data[key]?.[skill], skill);
+        skills[skill] = rate;
+        sum += rate;
+        count++;
       }
-      return { key, totalLevel, skills };
+      return { key, avgRate: sum / count, skills };
     });
 
-    models.sort((a, b) => b.totalLevel - a.totalLevel);
+    models.sort((a, b) => b.avgRate - a.avgRate);
 
     const skillOrder = SKILL_ORDER.slice().sort((a, b) => {
       const avgA = models.reduce((s, m) => s + m.skills[a], 0) / models.length;
@@ -52,33 +55,15 @@ export function Heatmap({ data }) {
       return avgB - avgA;
     });
 
-    const tiers = {};
+    const skillMax = {};
+    const skillPad = {};
     for (const skill of skillOrder) {
-      tiers[skill] = {};
-      const trained = models
-        .filter(m => m.skills[skill] > 1)
-        .map(m => m.skills[skill])
-        .sort((a, b) => a - b);
-
-      if (trained.length === 0) {
-        models.forEach(m => { tiers[skill][m.key] = 'zero'; });
-        continue;
-      }
-
-      const thirdLen = Math.max(1, Math.ceil(trained.length / 3));
-      const lowMax = trained[thirdLen - 1];
-      const midMax = trained[Math.min(thirdLen * 2 - 1, trained.length - 1)];
-
-      for (const m of models) {
-        const lvl = m.skills[skill];
-        if (lvl <= 1) tiers[skill][m.key] = 'zero';
-        else if (lvl <= lowMax && trained.length > 1) tiers[skill][m.key] = 'low';
-        else if (lvl <= midMax && trained.length > 2) tiers[skill][m.key] = 'mid';
-        else tiers[skill][m.key] = 'high';
-      }
+      skillMax[skill] = Math.max(...models.map(m => m.skills[skill]));
+      const maxDigits = Math.max(...models.map(m => String(Math.round(normRate(m.skills[skill]))).length));
+      skillPad[skill] = maxDigits;
     }
 
-    return { models, skillOrder, tiers };
+    return { models, skillOrder, skillMax, skillPad };
   }, [data]);
 
   if (!data || models.length === 0) return null;
@@ -99,7 +84,7 @@ export function Heatmap({ data }) {
           <div className="column">
             <h2 className="title is-3">Per-Skill Breakdown</h2>
             <p className="subtitle is-6" style=${{ color: '#888' }}>
-              Skill level reached per model. Best of 1. Color intensity indicates relative ranking within each skill column.
+              Normalized peak XP rate per skill per model. Best of 1. Color = relative ranking within each column.
             </p>
           </div>
         </div>
@@ -114,7 +99,7 @@ export function Heatmap({ data }) {
                          alt=${SKILL_DISPLAY[skill]} width="16" height="16" />
                   </th>
                 `)}
-                <th style=${{ fontWeight: 700 }}>Total</th>
+                <th style=${{ fontWeight: 700 }}>Avg</th>
               </tr>
             </thead>
             <tbody>
@@ -130,17 +115,17 @@ export function Heatmap({ data }) {
                       <span>${cfg.shortName}</span>
                     </td>
                     ${skillOrder.map(skill => {
-                      const tier = tiers[skill][m.key];
-                      const s = TIERS[tier];
+                      const rate = m.skills[skill];
+                      const s = cellTier(rate, skillMax[skill]);
                       return html`
                         <td key=${skill}
-                            style=${{ background: s.bg, color: s.color, fontVariantNumeric: 'tabular-nums', cursor: 'pointer' }}
+                            style=${{ background: s.bg, color: s.color, fontVariantNumeric: 'tabular-nums', cursor: 'pointer', fontSize: '11px' }}
                             onClick=${() => handleCellClick(m.key, skill)}>
-                          ${m.skills[skill] > 1 ? String(m.skills[skill]) : '1'}
+                          ${formatNorm(normRate(rate), skillPad[skill])}
                         </td>
                       `;
                     })}
-                    <td className="heatmap-total">${String(m.totalLevel)}</td>
+                    <td className="heatmap-total">${formatNorm(normRate(m.avgRate))}</td>
                   </tr>
                 `;
               })}

@@ -9,7 +9,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 source "$SCRIPT_DIR/run-common.sh"
 
-STAGGER_SECS=120
+STAGGER_SECS=90
 
 ALL_MODELS="
 claude-code|anthropic/claude-opus-4-6|opus

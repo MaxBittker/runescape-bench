@@ -14,7 +14,7 @@
  */
 // @ts-ignore - absolute path resolved inside Docker container
 import { BotSDK } from '/app/sdk/index';
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync, mkdirSync, unlinkSync } from 'fs';
 import { dirname } from 'path';
 
 const botName = process.env.BOT_NAME || 'agent';
@@ -78,7 +78,36 @@ interface SkillSnapshot { level: number; xp: number; }
 interface Sample { timestamp: string; elapsedMs: number; skills: Record<string, SkillSnapshot>; totalLevel: number; gold?: number; inventoryGold?: number; bankGold?: number; }
 interface TrackingData { botName: string; startTime: string; samples: Sample[]; }
 
+const LOCK_FILE = '/tmp/skill_tracker.lock';
+
+function isTrackerAlreadyRunning(): boolean {
+  if (!existsSync(LOCK_FILE)) return false;
+  try {
+    const pid = parseInt(readFileSync(LOCK_FILE, 'utf-8').trim());
+    if (isNaN(pid)) return false;
+    // Check if process is alive
+    process.kill(pid, 0);
+    return true;
+  } catch {
+    // Process doesn't exist — stale lock
+    return false;
+  }
+}
+
+function acquireLock() {
+  writeFileSync(LOCK_FILE, process.pid.toString());
+  // Clean up lock on exit
+  const removeLock = () => { try { unlinkSync(LOCK_FILE); } catch {} };
+  process.on('exit', removeLock);
+}
+
 async function main() {
+  if (isTrackerAlreadyRunning()) {
+    console.log('[skill-tracker] Another tracker is already running, exiting.');
+    process.exit(0);
+  }
+  acquireLock();
+
   mkdirSync(dirname(outFile), { recursive: true });
 
   console.log(`[skill-tracker] Connecting to bot "${botName}" in observe mode...`);
@@ -93,8 +122,9 @@ async function main() {
     autoReconnect: true,
   });
 
-  // Retry connection up to 3 times (gateway may still be settling after tutorial)
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  // Retry connection — gateway/engine may still be starting or restarting via watchdog
+  const MAX_ATTEMPTS = 6; // up to 1 minute of retries
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
       await sdk.connect();
       console.log(`[skill-tracker] Connected (attempt ${attempt}), waiting for game state...`);
@@ -102,13 +132,13 @@ async function main() {
       console.log('[skill-tracker] Game state received, starting tracking');
       break;
     } catch (err) {
-      console.log(`[skill-tracker] Attempt ${attempt} failed:`, err);
-      if (attempt === 3) {
+      console.log(`[skill-tracker] Attempt ${attempt}/${MAX_ATTEMPTS} failed:`, err);
+      if (attempt === MAX_ATTEMPTS) {
         console.log('[skill-tracker] All attempts failed, giving up');
         process.exit(1);
       }
       sdk.disconnect();
-      await new Promise(r => setTimeout(r, 5000));
+      await new Promise(r => setTimeout(r, 10000));
     }
   }
 

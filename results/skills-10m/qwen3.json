@@ -3,6 +3,7 @@
   "skills": {
     "woodcutting": {
       "jobName": "woodcutting-xp-10m-qwen3-20260227-153822",
+      "peakXpRate": 1799760,
       "finalXp": 33125,
       "finalLevel": 50,
       "durationSeconds": 585.13,
@@ -1046,12 +1047,14 @@
       "trimmedSamples": 2,
       "trialDir": "jobs/woodcutting-xp-10m-qwen3-20260227-153822/woodcutting-xp-10m__4oa6ZjN",
       "videoAvailable": true,
+      "videoDuration": 621,
       "containerStartedAt": "2026-02-27T20:39:24.414498Z",
       "containerFinishedAt": "2026-02-27T20:51:05.135478Z",
       "agentStartedAt": "2026-02-27T20:40:04.882273Z"
     },
     "ranged": {
       "jobName": "skills-10m-qwen3-20260306-004515",
+      "peakXpRate": 288000,
       "finalXp": 3100,
       "finalLevel": 19,
       "durationSeconds": 585.029,
@@ -1754,12 +1757,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen3-20260306-004515/ranged-xp-10m__sq35TPu",
       "videoAvailable": true,
+      "videoDuration": 595,
       "containerStartedAt": "2026-03-06T06:09:19.192966Z",
       "containerFinishedAt": "2026-03-06T06:20:17.066198Z",
       "agentStartedAt": "2026-03-06T06:09:39.077365Z"
     },
     "crafting": {
       "jobName": "crafting-xp-10m-qwen3-20260227-134050",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 576.267,
@@ -2249,12 +2254,14 @@
       "trajectory": [],
       "trialDir": "jobs/crafting-xp-10m-qwen3-20260227-134050/crafting-xp-10m__zmufBph",
       "videoAvailable": true,
+      "videoDuration": 578,
       "containerStartedAt": "2026-02-27T18:41:14.356990Z",
       "containerFinishedAt": "2026-02-27T18:52:09.705910Z",
       "agentStartedAt": "2026-02-27T18:41:36.629413Z"
     },
     "prayer": {
       "jobName": "prayer-xp-10m-qwen3-20260227-153822",
+      "peakXpRate": 26875,
       "finalXp": 112,
       "finalLevel": 2,
       "durationSeconds": 585.049,
@@ -3325,12 +3332,14 @@
       "trimmedSamples": 8,
       "trialDir": "jobs/prayer-xp-10m-qwen3-20260227-153822/prayer-xp-10m__jRTgaX8",
       "videoAvailable": true,
+      "videoDuration": 705,
       "containerStartedAt": "2026-02-27T20:39:21.172280Z",
       "containerFinishedAt": "2026-02-27T20:52:02.069539Z",
       "agentStartedAt": "2026-02-27T20:39:55.943317Z"
     },
     "fletching": {
       "jobName": "fletching-xp-10m-qwen3-20260227-153822",
+      "peakXpRate": 134871,
       "finalXp": 7125,
       "finalLevel": 29,
       "durationSeconds": 585.076,
@@ -4167,12 +4176,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/fletching-xp-10m-qwen3-20260227-153822/fletching-xp-10m__tw8KsKi",
       "videoAvailable": true,
+      "videoDuration": 615,
       "containerStartedAt": "2026-02-27T20:39:22.109730Z",
       "containerFinishedAt": "2026-02-27T20:50:43.721394Z",
       "agentStartedAt": "2026-02-27T20:40:03.474498Z"
     },
     "smithing": {
       "jobName": "smithing-xp-10m-qwen3-20260227-153822",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.018,
@@ -4940,12 +4951,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/smithing-xp-10m-qwen3-20260227-153822/smithing-xp-10m__yvA3J7d",
       "videoAvailable": true,
+      "videoDuration": 595,
       "containerStartedAt": "2026-02-27T20:39:22.494463Z",
       "containerFinishedAt": "2026-02-27T20:50:01.474403Z",
       "agentStartedAt": "2026-02-27T20:39:42.516667Z"
     },
     "magic": {
       "jobName": "magic-xp-10m-qwen3-20260227-153822",
+      "peakXpRate": 392880,
       "finalXp": 2812,
       "finalLevel": 18,
       "durationSeconds": 585.008,
@@ -6041,12 +6054,14 @@
       "trimmedSamples": 2,
       "trialDir": "jobs/magic-xp-10m-qwen3-20260227-153822/magic-xp-10m__JdtBERW",
       "videoAvailable": true,
+      "videoDuration": 611,
       "containerStartedAt": "2026-02-27T20:39:23.276516Z",
       "containerFinishedAt": "2026-02-27T20:50:50.291872Z",
       "agentStartedAt": "2026-02-27T20:39:45.581478Z"
     },
     "mining": {
       "jobName": "skills-10m-qwen3-20260305-231653",
+      "peakXpRate": 630000,
       "finalXp": 4375,
       "finalLevel": 23,
       "durationSeconds": 588.786,
@@ -6618,12 +6633,14 @@
       "trimmedSamples": 2,
       "trialDir": "jobs/skills-10m-qwen3-20260305-231653/mining-xp-10m__ss4vcE8",
       "videoAvailable": true,
+      "videoDuration": 618,
       "containerStartedAt": "2026-03-06T04:40:59.525018Z",
       "containerFinishedAt": "2026-03-06T04:52:21.826191Z",
       "agentStartedAt": "2026-03-06T04:41:24.190393Z"
     },
     "cooking": {
       "jobName": "skills-10m-qwen3-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.053,
@@ -7495,12 +7512,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen3-20260305-215936/cooking-xp-10m__HiC8uvB",
       "videoAvailable": true,
+      "videoDuration": 608,
       "containerStartedAt": "2026-03-06T03:23:42.709084Z",
       "containerFinishedAt": "2026-03-06T03:34:42.471533Z",
       "agentStartedAt": "2026-03-06T03:24:16.502691Z"
     },
     "attack": {
       "jobName": "skills-10m-qwen3-20260305-215936",
+      "peakXpRate": 863942,
       "finalXp": 73500,
       "finalLevel": 61,
       "durationSeconds": 585.027,
@@ -8196,12 +8215,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen3-20260305-215936/attack-xp-10m__caQz8kr",
       "videoAvailable": true,
+      "videoDuration": 595,
       "containerStartedAt": "2026-03-06T03:23:42.704246Z",
       "containerFinishedAt": "2026-03-06T03:34:44.297077Z",
       "agentStartedAt": "2026-03-06T03:24:03.031347Z"
     },
     "hitpoints": {
       "jobName": "skills-10m-qwen3-20260305-215936",
+      "peakXpRate": 288720,
       "finalXp": 25810,
       "finalLevel": 46,
       "durationSeconds": 585.082,
@@ -8823,19 +8844,21 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen3-20260305-215936/hitpoints-xp-10m__n84DE6q",
       "videoAvailable": true,
+      "videoDuration": 608,
       "containerStartedAt": "2026-03-06T03:23:42.718321Z",
       "containerFinishedAt": "2026-03-06T03:34:52.771835Z",
       "agentStartedAt": "2026-03-06T03:24:17.903004Z"
     },
     "firemaking": {
-      "jobName": "skills-10m-qwen3-20260305-215936",
-      "finalXp": 145000,
-      "finalLevel": 71,
-      "durationSeconds": 585.017,
+      "jobName": "firemaking-xp-10m-qwen3-20260227-153822",
+      "peakXpRate": 2879808,
+      "finalXp": 66000,
+      "finalLevel": 59,
+      "durationSeconds": 585.061,
       "sampleCount": 40,
       "samples": [
         {
-          "elapsedMs": 0,
+          "elapsedMs": 1,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -8847,7 +8870,7 @@
           }
         },
         {
-          "elapsedMs": 15001,
+          "elapsedMs": 15004,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -8859,7 +8882,7 @@
           }
         },
         {
-          "elapsedMs": 30001,
+          "elapsedMs": 30005,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -8871,7 +8894,7 @@
           }
         },
         {
-          "elapsedMs": 45001,
+          "elapsedMs": 45005,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -8883,7 +8906,7 @@
           }
         },
         {
-          "elapsedMs": 60001,
+          "elapsedMs": 60010,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -8895,37 +8918,322 @@
           }
         },
         {
-          "elapsedMs": 75001,
+          "elapsedMs": 75013,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 90019,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 105023,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 120024,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 135025,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 150025,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 165028,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 180030,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 195032,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 210033,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Firemaking": {
+              "level": 1,
+              "xp": 0
+            }
+          }
+        },
+        {
+          "elapsedMs": 225033,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 17
+              "level": 7
             },
             "Firemaking": {
-              "level": 22,
-              "xp": 4000
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 90002,
+          "elapsedMs": 240034,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 26
+              "level": 7
             },
             "Firemaking": {
-              "level": 32,
-              "xp": 9000
+              "level": 1,
+              "xp": 0
             }
           }
         },
         {
-          "elapsedMs": 105003,
+          "elapsedMs": 255035,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 7
+            },
+            "Firemaking": {
+              "level": 10,
+              "xp": 1000
+            }
+          }
+        },
+        {
+          "elapsedMs": 270036,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 7
+            },
+            "Firemaking": {
+              "level": 10,
+              "xp": 1000
+            }
+          }
+        },
+        {
+          "elapsedMs": 285040,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 7
+            },
+            "Firemaking": {
+              "level": 10,
+              "xp": 1000
+            }
+          }
+        },
+        {
+          "elapsedMs": 300042,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 10,
+              "xp": 1000
+            }
+          }
+        },
+        {
+          "elapsedMs": 315042,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 10,
+              "xp": 1000
+            }
+          }
+        },
+        {
+          "elapsedMs": 330044,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 10,
+              "xp": 1000
+            }
+          }
+        },
+        {
+          "elapsedMs": 345044,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 10,
+              "xp": 1000
+            }
+          }
+        },
+        {
+          "elapsedMs": 360045,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 19,
+              "xp": 3000
+            }
+          }
+        },
+        {
+          "elapsedMs": 375046,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 19,
+              "xp": 3000
+            }
+          }
+        },
+        {
+          "elapsedMs": 390046,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 19,
+              "xp": 3000
+            }
+          }
+        },
+        {
+          "elapsedMs": 405049,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 15
+            },
+            "Firemaking": {
+              "level": 19,
+              "xp": 3000
+            }
+          }
+        },
+        {
+          "elapsedMs": 420050,
           "skills": {
             "Hitpoints": {
               "level": 10
@@ -8934,67 +9242,49 @@
               "level": 29
             },
             "Firemaking": {
-              "level": 33,
-              "xp": 10000
+              "level": 19,
+              "xp": 3000
             }
           }
         },
         {
-          "elapsedMs": 120003,
+          "elapsedMs": 435051,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 29
+              "level": 33
             },
             "Firemaking": {
-              "level": 33,
-              "xp": 10000
+              "level": 37,
+              "xp": 13000
             }
           }
         },
         {
-          "elapsedMs": 135003,
+          "elapsedMs": 450051,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 32
+              "level": 38
             },
             "Firemaking": {
-              "level": 38,
-              "xp": 14000
+              "level": 39,
+              "xp": 15000
             }
           }
         },
         {
-          "elapsedMs": 150004,
+          "elapsedMs": 465052,
           "skills": {
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 36
-            },
-            "Firemaking": {
-              "level": 43,
-              "xp": 20000
-            }
-          }
-        },
-        {
-          "elapsedMs": 165004,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 41
+              "level": 40
             },
             "Firemaking": {
               "level": 47,
@@ -9003,16 +9293,13 @@
           }
         },
         {
-          "elapsedMs": 180004,
+          "elapsedMs": 480052,
           "skills": {
-            "Attack": {
-              "level": 4
-            },
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 41
+              "level": 45
             },
             "Firemaking": {
               "level": 47,
@@ -9021,196 +9308,13 @@
           }
         },
         {
-          "elapsedMs": 195005,
+          "elapsedMs": 495054,
           "skills": {
-            "Attack": {
-              "level": 4
-            },
             "Hitpoints": {
               "level": 10
             },
             "Woodcutting": {
-              "level": 41
-            },
-            "Firemaking": {
-              "level": 47,
-              "xp": 27000
-            }
-          }
-        },
-        {
-          "elapsedMs": 210006,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 41
-            },
-            "Firemaking": {
-              "level": 47,
-              "xp": 27000
-            }
-          }
-        },
-        {
-          "elapsedMs": 225006,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 41
-            },
-            "Firemaking": {
-              "level": 47,
-              "xp": 27000
-            }
-          }
-        },
-        {
-          "elapsedMs": 240007,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 41
-            },
-            "Firemaking": {
-              "level": 47,
-              "xp": 27000
-            }
-          }
-        },
-        {
-          "elapsedMs": 255008,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 41
-            },
-            "Firemaking": {
-              "level": 47,
-              "xp": 27000
-            }
-          }
-        },
-        {
-          "elapsedMs": 270008,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 41
-            },
-            "Firemaking": {
-              "level": 47,
-              "xp": 27000
-            }
-          }
-        },
-        {
-          "elapsedMs": 285008,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 41
-            },
-            "Firemaking": {
-              "level": 47,
-              "xp": 28000
-            }
-          }
-        },
-        {
-          "elapsedMs": 300009,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 43
-            },
-            "Firemaking": {
-              "level": 49,
-              "xp": 32000
-            }
-          }
-        },
-        {
-          "elapsedMs": 315009,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 43
-            },
-            "Firemaking": {
-              "level": 49,
-              "xp": 32000
-            }
-          }
-        },
-        {
-          "elapsedMs": 330009,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 43
-            },
-            "Firemaking": {
-              "level": 49,
-              "xp": 32000
-            }
-          }
-        },
-        {
-          "elapsedMs": 345009,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 44
+              "level": 47
             },
             "Firemaking": {
               "level": 51,
@@ -9219,29 +9323,8 @@
           }
         },
         {
-          "elapsedMs": 360009,
+          "elapsedMs": 510055,
           "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 46
-            },
-            "Firemaking": {
-              "level": 52,
-              "xp": 40000
-            }
-          }
-        },
-        {
-          "elapsedMs": 375010,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
             "Hitpoints": {
               "level": 10
             },
@@ -9249,17 +9332,14 @@
               "level": 49
             },
             "Firemaking": {
-              "level": 55,
-              "xp": 48000
+              "level": 54,
+              "xp": 44000
             }
           }
         },
         {
-          "elapsedMs": 390010,
+          "elapsedMs": 525055,
           "skills": {
-            "Attack": {
-              "level": 4
-            },
             "Hitpoints": {
               "level": 10
             },
@@ -9267,17 +9347,14 @@
               "level": 51
             },
             "Firemaking": {
-              "level": 57,
-              "xp": 57000
+              "level": 56,
+              "xp": 51000
             }
           }
         },
         {
-          "elapsedMs": 405010,
+          "elapsedMs": 540055,
           "skills": {
-            "Attack": {
-              "level": 4
-            },
             "Hitpoints": {
               "level": 10
             },
@@ -9285,17 +9362,44 @@
               "level": 53
             },
             "Firemaking": {
-              "level": 59,
-              "xp": 66000
+              "level": 58,
+              "xp": 61000
             }
           }
         },
         {
-          "elapsedMs": 420011,
+          "elapsedMs": 555056,
           "skills": {
-            "Attack": {
-              "level": 4
+            "Hitpoints": {
+              "level": 10
             },
+            "Woodcutting": {
+              "level": 53
+            },
+            "Firemaking": {
+              "level": 58,
+              "xp": 61000
+            }
+          }
+        },
+        {
+          "elapsedMs": 570057,
+          "skills": {
+            "Hitpoints": {
+              "level": 10
+            },
+            "Woodcutting": {
+              "level": 53
+            },
+            "Firemaking": {
+              "level": 58,
+              "xp": 61000
+            }
+          }
+        },
+        {
+          "elapsedMs": 585061,
+          "skills": {
             "Hitpoints": {
               "level": 10
             },
@@ -9303,230 +9407,80 @@
               "level": 54
             },
             "Firemaking": {
-              "level": 61,
-              "xp": 72000
-            }
-          }
-        },
-        {
-          "elapsedMs": 435011,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 55
-            },
-            "Firemaking": {
-              "level": 61,
-              "xp": 76000
-            }
-          }
-        },
-        {
-          "elapsedMs": 450011,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 56
-            },
-            "Firemaking": {
-              "level": 63,
-              "xp": 83000
-            }
-          }
-        },
-        {
-          "elapsedMs": 465013,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 58
-            },
-            "Firemaking": {
-              "level": 64,
-              "xp": 93000
-            }
-          }
-        },
-        {
-          "elapsedMs": 480013,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 59
-            },
-            "Firemaking": {
-              "level": 65,
-              "xp": 99000
-            }
-          }
-        },
-        {
-          "elapsedMs": 495013,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 59
-            },
-            "Firemaking": {
-              "level": 65,
-              "xp": 100000
-            }
-          }
-        },
-        {
-          "elapsedMs": 510014,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 60
-            },
-            "Firemaking": {
-              "level": 67,
-              "xp": 109000
-            }
-          }
-        },
-        {
-          "elapsedMs": 525014,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 61
-            },
-            "Firemaking": {
-              "level": 68,
-              "xp": 116000
-            }
-          }
-        },
-        {
-          "elapsedMs": 540015,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 61
-            },
-            "Firemaking": {
-              "level": 68,
-              "xp": 118000
-            }
-          }
-        },
-        {
-          "elapsedMs": 555015,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 62
-            },
-            "Firemaking": {
-              "level": 69,
-              "xp": 127000
-            }
-          }
-        },
-        {
-          "elapsedMs": 570016,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 63
-            },
-            "Firemaking": {
-              "level": 70,
-              "xp": 136000
-            }
-          }
-        },
-        {
-          "elapsedMs": 585017,
-          "skills": {
-            "Attack": {
-              "level": 4
-            },
-            "Hitpoints": {
-              "level": 10
-            },
-            "Woodcutting": {
-              "level": 64
-            },
-            "Firemaking": {
-              "level": 71,
-              "xp": 145000
+              "level": 59,
+              "xp": 66000
             }
           }
         }
       ],
       "trajectory": [
         {
-          "source": "agent",
-          "text": "I'll start by checking the current state of the agent and then begin training Firemaking XP."
-        },
-        {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent state"
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la sdk/"
+          "text": "rs-agent_list_bots"
         },
         {
           "source": "agent",
-          "text": "Let me check the SDK structure and see if there's a local server to connect to:"
+          "text": "I'll start by exploring the environment and then create minimal scripts to maximize Firemaking XP."
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/README.md"
+          "text": "bash: ls -la /app"
+        },
+        {
+          "source": "tool",
+          "text": "bash: ls -la /app/bots"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/agents.md"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/bots/agent/script.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat /app/bots/agent/bot.env"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | head -100"
+        },
+        {
+          "source": "agent",
+          "text": "I see the bot starts at 3222,3222 with Firemaking level 1 and 0 XP. It has a tinderbox and some food. Let me first find wood logs to burn, then create a short script to test firemaking."
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -i \"log\""
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -i \"bush\\|tree\""
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/test_firemake.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 45 bun bots/agent/test_firemake.ts 2>&1"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/test_firemake.ts"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/test_firemake.ts"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/test_firemake.ts"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/index.ts"
         },
         {
           "source": "tool",
@@ -9534,139 +9488,7 @@
         },
         {
           "source": "agent",
-          "text": "I see the CLI requires username and password. Looking at the error, it's attempting to connect to a remote demo server. The task mentions a \"local RuneScape private server running on localhost\". Let me check the CLI and see if I need to use localhost:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: ls -la bots/ 2>/dev/null || echo \"No bots directory\""
-        },
-        {
-          "source": "agent",
-          "text": "I see that for localhost, password might not be required. Let me also check if there are bot credentials files:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: cat bots/agent/bot.env"
-        },
-        {
-          "source": "agent",
-          "text": "Now let me try connecting with the localhost credentials:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent"
-        },
-        {
-          "source": "agent",
-          "text": "The agent is connected. Now I need to start Firemaking. Looking at the inventory, there's no logs or tinderbox already in use. The agent has:\n- A bronze axe (to chop trees)\n- A tinderbox (to burn logs)\n\nI need to find trees, chop them, then burn the logs. Let me first check the actions available:"
-        },
-        {
-          "source": "tool",
-          "text": "grep"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/test/woodcutting-firemaking.ts"
-        },
-        {
-          "source": "agent",
-          "text": "Perfect! There's a test file that shows the exact pattern for Woodcutting-Firemaking. Let me read it:"
-        },
-        {
-          "source": "agent",
-          "text": "This is perfect - I can see the exact pattern. Now I need to run this as a continuous loop for 10 minutes to maximize Firemaking XP. But first let me start with a single action using the CLI to verify it works:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: timeout 30 bun sdk/test/woodcutting-firemaking.ts 2>&1 | head -60"
-        },
-        {
-          "source": "agent",
-          "text": "There's an issue with the test file. Let me create my own simplified script to maximize Firemaking:"
-        },
-        {
-          "source": "tool",
-          "text": "write: /app/firemaking.ts"
-        },
-        {
-          "source": "tool",
-          "text": "grep"
-        },
-        {
-          "source": "agent",
-          "text": "Let me check the SkillState type to see what properties are available:"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/types.ts"
-        },
-        {
-          "source": "agent",
-          "text": "The property is `experience`, not `xp`. Let me fix the script:"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "agent",
-          "text": "Now let me run the script with a timeout to ensure it doesn't run too long:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: timeout 65 bun firemaking.ts"
-        },
-        {
-          "source": "agent",
-          "text": "The script ran for 10 minutes but stopped early due to the tick check. Let me fix the script - the issue is the tick counting. Let me also make it run longer:"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "agent",
-          "text": "Now let me run it again:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: timeout 70 bun firemaking.ts"
-        },
-        {
-          "source": "agent",
-          "text": "The script is running but not making progress - it seems like it's stuck. The XP isn't changing. Let me check if there's an issue with the action logic. Let me verify the current state:"
-        },
-        {
-          "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -A 20 \"## Inventory\""
-        },
-        {
-          "source": "agent",
-          "text": "There's 1 log in inventory. The issue is that the bot is likely walking away or having issues. Let me create a simpler, more robust script that verifies each step:"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "agent",
-          "text": "Let me fix the API - `findNearbyLoc` only takes one argument:"
-        },
-        {
-          "source": "tool",
-          "text": "edit"
-        },
-        {
-          "source": "tool",
-          "text": "bash: timeout 65 bun firemaking.ts"
+          "text": "I see the SDK has BotAction and BotSDK classes. Let me check the CLI to see how it's used:"
         },
         {
           "source": "tool",
@@ -9674,62 +9496,248 @@
         },
         {
           "source": "agent",
-          "text": "The script is making progress! But the `burnLogs` action is failing because the bot needs to find a suitable spot to light a fire. The issue is that the bot is already holding logs and trying to burn them immediately after picking them up, but the location might not be valid.\n\nLet me check the bot actions to understand how to properly burn logs:"
-        },
-        {
-          "source": "tool",
-          "text": "grep"
+          "text": "Now let me check if there's an actions.ts file with BotActions:"
         },
         {
           "source": "agent",
-          "text": "The `burnLogs` function uses `sendUseItemOnItem` which is the correct low-level action. The issue is that burning logs requires the bot to be in a valid location (not indoors, not near Obstacles). \n\nThe key insight is that `burnLogs` expects the action to complete and checks for Firemaking XP gain. If it fails, it could be because the location is invalid or the dialog isn't being closed properly.\n\nLet me check the SDK's sendUseItemOnItem implementation:"
+          "text": "Now I have enough context. Let me check the learnings folder for any tips, and then write a proper Firemaking script:"
         },
         {
           "source": "tool",
-          "text": "read: /app/sdk/index.ts"
+          "text": "bash: ls -la /app/learnings/"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/learnings/woodcutting.md"
         },
         {
           "source": "agent",
-          "text": "I see. The issue is that `sendUseItemOnItem` uses the tinderbox on logs internally. However, the error \"Failed to light fire (possibly bad location)\" suggests the bot needs to be in a valid outdoor location to light fires.\n\nThe problem is that the bot might be indoors or in a bad spot. Let me check where the bot is and create a more robust script that ensures the bot is in a valid fire-making location before attempting to burn logs:"
+          "text": "Perfect! Now I understand the structure. Let me first check what's in the inventory and where the nearest trees/ground logs are:"
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent 2>&1 | head -15"
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -A 50 \"## Inventory\""
         },
         {
           "source": "agent",
-          "text": "The bot is at position (3256, 3243). Let me check what's around there:"
+          "text": "The inventory is empty of logs. Let me first chop a tree to get logs, then burn them. Let me write a simple 30-second script to test the chop and burn flow:"
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -A 30 \"## Nearby Objects\""
+          "text": "write: /app/bots/agent/firemaking_test.ts"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/firemaking_test.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/firemaking_test.ts 2>&1"
         },
         {
           "source": "agent",
-          "text": "The bot is making progress! There are trees nearby and the logs are being burned. The script is working. However, there's an issue - it seems like the `burnLogs` action is failing initially but still managing to make progress.\n\nLooking at the logs, I see \"The fire catches and the logs begin to burn\" which means burns ARE succeeding. The issue is the failure detection in the action is too aggressive.\n\nLet me look at a simpler approach - directly use `sendUseItemOnItem` with proper state checking:"
+          "text": "No logs were added. Let me check the firemaking skill to understand what logs are needed:"
         },
         {
           "source": "tool",
-          "text": "write: /app/firemaking.ts"
+          "text": "write: /app/bots/agent/examine_game.ts"
         },
         {
           "source": "tool",
-          "text": "bash: timeout 65 bun firemaking.ts"
+          "text": "bash: timeout 30 bun bots/agent/examine_game.ts 2>&1"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/actions.ts"
         },
         {
           "source": "agent",
-          "text": "The script is working and making progress. However, it's stopping after ~60 seconds because of the timeout. Let me run it for the full 10 minutes:"
+          "text": "The shrimp wasn't burned - the tinderbox needs to be used on logs specifically. The firemaking skill level is 1 with 0 XP. I need to chop trees and burn the logs. Let me check the actions.ts to see how burnLogs works:"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/actions.ts"
+        },
+        {
+          "source": "agent",
+          "text": "I see - the `burnLogs` method uses `resolveInventoryItem` which looks for `/logs/i` pattern. The issue is the tree needs to be chopped to add logs. Let me check what happens when we chop a tree:"
+        },
+        {
+          "source": "agent",
+          "text": "The chopTree method should add logs to inventory. Let me trace through the actual chop to see what's happening. Let me write a script that actually waits for the logs:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/chop_test.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/chop_test.ts 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "Now I have logs. Let me burn them:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/burn_test.ts"
+        },
+        {
+          "source": "tool",
+          "text": "edit"
+        },
+        {
+          "source": "tool",
+          "text": "edit"
+        },
+        {
+          "source": "tool",
+          "text": "edit"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/burn_test.ts 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "The logs disappeared but no XP was gained. This is likely because the tinderbox is being used but there's a dialog that needs to be clicked. Let me check if there's a dialog opening:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/burn_with_dialog.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/burn_with_dialog.ts 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "The logs are gone from the last test. Let me create a complete test that chops first then burns:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/full_cycle.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/full_cycle.ts 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "The tree isn't giving logs. Let me check what's happening with the chop more carefully:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/debug_chop.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/debug_chop.ts 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "The logs ARE being added! But in my previous test, the inventory was showing only 19 items total with 10 empty slots. Let me check if the logs were being counted:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -A 3 \"Firemaking\""
+        },
+        {
+          "source": "agent",
+          "text": "Wait - the firemaking XP is now 1000! Let me check the inventory:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -B 5 \"Firemaking: 10\""
+        },
+        {
+          "source": "agent",
+          "text": "It seems like the XP is being tracked. But my test showed 0 XP. Let me verify the XP is really 1000 now and check what logs are in inventory:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -A 30 \"## Inventory\""
+        },
+        {
+          "source": "agent",
+          "text": "Logs x2 is in inventory, and Firemaking is level 10 with 1000 XP. It seems like maybe the bot has been running something in another session! Let me now burn those logs properly. First, let me verify the logs are at the correct level for firemaking:\n\nAccording to the XP, Firemaking level 10 gives 1000 XP total. At level 1, each log gives 17.5 XP. By level 10, each log gives ~175 XP. Let me test burning the logs:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/burn_current_logs.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/burn_current_logs.ts 2>&1"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/actions.ts"
+        },
+        {
+          "source": "agent",
+          "text": "The porcelain methods are in BotActions, not BotSDK. Let me check the correct way to use them:"
+        },
+        {
+          "source": "agent",
+          "text": "I need to use BotActions, not BotSDK directly. Let me look at the correct approach:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat /app/bots/_template/script.ts 2>/dev/null || cat /app/bots/agent/lab_log.md 2>/dev/null || echo \"No template found\""
+        },
+        {
+          "source": "agent",
+          "text": "Perfect! The bot scripts should use `runScript` with a context. Let me create a proper firemaking script:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/firemaking_test.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 30 bun bots/agent/firemaking_test.ts 2>&1"
+        },
+        {
+          "source": "agent",
+          "text": "Excellent! The firemaking works! I got 2000 XP from burning 2 logs (1000 XP each). The Firemaking level is now 19. Now I need to optimize this to maximize XP within 10 minutes. \n\nThe strategy should be:\n1. Chop trees for logs\n2. Burn logs for XP\n3. Repeat\n\nBut I notice I'm already in a dialog box. Let me create a proper 10-minute firemaking script that handles this automatically:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/firemaking_maximize.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: timeout 600 bun bots/agent/firemaking_maximize.ts 2>&1 &\nsleep 60 && bun sdk/cli.ts agent 2>&1 | grep -A 3 \"Firemaking:\""
+        },
+        {
+          "source": "agent",
+          "text": "The script is working! Firemaking is now level 47 with 27,000 XP. I need to fix it to also burn logs. The issue is that with 28 slots and only tinderbox in inventory, I'm accumulating logs but not burning them. Let me check the inventory state:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent 2>&1 | grep -A 35 \"## Inventory\""
+        },
+        {
+          "source": "agent",
+          "text": "I have 9 logs in inventory. The script is working but needs to burn logs before the inventory fills up. Since I have 28 slots total and most slots are taken by runes/equipment, I should only have space for about 8-9 items (logs). With my current inventory having 19 items total (9 empty slots), I can fit more logs.\n\nThe issue is that I'm not burning logs fast enough. Let me improve the script to burn logs more frequently:"
+        },
+        {
+          "source": "tool",
+          "text": "write: /app/bots/agent/firemaking_optimized.ts"
         }
       ],
-      "trimmedSamples": 1,
-      "trialDir": "jobs/skills-10m-qwen3-20260305-215936/firemaking-xp-10m__LEHeCxY",
+      "trimmedSamples": 2,
+      "trialDir": "jobs/firemaking-xp-10m-qwen3-20260227-153822/firemaking-xp-10m__PZLhX4h",
       "videoAvailable": true,
-      "containerStartedAt": "2026-03-06T03:23:42.699072Z",
-      "containerFinishedAt": "2026-03-06T03:34:37.471444Z",
-      "agentStartedAt": "2026-03-06T03:24:01.733988Z"
+      "videoDuration": 623,
+      "containerStartedAt": "2026-02-27T20:39:24.048155Z",
+      "containerFinishedAt": "2026-02-27T20:51:05.205322Z",
+      "agentStartedAt": "2026-02-27T20:40:10.030734Z"
     },
     "thieving": {
       "jobName": "skills-10m-qwen3-20260306-101725",
+      "peakXpRate": 1055930,
       "finalXp": 23200,
       "finalLevel": 45,
       "durationSeconds": 592.054,
@@ -10389,19 +10397,21 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen3-20260306-101725/thieving-xp-10m__KAJ3BRC",
       "videoAvailable": true,
+      "videoDuration": 602,
       "containerStartedAt": "2026-03-06T15:41:28.623568Z",
       "containerFinishedAt": "2026-03-06T15:53:03.143384Z",
       "agentStartedAt": "2026-03-06T15:41:50.082958Z"
     },
     "defence": {
-      "jobName": "defence-xp-10m-qwen3-20260227-153822",
-      "finalXp": 34200,
-      "finalLevel": 50,
-      "durationSeconds": 585.053,
+      "jobName": "skills-10m-qwen3-20260305-231653",
+      "peakXpRate": 504000,
+      "finalXp": 22500,
+      "finalLevel": 44,
+      "durationSeconds": 585.068,
       "sampleCount": 40,
       "samples": [
         {
-          "elapsedMs": 0,
+          "elapsedMs": 1,
           "skills": {
             "Defence": {
               "level": 1,
@@ -10413,7 +10423,7 @@
           }
         },
         {
-          "elapsedMs": 15007,
+          "elapsedMs": 15009,
           "skills": {
             "Defence": {
               "level": 1,
@@ -10425,7 +10435,7 @@
           }
         },
         {
-          "elapsedMs": 30008,
+          "elapsedMs": 30007,
           "skills": {
             "Defence": {
               "level": 1,
@@ -10437,7 +10447,7 @@
           }
         },
         {
-          "elapsedMs": 45010,
+          "elapsedMs": 45011,
           "skills": {
             "Defence": {
               "level": 1,
@@ -10449,7 +10459,7 @@
           }
         },
         {
-          "elapsedMs": 60012,
+          "elapsedMs": 60015,
           "skills": {
             "Defence": {
               "level": 1,
@@ -10461,7 +10471,7 @@
           }
         },
         {
-          "elapsedMs": 75014,
+          "elapsedMs": 75016,
           "skills": {
             "Defence": {
               "level": 1,
@@ -10473,7 +10483,79 @@
           }
         },
         {
-          "elapsedMs": 90015,
+          "elapsedMs": 90028,
+          "skills": {
+            "Defence": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 105030,
+          "skills": {
+            "Defence": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 120032,
+          "skills": {
+            "Defence": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 135035,
+          "skills": {
+            "Defence": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 150035,
+          "skills": {
+            "Defence": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 165036,
+          "skills": {
+            "Defence": {
+              "level": 1,
+              "xp": 0
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 180036,
           "skills": {
             "Defence": {
               "level": 5,
@@ -10485,11 +10567,47 @@
           }
         },
         {
-          "elapsedMs": 105016,
+          "elapsedMs": 195036,
           "skills": {
             "Defence": {
-              "level": 10,
-              "xp": 1100
+              "level": 5,
+              "xp": 400
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 210037,
+          "skills": {
+            "Defence": {
+              "level": 5,
+              "xp": 400
+            },
+            "Hitpoints": {
+              "level": 10
+            }
+          }
+        },
+        {
+          "elapsedMs": 225043,
+          "skills": {
+            "Defence": {
+              "level": 7,
+              "xp": 700
+            },
+            "Hitpoints": {
+              "level": 11
+            }
+          }
+        },
+        {
+          "elapsedMs": 240043,
+          "skills": {
+            "Defence": {
+              "level": 12,
+              "xp": 1300
             },
             "Hitpoints": {
               "level": 12
@@ -10497,11 +10615,23 @@
           }
         },
         {
-          "elapsedMs": 120016,
+          "elapsedMs": 255044,
+          "skills": {
+            "Defence": {
+              "level": 15,
+              "xp": 1900
+            },
+            "Hitpoints": {
+              "level": 13
+            }
+          }
+        },
+        {
+          "elapsedMs": 270045,
           "skills": {
             "Defence": {
               "level": 16,
-              "xp": 2300
+              "xp": 2100
             },
             "Hitpoints": {
               "level": 14
@@ -10509,11 +10639,11 @@
           }
         },
         {
-          "elapsedMs": 135017,
+          "elapsedMs": 285052,
           "skills": {
             "Defence": {
               "level": 18,
-              "xp": 2600
+              "xp": 2700
             },
             "Hitpoints": {
               "level": 14
@@ -10521,59 +10651,11 @@
           }
         },
         {
-          "elapsedMs": 150019,
+          "elapsedMs": 300051,
           "skills": {
             "Defence": {
-              "level": 22,
-              "xp": 3800
-            },
-            "Hitpoints": {
-              "level": 16
-            }
-          }
-        },
-        {
-          "elapsedMs": 165019,
-          "skills": {
-            "Defence": {
-              "level": 22,
-              "xp": 3800
-            },
-            "Hitpoints": {
-              "level": 16
-            }
-          }
-        },
-        {
-          "elapsedMs": 180020,
-          "skills": {
-            "Defence": {
-              "level": 22,
-              "xp": 3800
-            },
-            "Hitpoints": {
-              "level": 16
-            }
-          }
-        },
-        {
-          "elapsedMs": 195022,
-          "skills": {
-            "Defence": {
-              "level": 22,
-              "xp": 3800
-            },
-            "Hitpoints": {
-              "level": 16
-            }
-          }
-        },
-        {
-          "elapsedMs": 210023,
-          "skills": {
-            "Defence": {
-              "level": 24,
-              "xp": 4600
+              "level": 23,
+              "xp": 4100
             },
             "Hitpoints": {
               "level": 17
@@ -10581,11 +10663,47 @@
           }
         },
         {
-          "elapsedMs": 225025,
+          "elapsedMs": 315054,
           "skills": {
             "Defence": {
-              "level": 27,
-              "xp": 6100
+              "level": 23,
+              "xp": 4300
+            },
+            "Hitpoints": {
+              "level": 17
+            }
+          }
+        },
+        {
+          "elapsedMs": 330056,
+          "skills": {
+            "Defence": {
+              "level": 24,
+              "xp": 4800
+            },
+            "Hitpoints": {
+              "level": 17
+            }
+          }
+        },
+        {
+          "elapsedMs": 345057,
+          "skills": {
+            "Defence": {
+              "level": 26,
+              "xp": 5300
+            },
+            "Hitpoints": {
+              "level": 18
+            }
+          }
+        },
+        {
+          "elapsedMs": 360057,
+          "skills": {
+            "Defence": {
+              "level": 26,
+              "xp": 5700
             },
             "Hitpoints": {
               "level": 19
@@ -10593,23 +10711,23 @@
           }
         },
         {
-          "elapsedMs": 240027,
+          "elapsedMs": 375057,
           "skills": {
             "Defence": {
-              "level": 29,
-              "xp": 6800
+              "level": 28,
+              "xp": 6300
             },
             "Hitpoints": {
-              "level": 20
+              "level": 19
             }
           }
         },
         {
-          "elapsedMs": 255028,
+          "elapsedMs": 390057,
           "skills": {
             "Defence": {
               "level": 30,
-              "xp": 7900
+              "xp": 7500
             },
             "Hitpoints": {
               "level": 21
@@ -10617,7 +10735,19 @@
           }
         },
         {
-          "elapsedMs": 270029,
+          "elapsedMs": 405060,
+          "skills": {
+            "Defence": {
+              "level": 31,
+              "xp": 8600
+            },
+            "Hitpoints": {
+              "level": 22
+            }
+          }
+        },
+        {
+          "elapsedMs": 420061,
           "skills": {
             "Defence": {
               "level": 32,
@@ -10629,11 +10759,23 @@
           }
         },
         {
-          "elapsedMs": 285031,
+          "elapsedMs": 435062,
           "skills": {
             "Defence": {
               "level": 34,
-              "xp": 10800
+              "xp": 10500
+            },
+            "Hitpoints": {
+              "level": 23
+            }
+          }
+        },
+        {
+          "elapsedMs": 450061,
+          "skills": {
+            "Defence": {
+              "level": 35,
+              "xp": 11300
             },
             "Hitpoints": {
               "level": 24
@@ -10641,11 +10783,11 @@
           }
         },
         {
-          "elapsedMs": 300033,
+          "elapsedMs": 465062,
           "skills": {
             "Defence": {
-              "level": 37,
-              "xp": 12900
+              "level": 36,
+              "xp": 12600
             },
             "Hitpoints": {
               "level": 25
@@ -10653,11 +10795,11 @@
           }
         },
         {
-          "elapsedMs": 315034,
+          "elapsedMs": 480061,
           "skills": {
             "Defence": {
               "level": 38,
-              "xp": 14100
+              "xp": 14500
             },
             "Hitpoints": {
               "level": 26
@@ -10665,11 +10807,11 @@
           }
         },
         {
-          "elapsedMs": 330037,
+          "elapsedMs": 495064,
           "skills": {
             "Defence": {
               "level": 39,
-              "xp": 15000
+              "xp": 15400
             },
             "Hitpoints": {
               "level": 27
@@ -10677,23 +10819,11 @@
           }
         },
         {
-          "elapsedMs": 345038,
+          "elapsedMs": 510065,
           "skills": {
             "Defence": {
-              "level": 40,
-              "xp": 16000
-            },
-            "Hitpoints": {
-              "level": 27
-            }
-          }
-        },
-        {
-          "elapsedMs": 360039,
-          "skills": {
-            "Defence": {
-              "level": 40,
-              "xp": 16700
+              "level": 41,
+              "xp": 17100
             },
             "Hitpoints": {
               "level": 28
@@ -10701,23 +10831,11 @@
           }
         },
         {
-          "elapsedMs": 375039,
-          "skills": {
-            "Defence": {
-              "level": 41,
-              "xp": 18100
-            },
-            "Hitpoints": {
-              "level": 29
-            }
-          }
-        },
-        {
-          "elapsedMs": 390039,
+          "elapsedMs": 525065,
           "skills": {
             "Defence": {
               "level": 42,
-              "xp": 18900
+              "xp": 19000
             },
             "Hitpoints": {
               "level": 29
@@ -10725,11 +10843,11 @@
           }
         },
         {
-          "elapsedMs": 405039,
+          "elapsedMs": 540065,
           "skills": {
             "Defence": {
               "level": 43,
-              "xp": 20200
+              "xp": 21100
             },
             "Hitpoints": {
               "level": 30
@@ -10737,11 +10855,11 @@
           }
         },
         {
-          "elapsedMs": 420040,
+          "elapsedMs": 555070,
           "skills": {
             "Defence": {
               "level": 44,
-              "xp": 21500
+              "xp": 22300
             },
             "Hitpoints": {
               "level": 31
@@ -10749,11 +10867,11 @@
           }
         },
         {
-          "elapsedMs": 435041,
+          "elapsedMs": 570066,
           "skills": {
             "Defence": {
-              "level": 45,
-              "xp": 23000
+              "level": 44,
+              "xp": 22500
             },
             "Hitpoints": {
               "level": 31
@@ -10761,134 +10879,26 @@
           }
         },
         {
-          "elapsedMs": 450041,
+          "elapsedMs": 585068,
           "skills": {
             "Defence": {
-              "level": 45,
-              "xp": 24300
+              "level": 44,
+              "xp": 22500
             },
             "Hitpoints": {
-              "level": 32
-            }
-          }
-        },
-        {
-          "elapsedMs": 465042,
-          "skills": {
-            "Defence": {
-              "level": 46,
-              "xp": 25600
-            },
-            "Hitpoints": {
-              "level": 33
-            }
-          }
-        },
-        {
-          "elapsedMs": 480044,
-          "skills": {
-            "Defence": {
-              "level": 47,
-              "xp": 26800
-            },
-            "Hitpoints": {
-              "level": 33
-            }
-          }
-        },
-        {
-          "elapsedMs": 495045,
-          "skills": {
-            "Defence": {
-              "level": 47,
-              "xp": 27000
-            },
-            "Hitpoints": {
-              "level": 33
-            }
-          }
-        },
-        {
-          "elapsedMs": 510047,
-          "skills": {
-            "Defence": {
-              "level": 47,
-              "xp": 28000
-            },
-            "Hitpoints": {
-              "level": 34
-            }
-          }
-        },
-        {
-          "elapsedMs": 525048,
-          "skills": {
-            "Defence": {
-              "level": 48,
-              "xp": 29200
-            },
-            "Hitpoints": {
-              "level": 34
-            }
-          }
-        },
-        {
-          "elapsedMs": 540050,
-          "skills": {
-            "Defence": {
-              "level": 48,
-              "xp": 30300
-            },
-            "Hitpoints": {
-              "level": 34
-            }
-          }
-        },
-        {
-          "elapsedMs": 555050,
-          "skills": {
-            "Defence": {
-              "level": 49,
-              "xp": 31800
-            },
-            "Hitpoints": {
-              "level": 35
-            }
-          }
-        },
-        {
-          "elapsedMs": 570051,
-          "skills": {
-            "Defence": {
-              "level": 49,
-              "xp": 32500
-            },
-            "Hitpoints": {
-              "level": 35
-            }
-          }
-        },
-        {
-          "elapsedMs": 585053,
-          "skills": {
-            "Defence": {
-              "level": 50,
-              "xp": 34200
-            },
-            "Hitpoints": {
-              "level": 36
+              "level": 31
             }
           }
         }
       ],
       "trajectory": [
         {
-          "source": "tool",
-          "text": "rs-agent_list_bots"
+          "source": "agent",
+          "text": "I'll start training Defence XP immediately by checking the current state and then taking actions."
         },
         {
-          "source": "agent",
-          "text": "I'll start by exploring the local RuneScape private server to understand what's available and then create minimal scripts to train Defence XP."
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent state"
         },
         {
           "source": "tool",
@@ -10896,19 +10906,11 @@
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: cat .envrc"
         },
         {
           "source": "tool",
-          "text": "read: /app/agents.md"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/benchmark/README.md"
-        },
-        {
-          "source": "tool",
-          "text": "read: /app/sdk/API.md"
+          "text": "bash: ls -la sdk/"
         },
         {
           "source": "tool",
@@ -10916,142 +10918,180 @@
         },
         {
           "source": "tool",
-          "text": "bash: ls -la bots/agent/ 2>/dev/null || echo \"Bot not found\""
+          "text": "bash: ls -la bots/agent/"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat bots/agent/bot.env"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/cli.ts"
         },
         {
           "source": "agent",
-          "text": "Let me check if the agent bot exists and get its current state:"
+          "text": "The bot.env file is empty. Let me check the server for local credentials or configuration:"
         },
         {
           "source": "tool",
-          "text": "bash: bun sdk/cli.ts agent 2>&1 | head -100"
+          "text": "bash: cat server/*"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: ls -la server/engine/"
+        },
+        {
+          "source": "tool",
+          "text": "bash: cat server/engine/.env.example"
+        },
+        {
+          "source": "tool",
+          "text": "bash: ls -la server/engine/data/"
+        },
+        {
+          "source": "tool",
+          "text": "bash: ls -la server/engine/data/players/"
+        },
+        {
+          "source": "tool",
+          "text": "bash: ls -la server/engine/data/players/main/"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent password --server localhost"
         },
         {
           "source": "agent",
-          "text": "The bot is ready. I can see:\n- Bot is at position (3222, 3222) in the tutorial area\n- Has Defence level 1 with 0 XP\n- Has bronze sword and wooden shield equipped\n- Nearby rats, men, and tutorial NPCs\n\nFor Defence XP, the most efficient method is to train combat by either:\n1. Fighting NPCs while using defensive combat style\n2. Using the combat tutorial area\n\nLet me first skip the tutorial if needed, then start training Defence:"
+          "text": "Good, I can see the connection works. The bot is at Lumbridge with rats nearby. For maximum Defence XP, I should train by blocking hits from NPCs. Rats are the easiest targets. Let me attack a rat and switch to Defensive mode:"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun sdk/cli.ts agent password --server localhost --exec \"await sdk.actions.combat.attack('Rat'); await sdk.actions.combat.setCombatStyle('Defensive');\""
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/actions.ts"
         },
         {
           "source": "agent",
-          "text": "Good, tutorial skipped. The combat style is currently \"Punch (Accurate)\" which trains Attack. To maximize Defence XP, I need to:\n1. Equip the bronze sword and wooden shield properly\n2. Switch to a defensive combat style\n\nLet me first check if changing combat style is available and then write a short test script to attack rats (which are low level and safe):"
+          "text": "I need to write a script to continuously train Defence. Let me check the actions available:"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "grep"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/index.ts"
+        },
+        {
+          "source": "tool",
+          "text": "grep"
         },
         {
           "source": "agent",
-          "text": "I see the issue - the combat style set to index 1 but shows 0. Let me fix this by explicitly setting style 3 (Block/Defensive):"
+          "text": "Now let me check the combat actions in the porcelain layer:"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: grep -n \"Attack\" /app/sdk/actions.ts | head -30"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/actions.ts"
         },
         {
           "source": "agent",
-          "text": "The interface might be buggy or the combat style option indices don't match. Let me check the actual interface for combat style options and set it properly:"
+          "text": "Let me check the types for combat style options:"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: grep -n \"CombatStyle\\|combat.*style\" /app/sdk/types.ts | head -30"
+        },
+        {
+          "source": "tool",
+          "text": "read: /app/sdk/types.ts"
         },
         {
           "source": "agent",
-          "text": "Let me try attacking without accessing undefined properties:"
+          "text": "Now let me write a CLI script to train Defence. I'll use a loop that:\n1. Attacks a rat\n2. Sets combat style to Defensive (style 2)\n3. Continues attacking"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
-        },
-        {
-          "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: bun sdk/cli.ts agent password --server localhost --exec \"\nlet attacks = 0;\nlet startDefXp = 0;\nlet iterations = 0;\n\n// Get initial XP\nconst state1 = sdk.getState();\nconst defSkill = state1?.skil"
         },
         {
           "source": "agent",
-          "text": "Excellent! The bot is now in combat with the rat, using the \"Block (Defensive)\" combat style which trains Defence. I can see:\n\n- **Defence just advanced to level 3 with 200 XP** - the combat is working!\n- The combat style is correctly set to \"Block\" which trains Defence\n\nNow let me create a short script to fight rats for 30 seconds to verify it gains Defence XP consistently:"
+          "text": "The --exec flag doesn't seem to be working as expected. Let me try a different approach - continuously loop using the CLI state command to monitor progress:"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: bun sdk/cli.ts agent password --server localhost --exec \"const rat = sdk.findNearbyNpc('Rat'); const attackOpt = rat.optionsWithIndex.find(o => /attack/i.test(o.text)); await sdk.sendInteractNpc"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "read: /app/sdk/runner.ts"
         },
         {
           "source": "agent",
-          "text": "**Excellent!** The bot gained **17 Defence levels (1→18) and 2,600 XP in just 30 seconds!** \n\nThe \"I can't reach that!\" messages indicate it ran out of nearby rats to attack. Let me check if there are more rats nearby and extend the fight. If rats are exhausted, I should look for other high-defence-XP options nearby or expand the area."
-        },
-        {
-          "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "The CLI seems to timeout the exec. Let me check if there's a runner script:"
         },
         {
           "source": "agent",
-          "text": "The 2-minute run timed out. Let me run two 45-second runs instead:"
+          "text": "Now I understand the structure. Let me create a training script and run it:"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "write: /app/train_defence.ts"
+        },
+        {
+          "source": "tool",
+          "text": "bash: bun --env-file=bots/agent/bot.env train_defence.ts 2>&1 | tee /tmp/train_output.txt &"
+        },
+        {
+          "source": "tool",
+          "text": "bash: sleep 3 && cat /tmp/train_output.txt"
         },
         {
           "source": "agent",
-          "text": "**Excellent gains:** 30 seconds → 45 seconds = **12 more levels (18→30) and 5,100 XP (2,600→7,700)**\n\nNow I'm at position (3224, 3237). There are more rats and even stronger targets (Imps, Men, Women). Let me continue training for the remaining time. With 10 minutes total and ~2 minutes used, I have about 8 minutes left.\n\nLet me run multiple 2-minute runs:"
+          "text": "The training is working! Let me wait more time to gather more XP:"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: sleep 60 && grep \"Tick\\|Training complete\\|Defence XP\" /tmp/train_output.txt | tail -20"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
+          "text": "bash: sleep 60 && grep \"Tick\\|Training complete\\|Defence XP\" /tmp/train_output.txt | tail -20"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
-        },
-        {
-          "source": "agent",
-          "text": "The 60-second run is timing out. Let me try a 30-second run and repeat:"
+          "text": "bash: sleep 60 && grep \"Tick\\|Training complete\\|Defence XP\" /tmp/train_output.txt | tail -20"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
-        },
-        {
-          "source": "agent",
-          "text": "**Great!** 30 seconds = **17 levels (30→47) and 19,100 XP (7,700→26,800)**\n\nCurrent status:\n- Defence: **Level 47 (26,800 XP)**\n- Position: (3234, 3213) \n- Still have ~8.5 minutes\n\nLet me continue with more 30-second runs:"
+          "text": "bash: sleep 60 && grep \"Tick\\|Training complete\\|Defence XP\\|Final\" /tmp/train_output.txt | tail -20"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
-        },
-        {
-          "source": "agent",
-          "text": "**48→49 (2,600 XP)** in 30 seconds. The combat is working well.\n\nLet me continue for the full remaining time with shorter bursts:"
+          "text": "bash: sleep 60 && grep \"Tick\\|Training complete\\|Defence XP\\|Final\" /tmp/train_output.txt | tail -20"
         },
         {
           "source": "tool",
-          "text": "rs-agent_execute_code"
-        },
-        {
-          "source": "agent",
-          "text": "Good progress: **49→50 (3,000 XP)** in 30 seconds.\n\nLet me run more 30-second bursts. Current totals:\n- Defence: **Level 50 (32,400 XP)**\n- Time used: ~2.5 minutes\n- Remaining: ~7.5 minutes"
+          "text": "bash: sleep 60 && grep \"Tick\\|Training complete\\|Defence XP\\|Final\" /tmp/train_output.txt | tail -20"
         }
       ],
       "trimmedSamples": 1,
-      "trialDir": "jobs/defence-xp-10m-qwen3-20260227-153822/defence-xp-10m__EhQj2Gv",
+      "trialDir": "jobs/skills-10m-qwen3-20260305-231653/defence-xp-10m__muTCWZB",
       "videoAvailable": true,
-      "containerStartedAt": "2026-02-27T20:39:15.598299Z",
-      "containerFinishedAt": "2026-02-27T20:50:31.165434Z",
-      "agentStartedAt": "2026-02-27T20:39:53.098359Z"
+      "videoDuration": 616,
+      "containerStartedAt": "2026-03-06T04:40:59.509199Z",
+      "containerFinishedAt": "2026-03-06T04:52:18.447330Z",
+      "agentStartedAt": "2026-03-06T04:41:42.469633Z"
     },
     "fishing": {
       "jobName": "skills-10m-qwen3-20260305-215936",
+      "peakXpRate": 0,
       "finalXp": 0,
       "finalLevel": 1,
       "durationSeconds": 585.015,
@@ -11799,12 +11839,14 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen3-20260305-215936/fishing-xp-10m__TRYprxn",
       "videoAvailable": true,
+      "videoDuration": 595,
       "containerStartedAt": "2026-03-06T03:23:42.706385Z",
       "containerFinishedAt": "2026-03-06T03:34:37.240055Z",
       "agentStartedAt": "2026-03-06T03:24:02.339226Z"
     },
     "strength": {
       "jobName": "skills-10m-qwen3-20260306-101725",
+      "peakXpRate": 1343821,
       "finalXp": 82000,
       "finalLevel": 63,
       "durationSeconds": 585.033,
@@ -12604,6 +12646,7 @@
       "trimmedSamples": 1,
       "trialDir": "jobs/skills-10m-qwen3-20260306-101725/strength-xp-10m__2ew44X6",
       "videoAvailable": true,
+      "videoDuration": 609,
       "containerStartedAt": "2026-03-06T15:41:28.630159Z",
       "containerFinishedAt": "2026-03-06T15:52:38.461263Z",
       "agentStartedAt": "2026-03-06T15:42:03.603492Z"

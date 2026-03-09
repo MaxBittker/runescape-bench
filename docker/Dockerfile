@@ -1,37 +1,14 @@
-FROM debian:bookworm-slim
-
-ENV DEBIAN_FRONTEND=noninteractive
-
-# System dependencies:
-#   chromium     - real chromium binary (not a snap shim like ubuntu 24.04)
-#   default-jre  - Java runtime for RuneScript compiler (engine cache packing)
-RUN apt-get update && apt-get install -y \
-    curl \
-    git \
-    chromium \
-    default-jre-headless \
-    unzip \
-    ca-certificates \
-    procps \
-    xvfb \
-    ffmpeg \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install bun
-RUN curl -fsSL https://bun.sh/install | bash
-ENV PATH="/root/.bun/bin:$PATH"
-
-# Use system chromium instead of puppeteer downloading its own
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+ARG BASE_IMAGE=ghcr.io/maxbittker/rs-agent-benchmark-base:v1
+FROM ${BASE_IMAGE}
 
 # 8x faster game simulation (50ms ticks vs default 420ms)
 ENV NODE_TICKRATE=50
 
-# Clone rs-sdk
+# Clone rs-sdk (shallow clone, then delete .git to save ~50MB)
 ARG RS_SDK_REPO=https://github.com/MaxBittker/rs-sdk.git
 ARG RS_SDK_REF=main
-RUN git clone --depth 1 --branch $RS_SDK_REF $RS_SDK_REPO /app
+RUN git clone --depth 1 --branch $RS_SDK_REF $RS_SDK_REPO /app \
+    && rm -rf /app/.git
 WORKDIR /app
 
 # Install all workspace dependencies
@@ -42,8 +19,8 @@ RUN cd server/webclient && bun install && bun run build
 RUN cp -r server/webclient/out/bot server/engine/public/bot
 RUN cd sdk && bun install
 
-# Remove scripts/ directory — benchmark agents waste budget reading/running these
-RUN rm -rf /app/scripts
+# Remove scripts/ and sdk/test/ — benchmark agents waste budget reading/running these
+RUN rm -rf /app/scripts /app/sdk/test
 
 # Pre-pack game cache and let engine fully start so all data files are generated.
 # Wait for "World ready" in output, then kill. This ensures maps, scripts, configs are all packed.
@@ -59,20 +36,18 @@ RUN cd server/engine && \
 RUN mkdir -p bots/agent
 COPY bot.env bots/agent/bot.env
 
-# Pre-install Claude Code CLI (Harbor's agent setup tries to curl this and
-# fails inside Daytona sandboxes due to connection resets).
-# Symlink to /usr/local/bin so it's on PATH for any user (Daytona may not run as root).
+# Pre-install Claude Code CLI so Harbor doesn't need to curl it at agent start.
 RUN curl -fsSL https://claude.ai/install.sh | bash \
     && ln -s /root/.local/share/claude/versions/* /usr/local/bin/claude
 
 # Copy entrypoint and helper scripts
 COPY entrypoint.sh /entrypoint.sh
-COPY start-services.sh /start-services.sh
 COPY launch-bot.ts /app/server/gateway/launch-bot.ts
-RUN chmod +x /entrypoint.sh /start-services.sh
+RUN chmod +x /entrypoint.sh
 
 # SAMPLE_INTERVAL_MS can be overridden per task via ENV in the thin FROM layer.
 COPY skill_tracker.ts /app/benchmark/shared/skill_tracker.ts
+COPY check_xp_rate.ts /app/benchmark/shared/check_xp_rate.ts
 
 # Ensure bot.env has SERVER=localhost so scripts connect to the local gateway
 RUN echo 'SERVER=localhost' >> /app/bots/agent/bot.env
@@ -80,7 +55,53 @@ RUN echo 'SERVER=localhost' >> /app/bots/agent/bot.env
 # Remove .mcp.json so Claude Code doesn't try to start a nonexistent MCP server.
 RUN rm -f /app/.mcp.json
 
-# Idempotent service starter for agents that don't use MCP (e.g. gemini-cli)
+# Patch GEMINI.md: heredoc syntax is rejected by gemini-cli's bash parser,
+# so add guidance on writing files without heredocs.
+RUN cat >> /app/GEMINI.md <<'PATCH'
+
+## Writing Files (Important!)
+
+**Do NOT use heredoc syntax (`<< 'EOF'`).** It will be rejected by the shell parser.
+
+Instead, use `printf` to write multi-line files:
+
+```bash
+printf '%s\n' \
+  'import { BotSDK } from "/app/sdk/index";' \
+  'import { BotActions } from "/app/sdk/actions";' \
+  '' \
+  'const sdk = new BotSDK({' \
+  '  botUsername: "agent",' \
+  '  password: "test",' \
+  '  gatewayUrl: "ws://localhost:7780",' \
+  '  autoLaunchBrowser: false,' \
+  '});' \
+  'await sdk.connect();' \
+  'const bot = new BotActions(sdk);' \
+  'await bot.skipTutorial();' \
+  'console.log("done");' \
+  'process.exit(0);' \
+  > /tmp/my_script.ts
+bun /tmp/my_script.ts
+```
+
+Or use the `/usr/local/bin/writefile` helper which reads from stdin:
+
+```bash
+echo 'console.log("hello")
+process.exit(0)' | writefile /tmp/test.ts
+bun /tmp/test.ts
+```
+PATCH
+
+# writefile helper — reads stdin and writes to the path given as $1
+RUN printf '#!/bin/bash\ncat > "$1"\n' > /usr/local/bin/writefile && chmod +x /usr/local/bin/writefile
+
+# SDK daemon defaults to remote demo server — force localhost for Docker runs.
+# (belt-and-suspenders; bot.env already has SERVER=localhost for the daemon)
+ENV GATEWAY_URL=ws://localhost:7780
+
+# Idempotent service checker — verifier calls this to ensure services + tracker are alive
 COPY ensure-services.sh /ensure-services.sh
 RUN chmod +x /ensure-services.sh
 

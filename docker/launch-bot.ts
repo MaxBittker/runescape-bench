@@ -66,7 +66,7 @@ async function main() {
         }
     });
 
-    // Connect SDK to skip tutorial
+    // Connect SDK to skip tutorial (with timeout so we always release the connection)
     console.log(`[launch-bot] Connecting SDK to skip tutorial...`);
     const sdk = new BotSDK({
         botUsername: BOT_NAME,
@@ -77,28 +77,37 @@ async function main() {
         autoReconnect: false,
     });
 
-    await sdk.connect();
-    await sdk.waitForCondition(s => s.inGame, 30000);
+    try {
+        await sdk.connect();
+        await sdk.waitForCondition(s => s.inGame, 30000);
 
-    const bot = new BotActions(sdk);
+        const bot = new BotActions(sdk);
 
-    // Skip tutorial (may take several attempts)
-    for (let i = 0; i < 30; i++) {
-        const state = sdk.getState();
-        if (state?.player) {
-            const { worldX, worldZ } = state.player;
-            // Tutorial Island: X 3050-3156, Z 3056-3136
-            if (worldX < 3050 || worldX > 3156 || worldZ < 3056 || worldZ > 3136) {
-                console.log(`[launch-bot] Not on tutorial island (${worldX}, ${worldZ}), done`);
-                break;
+        // Skip tutorial (may take several attempts, 60s max)
+        const deadline = Date.now() + 60000;
+        for (let i = 0; i < 30 && Date.now() < deadline; i++) {
+            const state = sdk.getState();
+            if (state?.player) {
+                const { worldX, worldZ } = state.player;
+                // Tutorial Island: X 3050-3156, Z 3056-3136
+                if (worldX < 3050 || worldX > 3156 || worldZ < 3056 || worldZ > 3136) {
+                    console.log(`[launch-bot] Not on tutorial island (${worldX}, ${worldZ}), done`);
+                    break;
+                }
             }
+            await Promise.race([
+                bot.skipTutorial(),
+                new Promise(r => setTimeout(r, 10000)),
+            ]);
+            await new Promise(r => setTimeout(r, 1000));
         }
-        await bot.skipTutorial();
-        await new Promise(r => setTimeout(r, 1000));
-    }
 
-    console.log(`[launch-bot] Tutorial complete, disconnecting SDK`);
-    sdk.disconnect();
+        console.log(`[launch-bot] Tutorial skip done, disconnecting SDK`);
+    } catch (err) {
+        console.error(`[launch-bot] Tutorial skip error:`, err);
+    } finally {
+        sdk.disconnect();
+    }
 
     // Keep browser alive so the bot stays connected
     console.log(`[launch-bot] Bot client running headless. Keeping alive...`);

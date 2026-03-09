@@ -91,9 +91,15 @@ body {
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 .skill-rail-reset:hover,
+.skill-rail-reset.hovered {
+  background: #eef4ff;
+  border-color: #9dbcfb;
+  color: #333;
+}
 .skill-rail-reset.active {
-  background: #e8e8e8;
-  border-color: #cfcfcf;
+  background: #eaf2ff;
+  border-color: #4f8df7;
+  box-shadow: inset 0 0 0 1px #4f8df7;
   color: #333;
 }
 .skill-rail-grid {
@@ -258,6 +264,7 @@ body {
 .heatmap-table td {
   padding: 4px 6px;
   text-align: center;
+  vertical-align: middle;
   border: 1px solid #e8e8e8;
 }
 .heatmap-table thead th {
@@ -266,10 +273,11 @@ body {
   position: sticky;
   top: 0;
   z-index: 2;
+  vertical-align: middle;
 }
 .heatmap-table thead th img {
   display: block;
-  margin: 0 auto 2px;
+  margin: 0 auto;
 }
 .heatmap-model {
   position: sticky;
@@ -375,13 +383,35 @@ body {
   position: relative;
   background: #fff;
   border-top: 1px solid #e8e8e8;
-  height: 150px;
+  height: 120px;
   cursor: pointer;
   overflow: visible;
 }
 .traj-skills-chart-wrap canvas {
   width: 100% !important;
   height: 100% !important;
+}
+.traj-rate-legend {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 4px 8px 0;
+  font-size: 10px;
+  color: #666;
+}
+.traj-rate-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.traj-rate-legend-line {
+  display: inline-block;
+  width: 16px;
+  height: 0;
+  border-top: 2px solid;
+}
+.traj-rate-legend-line.dashed {
+  border-top-style: dashed;
 }
 
 /* Video + transcript layout */

@@ -168,12 +168,12 @@ export function findTrackingInTrial(trialDir: string): { samples: Sample[]; botN
 }
 
 /** Find reward data within a single trial directory */
-export function findRewardInTrial(trialDir: string): { xp: number; level: number } | null {
+export function findRewardInTrial(trialDir: string): { xp: number; level: number; peakXpRate?: number } | null {
   const rewardPath = join(trialDir, 'verifier', 'reward.json');
   if (existsSync(rewardPath)) {
     try {
       const reward = JSON.parse(readFileSync(rewardPath, 'utf-8'));
-      if (reward.xp !== undefined) return { xp: reward.xp, level: reward.level ?? 1 };
+      if (reward.xp !== undefined) return { xp: reward.xp, level: reward.level ?? 1, peakXpRate: reward.peakXpRate };
     } catch {}
   }
 
@@ -182,7 +182,7 @@ export function findRewardInTrial(trialDir: string): { xp: number; level: number
     try {
       const content = readFileSync(stdoutPath, 'utf-8');
       const stdoutReward = parseRewardFromStdout(content);
-      if (stdoutReward?.xp !== undefined) return { xp: stdoutReward.xp, level: stdoutReward.level ?? 1 };
+      if (stdoutReward?.xp !== undefined) return { xp: stdoutReward.xp, level: stdoutReward.level ?? 1, peakXpRate: stdoutReward.peakXpRate };
     } catch {}
   }
 

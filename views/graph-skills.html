@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="skill-icons/crafting.png">
-<title>Skill XP Benchmark</title>
+<title>Peak XP Rate Benchmark</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="shared-constants.js"></script>
 <script>
@@ -577,7 +577,7 @@
 <body>
 
 <div class="page-header">
-  <h1>Skill XP Benchmark
+  <h1>Peak XP Rate Benchmark
     <span class="pill-toggle" id="horizonToggle">
       <button data-horizon="10m" onclick="setHorizon('10m')">10 min</button>
       <button data-horizon="30m" onclick="setHorizon('30m')">30 min</button>
@@ -598,7 +598,7 @@
     <div id="skillRailGrid" class="skill-rail-grid" onmouseleave="clearSkillPreview()"></div>
   </aside>
   <div class="cumulative-main">
-    <div id="chartModeChip" class="chart-mode-chip">Total XP</div>
+    <div id="chartModeChip" class="chart-mode-chip">Total Peak Rate</div>
     <div id="cumulativeContainer" class="cumulative-container"></div>
   </div>
 </div>
@@ -663,7 +663,7 @@ function getActiveSkill() {
 
 function getActiveSkillLabel() {
   const activeSkill = getActiveSkill();
-  return activeSkill ? `${SKILL_DISPLAY[activeSkill] || activeSkill} XP` : 'Total XP';
+  return activeSkill ? `${SKILL_DISPLAY[activeSkill] || activeSkill} Peak Rate` : 'Total Peak Rate';
 }
 
 // Preload model icons as Image objects for canvas drawing
@@ -726,7 +726,7 @@ function externalTooltipCumulative(context) {
   const modelKey = ds._modelKey;
   const config = MODEL_CONFIG[modelKey] || { displayName: modelKey, color: '#999' };
   const minute = Math.floor(item.parsed.x * 10) / 10;
-  const avgXp = item.parsed.y;
+  const rateValue = item.parsed.y;
   const activeSkill = getActiveSkill();
 
   let html = `<div class="chart-tooltip-title">`;
@@ -736,23 +736,23 @@ function externalTooltipCumulative(context) {
   if (activeSkill) {
     const skillName = SKILL_DISPLAY[activeSkill] || activeSkill;
     const iconSrc = 'skill-icons/' + activeSkill + '.png';
-    html += `<div class="chart-tooltip-avg">${skillName}: ${avgXp.toLocaleString()} XP</div>`;
+    html += `<div class="chart-tooltip-avg">${skillName}: ${formatRate(rateValue)}</div>`;
     html += `<div class="chart-tooltip-skill">`;
     html += `<img src="${iconSrc}">`;
     html += `<span>${skillName}</span>`;
-    html += `<span class="xp">${formatXp(avgXp)}</span>`;
+    html += `<span class="xp">${formatRate(rateValue)}</span>`;
     html += `</div>`;
   } else {
-    html += `<div class="chart-tooltip-avg">Total: ${avgXp.toLocaleString()} XP</div>`;
+    html += `<div class="chart-tooltip-avg">Total: ${formatRate(rateValue)}</div>`;
 
-    const skills = cumulativeSkillFinalXp[modelKey] || [];
+    const skills = cumulativeSkillPeakRate[modelKey] || [];
     for (const s of skills) {
       const iconSrc = 'skill-icons/' + s.skill + '.png';
-      const zeroClass = s.finalXp === 0 ? ' zero' : '';
+      const zeroClass = s.peakRate === 0 ? ' zero' : '';
       html += `<div class="chart-tooltip-skill">`;
       html += `<img src="${iconSrc}">`;
       html += `<span>${s.label}</span>`;
-      html += `<span class="xp${zeroClass}">${formatXp(s.finalXp)}</span>`;
+      html += `<span class="xp${zeroClass}">${formatRate(s.peakRate)}</span>`;
       html += `</div>`;
     }
   }
@@ -801,7 +801,7 @@ function externalTooltipGrid(skill) {
     html += `<div class="chart-tooltip-skill" style="padding:2px 0">`;
     if (config.icon) html += `<img src="${config.icon}">`;
     html += `<span>${config.displayName}</span>`;
-    html += `<span class="xp">${item.parsed.y.toLocaleString()} XP</span>`;
+    html += `<span class="xp">${formatRate(item.parsed.y)}</span>`;
     html += `</div>`;
 
     el.innerHTML = html;
@@ -913,11 +913,11 @@ function clearActiveSkill() {
   renderCurrentView();
 }
 
-function getModelTotalXp(model) {
+function getModelTotalRate(model) {
   const skills = combinedData[model];
   if (!skills) return 0;
-  const xps = Object.values(skills).map(s => s.finalXp || 0);
-  return xps.reduce((a, b) => a + b, 0);
+  const rates = Object.values(skills).map(s => s.peakXpRate || 0);
+  return rates.reduce((a, b) => a + b, 0);
 }
 
 function getModelsInData() {
@@ -929,9 +929,9 @@ function getModelsByPerformance() {
   const activeSkill = getActiveSkill();
   return Object.keys(combinedData)
     .sort((a, b) => {
-      const aXp = activeSkill ? (combinedData[a]?.[activeSkill]?.finalXp || 0) : getModelTotalXp(a);
-      const bXp = activeSkill ? (combinedData[b]?.[activeSkill]?.finalXp || 0) : getModelTotalXp(b);
-      return bXp - aXp;
+      const aRate = activeSkill ? (combinedData[a]?.[activeSkill]?.peakXpRate || 0) : getModelTotalRate(a);
+      const bRate = activeSkill ? (combinedData[b]?.[activeSkill]?.peakXpRate || 0) : getModelTotalRate(b);
+      return bRate - aRate;
     });
 }
 
@@ -942,9 +942,9 @@ function renderLegend() {
   el.innerHTML = models.map(name => {
     const config = MODEL_CONFIG[name] || { displayName: name, shortName: name, color: '#999' };
     const isHidden = hiddenModels.has(name);
-    const totalXp = activeSkill ? (combinedData[name]?.[activeSkill]?.finalXp || 0) : getModelTotalXp(name);
+    const totalRate = activeSkill ? (combinedData[name]?.[activeSkill]?.peakXpRate || 0) : getModelTotalRate(name);
     const showValue = currentView === 'cumulative';
-    const totalStr = showValue ? (totalXp > 0 ? formatXp(totalXp) : '-') : '';
+    const totalStr = showValue ? (totalRate > 0 ? formatRate(totalRate) : '-') : '';
     return `<div class="legend-item ${isHidden ? 'hidden' : ''}" onclick="toggleModel('${name}')">
       <div class="legend-dot" style="background:${config.color}"></div>
       <span class="legend-label">${config.shortName || config.displayName}</span>
@@ -1087,7 +1087,7 @@ function renderGrid() {
 
     const datasets = [];
     for (const model of models) {
-      const points = extractSkillPoints(combinedData[model]?.[skill], skill, HORIZON_MINUTES);
+      const points = extractPeakRatePoints(combinedData[model]?.[skill], skill, HORIZON_MINUTES);
       if (points.length === 0) continue;
 
       const config = MODEL_CONFIG[model] || { displayName: model, color: '#999' };
@@ -1101,7 +1101,7 @@ function renderGrid() {
         pointRadius: 0,
         pointHoverRadius: 3,
         borderWidth: 1.5,
-        tension: 0.3,
+        tension: 0,
         _modelKey: model,
       });
     }
@@ -1137,7 +1137,7 @@ function renderGrid() {
               color: '#bbb',
               font: { size: 10 },
               maxTicksLimit: 5,
-              callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v,
+              callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k/hr' : v + '/hr',
             },
             grid: { color: '#f0f0f0', drawTicks: false },
             border: { color: '#e0e0e0' },
@@ -1161,12 +1161,12 @@ function renderGrid() {
 
 // Store per-model skill datasets for hover reveal
 let cumulativeSkillDatasets = {}; // model -> [{label, data, color}, ...]
-let cumulativeSkillFinalXp = {}; // model -> [{skill, label, finalXp}, ...] sorted desc
+let cumulativeSkillPeakRate = {}; // model -> [{skill, label, peakRate}, ...] sorted desc
 
 function renderCumulative() {
   if (cumulativeChart) { cumulativeChart.destroy(); cumulativeChart = null; }
   cumulativeSkillDatasets = {};
-  cumulativeSkillFinalXp = {};
+  cumulativeSkillPeakRate = {};
 
   const container = document.getElementById('cumulativeContainer');
   container.innerHTML = '';
@@ -1183,31 +1183,31 @@ function renderCumulative() {
 
   for (const model of models) {
     const config = MODEL_CONFIG[model] || { displayName: model, color: '#999' };
-    let avgPoints = [];
+    let ratePoints = [];
 
     if (activeSkill) {
-      avgPoints = extractSkillPoints(combinedData[model]?.[activeSkill], activeSkill, HORIZON_MINUTES);
+      ratePoints = extractPeakRatePoints(combinedData[model]?.[activeSkill], activeSkill, HORIZON_MINUTES);
     } else {
       const bucketSums = new Array(BUCKET_COUNT).fill(0);
       const bucketCounts = new Array(BUCKET_COUNT).fill(0);
 
-      // Collect individual skill curves for hover reveal
+      // Collect individual skill peak rate curves for hover reveal
       const skillCurves = [];
 
       for (const skill of SKILL_ORDER) {
-        const points = extractSkillPoints(combinedData[model]?.[skill], skill, HORIZON_MINUTES);
+        const points = extractPeakRatePoints(combinedData[model]?.[skill], skill, HORIZON_MINUTES);
         if (points.length === 0) continue;
 
         const skillBuckets = [];
         for (let min = 0; min < BUCKET_COUNT; min++) {
-          let lastXp = 0;
+          let lastRate = 0;
           for (const p of points) {
-            if (p.x <= min) lastXp = p.y;
+            if (p.x <= min) lastRate = p.y;
             else break;
           }
-          bucketSums[min] += lastXp;
+          bucketSums[min] += lastRate;
           bucketCounts[min]++;
-          skillBuckets.push({ x: min, y: lastXp });
+          skillBuckets.push({ x: min, y: lastRate });
         }
 
         skillCurves.push({
@@ -1218,31 +1218,31 @@ function renderCumulative() {
 
       cumulativeSkillDatasets[model] = skillCurves;
 
-      const skillFinals = [];
+      const skillRates = [];
       for (const skill of SKILL_ORDER) {
         const sd = combinedData[model]?.[skill];
-        if (sd) skillFinals.push({ skill, label: SKILL_DISPLAY[skill] || skill, finalXp: sd.finalXp || 0 });
+        if (sd) skillRates.push({ skill, label: SKILL_DISPLAY[skill] || skill, peakRate: sd.peakXpRate || 0 });
       }
-      skillFinals.sort((a, b) => b.finalXp - a.finalXp);
-      cumulativeSkillFinalXp[model] = skillFinals;
+      skillRates.sort((a, b) => b.peakRate - a.peakRate);
+      cumulativeSkillPeakRate[model] = skillRates;
 
       for (let min = 0; min < BUCKET_COUNT; min++) {
         if (bucketCounts[min] > 0) {
-          avgPoints.push({ x: min, y: Math.round(bucketSums[min]) });
+          ratePoints.push({ x: min, y: Math.round(bucketSums[min]) });
         }
       }
     }
 
     datasets.push({
       label: config.displayName,
-      data: avgPoints,
+      data: ratePoints,
       borderColor: config.color,
       backgroundColor: config.color,
       fill: false,
       pointRadius: 0,
       pointHoverRadius: 4,
       borderWidth: 2.5,
-      tension: 0.3,
+      tension: 0,
       _modelKey: model,
       _isAverage: true,
     });
@@ -1325,7 +1325,7 @@ function renderCumulative() {
             color: '#999',
             font: { size: 11, family: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace' },
             maxTicksLimit: 8,
-            callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v,
+            callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k/hr' : v + '/hr',
           },
           grid: { color: '#f0f0f0', drawTicks: false },
           border: { color: '#e0e0e0' },
@@ -1353,13 +1353,13 @@ function openSkillPicker(model) {
   let html = '';
   for (const skill of SKILL_ORDER) {
     const sd = combinedData[model]?.[skill];
-    const xp = sd?.finalXp || 0;
+    const rate = sd?.peakXpRate || 0;
     const hasTraj = sd?.trajectory?.length > 0;
     const iconSrc = 'skill-icons/' + skill + '.png';
     html += `<div class="skill-picker-item${hasTraj ? '' : ' no-traj'}" onclick="${hasTraj ? `closeSkillPicker();openTrajectory('${model}','${skill}')` : ''}" style="${hasTraj ? '' : 'opacity:0.4;cursor:default'}">
       <img src="${iconSrc}" onerror="this.style.display='none'">
       ${SKILL_DISPLAY[skill] || skill}
-      <span class="skill-picker-xp">${xp > 0 ? formatXp(xp) : '-'}</span>
+      <span class="skill-picker-xp">${rate > 0 ? formatRate(rate) : '-'}</span>
     </div>`;
   }
   grid.innerHTML = html;
@@ -1425,13 +1425,16 @@ function findSkillLevel(sample, skillKey) {
 }
 
 function getActiveSkills(samples, targetSkill) {
+  if (!samples || samples.length === 0) return [targetSkill];
+  const firstSample = samples[0];
   const seen = new Set();
-  for (const s of samples) {
+  for (let i = 1; i < samples.length; i++) {
+    const s = samples[i];
     if (!s.skills) continue;
     for (const sk of SKILL_ORDER) {
-      const lvl = findSkillLevel(s, sk);
-      const threshold = sk === 'hitpoints' ? 10 : 1;
-      if (lvl > threshold) seen.add(sk);
+      const startLvl = findSkillLevel(firstSample, sk);
+      const currLvl = findSkillLevel(s, sk);
+      if (currLvl > startLvl) seen.add(sk);
     }
   }
   seen.add(targetSkill);
@@ -1482,7 +1485,7 @@ function initStatsBar(samples, targetSkill) {
       borderWidth: isTarget ? 2.5 : 1.2,
       pointRadius: 0,
       pointStyle: makeSkillIcon(sk, 14),
-      tension: 0.3,
+      tension: 0,
       order: isTarget ? 0 : 1,
     };
   });
@@ -1586,7 +1589,7 @@ function openTrajectory(model, skill) {
 
   document.getElementById('trajTitle').textContent = `${config.displayName} — ${skillName}`;
   document.getElementById('trajSubtitle').textContent =
-    `${formatXp(data.finalXp)} XP (Lv ${data.finalLevel}) · ${data.jobName || ''}`;
+    `Peak: ${formatRate(data.peakXpRate || 0)} · ${formatXp(data.finalXp)} XP (Lv ${data.finalLevel}) · ${data.jobName || ''}`;
 
   // Set up video
   const videoPane = document.getElementById('trajVideoPane');
@@ -1857,10 +1860,10 @@ document.querySelectorAll('#horizonToggle button').forEach(btn => {
 });
 
 // Set dynamic title/subtitle based on horizon
-document.title = `Skill XP Benchmark (${HORIZON_MINUTES} min)`;
+document.title = `Peak XP Rate Benchmark (${HORIZON_MINUTES} min)`;
 document.getElementById('pageDescription').textContent =
-  `Each agent is placed in a RuneScape private server (8x game speed) and given ${HORIZON_MINUTES} minutes wall clock to maximize XP in a single skill. Best of 1. ` +
-  `The agent controls a freshly-created character via writing and running TypeScript scripts against RS-SDK. `;
+  `Each agent trains a single skill for ${HORIZON_MINUTES} minutes wall clock (8x game speed). ` +
+  `Score = peak XP/hr measured in any 15-second window. Best of 1.`;
 
 // Auto-load on page open
 loadResults();
