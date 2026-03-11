@@ -35,7 +35,7 @@
     if (remaining === 0 && onReady) onReady();
   }
 
-  // Chart.js plugin: draw model icon + label at end of each line
+  // Chart.js plugin: draw model icon + label at end of each line, with hover support
   const endIconPlugin = {
     id: 'endIconCumulative',
     afterDraw(chart) {
@@ -184,10 +184,11 @@
    * @param {number} opts.horizonMinutes - e.g. 30
    * @param {string|null} [opts.activeSkill] - selected skill key, or null for total
    */
-  window.renderCumulativeChart = function({ canvasContainer, legendContainer, data, horizonMinutes, activeSkill = null, onClick, selectedModel = null, onLegendClick = null }) {
+  window.renderCumulativeChart = function({ canvasContainer, legendContainer, labelContainer, data, horizonMinutes, activeSkill = null, onClick, selectedModel = null, onLegendClick = null }) {
     const cumulativeSkillPeakRate = {};
     const hiddenModels = new Set();
     let chart = null;
+    let hoveredModel = null;
 
     function getModels() {
       return Object.keys(data)
@@ -241,6 +242,31 @@
             renderChart();
           }
         });
+        el.addEventListener('mouseenter', () => {
+          const model = el.dataset.model;
+          if (model === selectedModel) return;
+          hoveredModel = model;
+          renderChart();
+          if (labelContainer) {
+            const cfg = MODEL_CONFIG[hoveredModel] || { displayName: hoveredModel };
+            labelContainer.textContent = cfg.displayName + ' \u2014 Per-Skill Peak Rate';
+          }
+        });
+        el.addEventListener('mouseleave', () => {
+          if (!hoveredModel) return;
+          hoveredModel = null;
+          renderChart();
+          if (labelContainer) {
+            if (selectedModel) {
+              const cfg = MODEL_CONFIG[selectedModel] || { displayName: selectedModel };
+              labelContainer.textContent = cfg.displayName + ' \u2014 Per-Skill Peak Rate';
+            } else {
+              labelContainer.textContent = activeSkill
+                ? (SKILL_DISPLAY[activeSkill] || activeSkill) + ' Peak Rate'
+                : 'Average';
+            }
+          }
+        });
       });
     }
 
@@ -252,11 +278,12 @@
       canvasContainer.appendChild(canvas);
 
       const datasets = [];
+      const effectiveModel = hoveredModel || selectedModel;
 
-      if (selectedModel) {
+      if (effectiveModel) {
         for (const skill of SKILL_ORDER) {
           if (hiddenModels.has(skill)) continue;
-          const skillData = data[selectedModel]?.[skill];
+          const skillData = data[effectiveModel]?.[skill];
           if (!skillData || !skillData.peakXpRate) continue;
           let ratePoints = extractPeakRatePoints(skillData, skill, horizonMinutes);
           if (ratePoints.length === 0) continue;
@@ -333,6 +360,8 @@
         }
       }
 
+      const tooltipHandler = makeTooltipHandler(cumulativeSkillPeakRate, activeSkill, effectiveModel);
+
       chart = new Chart(canvas, {
         type: 'line',
         data: { datasets },
@@ -367,7 +396,7 @@
                 color: '#999',
                 font: { size: 11, family: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace' },
                 maxTicksLimit: 8,
-                callback: v => activeSkill ? (v >= 1000 ? (v / 1000).toFixed(0) + 'k/min' : Math.round(v) + '/min') : v,
+                callback: v => (activeSkill || effectiveModel) ? (v >= 1000 ? (v / 1000).toFixed(0) + 'k/min' : Math.round(v) + '/min') : v,
               },
               grid: { color: '#f0f0f0', drawTicks: false },
               border: { color: '#e0e0e0' },
@@ -378,15 +407,16 @@
             legend: { display: false },
             tooltip: {
               enabled: false,
-              external: makeTooltipHandler(cumulativeSkillPeakRate, activeSkill, selectedModel),
+              external: tooltipHandler,
             },
           },
         },
       });
+
     }
 
     preloadIcons(() => { if (chart) chart.draw(); });
-    renderLegend();
     renderChart();
+    renderLegend();
   };
 })();

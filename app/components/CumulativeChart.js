@@ -4,6 +4,7 @@ import { navigate } from '../router.js';
 export function CumulativeChart({ data }) {
   const chartRef = useRef(null);
   const legendRef = useRef(null);
+  const labelRef = useRef(null);
   const [pinnedSkill, setPinnedSkill] = useState(null);
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const [selectedModel, setSelectedModel] = useState(null);
@@ -15,7 +16,7 @@ export function CumulativeChart({ data }) {
     : activeSkill ? `${SKILL_DISPLAY[activeSkill] || activeSkill} Peak Rate` : 'Average';
 
   useEffect(() => {
-    if (!data || !chartRef.current || !legendRef.current) return;
+    if (!data || !chartRef.current || !legendRef.current || !labelRef.current) return;
     if (!window.renderCumulativeChart) return;
 
     chartRef.current.innerHTML = '';
@@ -24,6 +25,7 @@ export function CumulativeChart({ data }) {
     renderCumulativeChart({
       canvasContainer: chartRef.current,
       legendContainer: legendRef.current,
+      labelContainer: labelRef.current,
       data,
       horizonMinutes: 30,
       activeSkill,
@@ -104,7 +106,7 @@ export function CumulativeChart({ data }) {
             </div>
           </aside>
           <div className="benchmark-chart-main">
-            <div className="benchmark-chart-label">${activeLabel}</div>
+            <div className="benchmark-chart-label" ref=${labelRef}>${activeLabel}</div>
             <div ref=${chartRef}></div>
           </div>
         </div>
