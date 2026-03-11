@@ -7,7 +7,7 @@ while (true) {
     for (const item of sdk.getInventory())
       if (/log/i.test(item.name)) await sdk.sendDropItem(item.slot);
   }
-  await bot.chopTree(/^tree$/i);
+  await bot.chopTree(/Maple/i);
 }`;
 
 function CodeBlock({ code, lang }) {
