@@ -34,7 +34,7 @@ const INTERESTING = [
   {
     model: 'gpt54',
     skill: 'smithing',
-    description: 'GPT-5.4 reverse-engineers the tracker\'s 15-second sample windows and times its smithing bursts to land right after each tick, methodically optimizing bar spend patterns to push its peak XP rate higher each cycle.',
+    description: 'GPT-5.4 reverse-engineers the 15-second sample window and times its smithing bursts to land right after each tick.',
     quote: 'The synced burst landed exactly after the 20:27:11 tracker sample. I need the next sample at 20:27:26 to flush that burst into the rate calculation.',
     moments: [
       { ts: 761, label: 'First baseline' },

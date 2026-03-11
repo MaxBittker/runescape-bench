@@ -232,6 +232,7 @@ export function TrajectoryModal({ model, skill, data, seekTs }) {
   const videoReadyRef = useRef(false);
   const chartDraggingRef = useRef(false);
   const initialRenderRef = useRef(true);
+  const pendingSeekTsRef = useRef(null);
 
   // Scroll into view when user navigates (not on initial load)
   useEffect(() => {
@@ -244,16 +245,6 @@ export function TrajectoryModal({ model, skill, data, seekTs }) {
     }
   }, [model, skill]);
 
-  // Scroll transcript to seekTs when navigating with a timestamp
-  useEffect(() => {
-    if (seekTs == null || !transcriptRef.current) return;
-    // Small delay to let the transcript render
-    const timer = setTimeout(() => {
-      highlightAndScrollToStep(transcriptRef.current, seekTs, true);
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [model, skill, seekTs]);
-
   // Seek video to a step timestamp
   const seekVideo = useCallback((stepTs) => {
     const videoEl = videoRef.current;
@@ -261,9 +252,28 @@ export function TrajectoryModal({ model, skill, data, seekTs }) {
     const targetTime = Math.min(stepTs + videoOffsetRef.current, maxVideoTimeRef.current);
     if (targetTime >= 0 && targetTime <= (videoEl.duration || Infinity)) {
       videoEl.currentTime = targetTime;
+      videoEl.play();
     }
     highlightAndScrollToStep(transcriptRef.current, stepTs, false);
   }, []);
+
+  // Scroll transcript and seek video to seekTs when navigating with a timestamp
+  useEffect(() => {
+    if (seekTs == null) {
+      pendingSeekTsRef.current = null;
+      return;
+    }
+    pendingSeekTsRef.current = seekTs;
+    // Small delay to let the transcript render
+    const timer = setTimeout(() => {
+      if (transcriptRef.current) {
+        highlightAndScrollToStep(transcriptRef.current, seekTs, true);
+      }
+      // Try seeking video now; if not ready yet, onMetadataReady will pick it up
+      seekVideo(seekTs);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [model, skill, seekTs, seekVideo]);
 
   // Handle click on a transcript step
   const handleStepClick = useCallback((e) => {
@@ -314,6 +324,7 @@ export function TrajectoryModal({ model, skill, data, seekTs }) {
     function onMetadataReady() {
       videoReadyRef.current = true;
       videoEl.playbackRate = 2;
+      videoEl.play();
       let offset = 0;
       if (trajData.containerFinishedAt) {
         const finishedMs = new Date(trajData.containerFinishedAt).getTime();
@@ -336,6 +347,17 @@ export function TrajectoryModal({ model, skill, data, seekTs }) {
       const maxTime = videoOffsetRef.current + gameDuration;
       maxVideoTimeRef.current = maxTime > 0 ? maxTime : Infinity;
       setVideoOffset(offset);
+
+      // If there's a pending seekTs from URL navigation, seek now that video is ready
+      if (pendingSeekTsRef.current != null) {
+        const ts = pendingSeekTsRef.current;
+        pendingSeekTsRef.current = null;
+        const targetTime = Math.min(ts + videoOffsetRef.current, maxVideoTimeRef.current);
+        if (targetTime >= 0 && targetTime <= (videoEl.duration || Infinity)) {
+          videoEl.currentTime = targetTime;
+          videoEl.play();
+        }
+      }
     }
 
     // If metadata already loaded before effect ran, handle immediately
@@ -830,7 +852,7 @@ export function TrajectoryModal({ model, skill, data, seekTs }) {
           <div className="traj-video-container">
             ${hasVideo && html`
               <div className="traj-video-pane">
-                <video ref=${videoRef} controls preload="auto"
+                <video ref=${videoRef} controls preload="auto" muted
                        src=${videoSrc} />
                 <div className="traj-skills-chart-wrap">
                   <div className="traj-rate-legend">
