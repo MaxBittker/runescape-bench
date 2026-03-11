@@ -43,6 +43,18 @@ const INTERESTING = [
     ],
   },
   {
+    model: 'geminiflash',
+    skill: 'crafting',
+    description: 'Gemini Flash bootstraps an entire supply chain: pickpockets men for coins, kills cows for hides, tans the leather in Al Kharid, and even buys uncut gems.',
+    quote: 'Full inventory\u200425 cow hides secured. Stopping the script now; it\'s time to hit the Al Kharid Tanner.',
+    moments: [
+      { ts: 22, label: 'Pickpockets for starting cash' },
+      { ts: 520, label: 'Kills cows for hides' },
+      { ts: 962, label: 'Tans 25 hides' },
+      { ts: 1255, label: 'Buys uncut gems' },
+    ],
+  },
+  {
     model: 'gemini31',
     skill: 'mining',
     description: 'Gemini 3.1 mines to level 75 and ventures into the Dwarven Mine seeking better ore. Stumbles into the wilderness, dies to Ice Giants, but recovers and gets back to work.',
