@@ -29,7 +29,7 @@ results/gold/*
 !results/gold/_data.js
 
 # Game save state
-shared/agent.sav
+# shared/agent.sav
 
 # Build artifacts copied by docker/build.sh
 docker/skill_tracker.ts
