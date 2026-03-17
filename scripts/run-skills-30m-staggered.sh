@@ -20,6 +20,8 @@ claude-code|anthropic/claude-haiku-4-5|haiku
 codex|openai/gpt-5.2-codex|codex
 codex|openai/gpt-5.3-codex|codex53
 codex|openai/gpt-5.4|gpt54
+codex|openai/gpt-5.4-mini|gpt54mini
+codex|openai/gpt-5.4-nano|gpt54nano
 gemini-cli|google/gemini-3-pro-preview|gemini
 gemini-cli|google/gemini-3.1-pro-preview|gemini31
 gemini-cli|google/gemini-3-flash-preview|geminiflash
@@ -44,7 +46,7 @@ echo "Staggered 30m skill run — ${TIMESTAMP}"
 echo "Logs: $LOG_DIR"
 echo ""
 
-MODEL_LIST="opus opus45 sonnet46 sonnet45 haiku codex codex53 gpt54 gemini gemini31 geminiflash glm kimi qwen3 qwen35"
+MODEL_LIST="opus opus45 sonnet46 sonnet45 haiku codex codex53 gpt54 gpt54mini gpt54nano gemini gemini31 geminiflash glm kimi qwen3 qwen35"
 PIDS=()
 MODEL_NAMES=()
 DELAY=0
@@ -69,7 +71,7 @@ for model_name in $MODEL_LIST; do
   fi
 
   case "$model_name" in
-    codex|codex53|gpt54)
+    codex|codex53|gpt54|gpt54mini|gpt54nano)
       MODEL_EXTRA_ARGS="--ak run_timeout_sec=1900"
       ;;
     kimi|qwen3|qwen35)
