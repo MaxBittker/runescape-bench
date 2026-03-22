@@ -46,7 +46,7 @@ configure_model_env() {
       ENV_PREFIX="PYTHONPATH=$agents_dir:\${PYTHONPATH:-}"
       AGENT_FLAG="--agent-import-path 'glm_adapter:GlmOpenCode'"
       ;;
-    codex|codex53|gpt54)
+    codex|codex53|gpt54|gpt54mini|gpt54nano)
       ENV_PREFIX="PYTHONPATH=$agents_dir:\${PYTHONPATH:-}"
       AGENT_FLAG="--agent-import-path 'codex_adapter:CodexWithTimeout'"
       ;;

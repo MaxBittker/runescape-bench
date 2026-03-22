@@ -9,6 +9,8 @@ const PRICING = {
   haiku:      { input: 1,    cache: 0.10,  output: 5 },
   codex53:    { input: 3,    cache: 0.75,  output: 15 },
   gpt54:      { input: 2.50, cache: 0.625, output: 15 },
+  gpt54mini:  { input: 0.40, cache: 0.10,  output: 1.60 },
+  gpt54nano:  { input: 0.10, cache: 0.025, output: 0.40 },
   gemini:     { input: 2,    cache: 0.20,  output: 12 },
   gemini31:   { input: 2,    cache: 0.20,  output: 12 },
   geminiflash:{ input: 0.50, cache: 0.05,  output: 3 },
